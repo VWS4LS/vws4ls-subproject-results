@@ -8,10 +8,18 @@ https://github.com/VWS4LS/vws4ls-subproject-results/blob/main/TP12/Reference-Sys
 
 ## Add semantic references
 
-### to a Submodel
+# to a Submodel
 
-### to a Property
+# to a Property
+The following picture shows the property with the VEC Reference:     
+![image](https://github.com/user-attachments/assets/8e930c5e-f31c-48c7-a630-d08c11356c51)
 
-### to a Property Value
 
-### to a Concept Descriptions
+
+# to a Property Value
+
+# to a Property Unit
+
+# to a Concept Descriptions
+
+
