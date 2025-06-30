@@ -1,5 +1,15 @@
 # **TP11 – Anbindung an Catena-X**
 
+## Inhalt
+
+[AP 11.1: Erarbeitung eines Konzepts zur Entscheidungsfindung](#_11.1)
+
+[AP 11.2 - Technische Umsetzung der Systemarchitektur](#_11.2)
+
+[AP 11.3 - Identity & Access Management (IAM)](#_11.3)
+
+
+## Zielsetzung
 Die Digitalisierung industrieller Wertschöpfungsketten erfordert standardisierte Datenmodelle sowie vertrauenswürdige Mechanismen für den Datenaustausch. Die lückenlose digitale Abbildung und Absicherung von Datenflüssen entlang der Wertschöpfungskette ist entscheidend um Effizienz, Rückverfolgbarkeit und Qualität sicherzustellen.
 
 Zwei technologische Bausteine, Verwaltungsschale und Eclipse-Dataspace Connector (EDC) sollen dabei gemeinsam genutzt werden, um vor allem das Accessmanagement bis auf Attributebene zu ermöglichen.
@@ -10,8 +20,6 @@ Zwei technologische Bausteine, Verwaltungsschale und Eclipse-Dataspace Connector
 Gerade in der Leitungssatzwertkette – mit ihren hohen Anforderungen an Variantenvielfalt, Fertigungstiefe und Lieferanteneinbindung – eröffnet die Kombination beider Technologien erhebliches Potenzial. Die VWS sorgt für semantisch konsistente Datenstrukturen auf Asset-Ebene (Produktrepräsentanz), während der EDC die kontrollierte Verteilung dieser Informationen über Unternehmensgrenzen hinweg ermöglicht. Eine koordinierte Anwendung der jeweiligen Zugriffskontrollmechanismen – also VWS-internes RBAC/ABAC und EDC-Policies – schaffen dabei die Grundlage für Datensouveränität, Compliance und Effizienz in einem digitalisierten Wertschöpfungsnetzwerk.
 
 Aktuell fehlt es jedoch an einem ersten technischen Durchstich, wie beide Technologien mit deren jeweiligen Konzepten kombiniert angewendet werden können. Eine solche Verbindung ist essenziell, um Zugriffsrechte und Nutzungsregeln konsistent zu übertragen und in durchsetzbare Vertragsbedingungen zu überführen. Der Aufbau eines interoperablen, sicheren Datenraums entlang der Leitungssatzwertkette stellt somit nicht nur einen wichtigen Use Case dar, sondern auch ein Schlüsselszenario für die Zukunft industrieller Datenökosysteme.
-
-## Zielsetzung
 
 Die Aufgabenstellung wurde in mehrere Arbeitspakete unterteilt. Zuerst sollte ein detailliertes Konzept zur Entscheidungsfindung bezüglich der Systemarchitektur, insbesondere für den Datenaustausch auf Attribut-Ebene aus einer VWS erstellt werden.
 
@@ -62,7 +70,7 @@ Anbei eine Tabelle 2-1 mit einigen Begrifflichkeiten die für das Verständnisse
 
 Tabelle 2-1: Glossar Anbindung an Catena-X
 
-## AP 11.1 – Erarbeitung eines Konzepts zur Entscheidungsfindung
+## <a name="_11.1"></a>AP 11.1 – Erarbeitung eines Konzepts zur Entscheidungsfindung
 
 Das erste Arbeitspaket umfasst die Erarbeitung eines detaillierten Konzepts zur Entscheidungsfindung bezüglich der Systemarchitektur und Kommunikationsmethodik. Ziel ist es, klare Spezifikationen zu schaffen, auf deren Basis die technischen Umsetzungen in den nachfolgenden Phasen durchgeführt werden können. Zusätzlich sollen mögliche Konflikte erkannt und diese in Zusammenarbeit von Fraunhofer IESE, ARENA2036, msg und Catena-X geklärt sowie mögliche Resolutionen erarbeitet werden.
 
@@ -177,7 +185,7 @@ Folgende Entscheidungen wurden final bestätigt:
 
 Abbildung 2-4: Finaler Catena-X EDC Transfer-Prozess
 
-## AP 11.2 – Technische Umsetzung der Systemarchitektur
+## <a name="_11.2">AP 11.2 – Technische Umsetzung der Systemarchitektur
 
 Im zweiten Arbeitspaket liegt der Schwerpunkt auf der technischen Umsetzung des zuvor entwickelten Konzepts. Ziel ist die Implementierung eines funktionsfähigen Proof-of-Concepts (PoC), der den Transfer auf Attribut- bzw. Rollen-Ebene mit dem EDC, sowie BaSyx-Komponenten[^3][^4] ermöglicht.
 
@@ -815,7 +823,7 @@ Der weitere Authentifizierungsfluss mit dem Token erfolgt so, dass das JWT-Token
 
 Als Ergebnis steht am Ende dieses Arbeitspakets ein voll funktionsfähiger Projektdemonstrator zur Verfügung, der nicht nur die technische Machbarkeit des PoCs beweist, sondern auch konkrete Vorschläge und technische Spezifikationen liefert. Diese können die Grundlage für zukünftige Standardisierungsprozesse innerhalb relevanter Organisationen wie Catena-X und der IDTA bilden.
 
-## AP 11.3 – Identity & Access Management (IAM)
+## <a name="_11.3">AP 11.3 – Identity & Access Management (IAM)
 
 ### Zielsetzung
 
