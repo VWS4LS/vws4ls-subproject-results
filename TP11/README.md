@@ -2,11 +2,77 @@
 
 ## Inhalt
 
-[AP 11.1: Erarbeitung eines Konzepts zur Entscheidungsfindung](#_11.1)
+[AP 11.1: Erarbeitung eines Konzepts zur Entscheidungsfindung](#_11.1)  
+- [Vorgehensweise und Inhalte](#_11.1.1)  
+  - [Analyse des Ist-Zustands](#_11.1.1.1)  
+  - [Systemarchitektur und Schnittstellen](#_11.1.1.2)  
+  - [Single-Sign-On Mechanismus](#_11.1.1.3)  
+  - [Entscheidungsvorlage](#_11.1.1.4)  
+- [Discovery Workflow](#_11.1.2)  
+- [Dataspace Workflow](#_11.1.3)  
+  - [Initiale Fassung](#_11.1.3.1)  
+  - [Zweite Fassung](#_11.1.3.2)  
+  - [Finale Fassung](#_11.1.3.3)  
 
-[AP 11.2 - Technische Umsetzung der Systemarchitektur](#_11.2)
+[AP 11.2 - Technische Umsetzung der Systemarchitektur](#_11.2)  
+- [Vorgehensweise und Inhalte](#_11.2.1)  
+  - [Föderierte Services](#_11.2.1.1)  
+  - [Deployment von EDCs und BaSyx](#_11.2.1.2)  
+- [Variationen](#_11.2.2)  
+  - [Shared Identity-Provider / Basisvariante](#_11.2.2.1)  
+  - [Zwei Identity-Provider Variation](#_11.2.2.2)  
+  - [Zwei Token Variation](#_11.2.2.3)  
+- [Deployment](#_11.2.3)  
+  - [Umbrella-Charts](#_11.2.3.1)  
+  - [Schritte zur Installation](#_11.2.3.2)  
+- [Durchführung Szenario](#_11.2.4)  
+  - [Connector Management](#_11.2.4.1)  
+  - [Connector Configuration](#_11.2.4.2)  
+  - [Connector Registration](#_11.2.4.3)  
+- [Data Provisioning](#_11.2.5)  
+  - [BaSyx-Backend](#_11.2.5.1)  
+    - [Sicherheitsfeature und RBAC](#_11.2.5.1.1)  
+    - [JSON-Schema für RBAC-Regeln](#_11.2.5.1.2)  
+    - [Beispielregeln](#_11.2.5.1.3)  
+  - [Konnektoren](#_11.2.5.2)  
+    - [Asset](#_11.2.5.2.1)  
+    - [Policy](#_11.2.5.2.2)  
+    - [Contract](#_11.2.5.2.3)  
+- [Data Consumption](#_11.2.6)  
+  - [Catalog Request](#_11.2.6.1)  
+  - [Contract Negotiation](#_11.2.6.2)  
+  - [Transfer Process](#_11.2.6.3)  
+  - [Zugriff auf das Token](#_11.2.6.4)  
+  - [Zugriff auf das BaSyx-Backend](#_11.2.6.5)  
+- [Ergebnis](#_11.2.7)  
 
-[AP 11.3 - Identity & Access Management (IAM)](#_11.3)
+[AP 11.3 - Identity & Access Management (IAM)](#_11.3)  
+- [Zielsetzung](#_11.3.1)  
+- [Vorgehensweise und Inhalte](#_11.3.2)  
+  - [Authentifizierungsebene](#_11.3.2.1)  
+  - [Infrastrukturebene](#_11.3.2.2)  
+- [Authentifizierung](#_11.3.3)  
+  - [Der allgemeine Ablauf](#_11.3.3.1)  
+    - [Policies](#_11.3.3.1.1)  
+    - [IDTA Security Spezifikation](#_11.3.3.1.2)  
+  - [Konsequenzen aus dem allgemeinen Ablauf](#_11.3.3.2)  
+  - [BPN Security](#_11.3.3.3)  
+- [Autorisierung](#_11.3.4)  
+  - [Token](#_11.3.4.1)  
+    - [Opaque-Token](#_11.3.4.1.1)  
+    - [JWT (Json-Web-Token)](#_11.3.4.1.2)  
+    - [Access-Token](#_11.3.4.1.3)  
+  - [Claims, Scopes, Rollen](#_11.3.4.2)  
+    - [Claims](#_11.3.4.2.1)  
+    - [Scope](#_11.3.4.2.2)  
+    - [Rollen](#_11.3.4.2.3)  
+  - [Regeln – IDTA Security Spezifikation](#_11.3.4.3)  
+- [Identity Provider](#_11.3.5)  
+  - [Keine Authentifizierung/Autorisierung](#_11.3.5.1)  
+  - [Interne Authentifizierung/Autorisierung](#_11.3.5.2)  
+  - [External und internal Identity Providers](#_11.3.5.3)  
+  - [Gateway](#_11.3.5.4)  
+- [Ergebnis](#_11.3.6)  
 
 
 ## Zielsetzung
@@ -17,7 +83,7 @@ Zwei technologische Bausteine, Verwaltungsschale und Eclipse-Dataspace Connector
 -   Die VWS ermöglicht, als standardisierte Grundlage die Erstellung Digitaler Zwillinge eines physischen oder immateriellen Assets, eine strukturierte und semantisch beschreibbare Bereitstellung von Informationen entlang des Lebenszyklus. Über integrierte Mechanismen wie Role-Based-Access-Control (RBAC) oder Attribute-Based-Access-Control (ABAC) lassen sich differenzierte Zugriffskonzepte auf Submodelle und Datenpunkte realisieren.
 -   Der EDC wiederum stellt eine interoperable Infrastruktur für den sicheren und souveränen Austausch von Daten auf unternehmensübergreifender-Ebene bereit. Über Policies und Contract Definitions lassen sich Nutzungsbedingungen und Zugriffskontrollen entlang von Datenflüssen definieren und automatisiert durchsetzen.
 
-Gerade in der Leitungssatzwertkette – mit ihren hohen Anforderungen an Variantenvielfalt, Fertigungstiefe und Lieferanteneinbindung – eröffnet die Kombination beider Technologien erhebliches Potenzial. Die VWS sorgt für semantisch konsistente Datenstrukturen auf Asset-Ebene (Produktrepräsentanz), während der EDC die kontrollierte Verteilung dieser Informationen über Unternehmensgrenzen hinweg ermöglicht. Eine koordinierte Anwendung der jeweiligen Zugriffskontrollmechanismen – also VWS-internes RBAC/ABAC und EDC-Policies – schaffen dabei die Grundlage für Datensouveränität, Compliance und Effizienz in einem digitalisierten Wertschöpfungsnetzwerk.
+Gerade in der Leitungssatzwertkette – mit ihren hohen Anforderungen an Variantenvielfalt, Fertigungstiefe und Lieferanteneinbindung – eröffnet die Komb она der beiden Technologien erhebliches Potenzial. Die VWS sorgt für semantisch konsistente Datenstrukturen auf Asset-Ebene (Produktrepräsentanz), während der EDC die kontrollierte Verteilung dieser Informationen über Unternehmensgrenzen hinweg ermöglicht. Eine koordinierte Anwendung der jeweiligen Zugriffskontrollmechanismen – also VWS-internes RBAC/ABAC und EDC-Policies – schaffen dabei die Grundlage für Datensouveränität, Compliance und Effizienz in einem digitalisierten Wertschöpfungsnetzwerk.
 
 Aktuell fehlt es jedoch an einem ersten technischen Durchstich, wie beide Technologien mit deren jeweiligen Konzepten kombiniert angewendet werden können. Eine solche Verbindung ist essenziell, um Zugriffsrechte und Nutzungsregeln konsistent zu übertragen und in durchsetzbare Vertragsbedingungen zu überführen. Der Aufbau eines interoperablen, sicheren Datenraums entlang der Leitungssatzwertkette stellt somit nicht nur einen wichtigen Use Case dar, sondern auch ein Schlüsselszenario für die Zukunft industrieller Datenökosysteme.
 
@@ -76,25 +142,30 @@ Das erste Arbeitspaket umfasst die Erarbeitung eines detaillierten Konzepts zur 
 
 Das Ergebnis dieses Arbeitspakets ist eine vollständige Architektur-Dokumentation, die neben einer präzisen Beschreibung der Schnittstellen, der erforderlichen Anpassungen an bestehenden Komponenten und der definierten Policies auch konkrete Vorschläge für ein effektives Identity- und Access-Management beinhaltet.
 
-### Vorgehensweise und Inhalte
+### <a name="_11.1.1"></a>Vorgehensweise und Inhalte
 
-Zu Beginn erfolgt eine umfassende Analyse des Ist-Zustands durch einen semantischen und technischen Abgleich der vorhandenen VWS- und Aspektmodelle, um Überschneidungen, Konflikte und Lücken zu identifizieren. Anschließend wird eine detaillierte Systemarchitektur entwickelt, die insbesondere die Anbindung der VWS an den EDC über eine erweiterte Distributed Digital Twin Registry (dDTR) spezifiziert. Dabei sind Transformationsregeln und Application Programming Interfaces (API) zu definieren, um Metadaten und Zugriffsrechte konsistent zwischen den Systemen zu synchronisieren.
+#### <a name="_11.1.1.1"></a>Analyse des Ist-Zustands
+Zu Beginn erfolgt eine umfassende Analyse des Ist-Zustands durch einen semantischen und technischen Abgleich der vorhandenen VWS- und Aspektmodelle, um Überschneidungen, Konflikte und Lücken zu identifizieren.
 
-Ein weiterer zentraler Bestandteil ist die Konzeption eines Single-Sign-On Mechanismus, der sicherstellt, dass Nutzer nahtlos und sicher auf verschiedene Services zugreifen können. Abschließend erfolgt die Erstellung einer Entscheidungsvorlage in Form eines Summary-Whitepapers, das die Grundlage für die nachfolgenden Implementierungsschritte darstellt. Diese Unterlagen dienen außerdem als Grundlage für agile Entwicklungsprozesse, inklusive Aufwandsschätzungen und Planungen der nächsten Projektschritte.
+#### <a name="_11.1.1.2"></a>Systemarchitektur und Schnittstellen
+Anschließend wird eine detaillierte Systemarchitektur entwickelt, die insbesondere die Anbindung der VWS an den EDC über eine erweiterte Distributed Digital Twin Registry (dDTR) spezifiziert. Dabei sind Transformationsregeln und Application Programming Interfaces (API) zu definieren, um Metadaten und Zugriffsrechte konsistent zwischen den Systemen zu synchronisieren.
 
-### Discovery Workflow
+#### <a name="_11.1.1.3"></a>Single-Sign-On Mechanismus
+Ein weiterer zentraler Bestandteil ist die Konzeption eines Single-Sign-On Mechanismus, der sicherstellt, dass Nutzer nahtlos und sicher auf verschiedene Services zugreifen können.
 
+#### <a name="_11.1.1.4"></a>Entscheidungsvorlage
+Abschließend erfolgt die Erstellung einer Entscheidungsvorlage in Form eines Summary-Whitepapers, das die Grundlage für die nachfolgenden Implementierungsschritte darstellt. Diese Unterlagen dienen außerdem als Grundlage für agile Entwicklungsprozesse, inklusive Aufwandsschätzungen und Planungen der nächsten Projektschritte.
+
+### <a name="_11.1.2"></a>Discovery Workflow
 Der Discovery Workflow ist statisch definiert und wird sich im Rahmen des Projekts nicht ändern. Zum besseren Verständnis wurde er initial dokumentiert:
 
 ![image](https://github.com/user-attachments/assets/3f847e35-4fc4-4b29-b53c-6944f0b6e025)     
 Abbildung 2-1: Sequenzdiagramm für den Discovery-Workflow
 
-### Dataspace Workflow
-
+### <a name="_11.1.3"></a>Dataspace Workflow
 Um ein Verständnis für AP 2 zu gewinnen, wurde der vollständige Dataspace-Workflow in mehreren Fassungen zwischen den Projektpartnern diskutiert und weiterentwickelt.
 
-#### Dataspace Workflow - Initiale Fassung
-
+#### <a name="_11.1.3.1"></a>Initiale Fassung
 Zunächst wird die initiale Fassung der Gespräche dargestellt. Bei dieser bleiben noch Fragen offen, welche im Folgenden behandelt werden, siehe Abbildung 2-2.
 
 ![image](https://github.com/user-attachments/assets/197d5ef9-750a-4ec0-9b9c-bae231307f06)    
@@ -146,7 +217,7 @@ Was für die Umsetzung des Security-Submodell benötigt wird:
 -   Eine Runtime, in der die Translation zu Regeln durchgeführt wird
 -   Eine Runtime, in der die Selektion des Submodells durchgeführt wird
 
-### Zweite Fassung
+#### <a name="_11.1.3.2"></a>Zweite Fassung
 
 Für die zweite Fassung, siehe Abbildung 2-3 wurden folgende Änderungen am Konzept durchgeführt:
 
@@ -168,7 +239,7 @@ Basierend darauf wurden folgende Entscheidungen getroffen:
 ![image](https://github.com/user-attachments/assets/ae006626-fafd-43f6-b19b-61c2dbdd12dd)          
 Abbildung 2-3: Zweite Fassung des Catena-X EDC Transfer-Prozess
 
-#### Finale Fassung
+#### <a name="_11.1.3.3"></a>Finale Fassung
 
 In der finalen Fassung, siehe Abbildung 2-4 wurden folgenden Entscheidungen getroffen:
 
@@ -185,7 +256,7 @@ Folgende Entscheidungen wurden final bestätigt:
 
 Abbildung 2-4: Finaler Catena-X EDC Transfer-Prozess
 
-## <a name="_11.2">AP 11.2 – Technische Umsetzung der Systemarchitektur
+## <a name="_11.2"></a>AP 11.2 – Technische Umsetzung der Systemarchitektur
 
 Im zweiten Arbeitspaket liegt der Schwerpunkt auf der technischen Umsetzung des zuvor entwickelten Konzepts. Ziel ist die Implementierung eines funktionsfähigen Proof-of-Concepts (PoC), der den Transfer auf Attribut- bzw. Rollen-Ebene mit dem EDC, sowie BaSyx-Komponenten[^3][^4] ermöglicht.
 
@@ -193,23 +264,21 @@ Im zweiten Arbeitspaket liegt der Schwerpunkt auf der technischen Umsetzung des 
 
 [^4]: <https://github.com/eclipse-basyx/basyx-java-server-sdk/tree/main/examples/BaSyxSecured>
 
-### Vorgehensweise und Inhalte
+### <a name="_11.2.1"></a>Vorgehensweise und Inhalte
 
+#### <a name="_11.2.1.1"></a>Föderierte Services
 Die initiale Fassung der föderierten Services ([Industry Core](https://catenax-ev.github.io/docs/next/standards/CX-0126-IndustryCorePartType)[^5]) wird von dem Projekt der ARENA2036-X bereitgestellt und an den entsprechenden Stellen angepasst.
 
 [^5]: <https://catenax-ev.github.io/docs/next/standards/CX-0126-IndustryCorePartType>
 
+#### <a name="_11.2.1.2"></a>Deployment von EDCs und BaSyx
 Zusätzlich werden dedizierte EDCs spezifisch für diesen Use-Case deployt mit denen das Szenario durchgespielt werden kann. Zudem wird eine aktualisierte Version von BaSyx auf der virtuellen Maschine Tractus-X 07 VM von Fraunhofer implementiert und deployt, auf welche der Datentransfer basieren soll.
 
-### Variationen
+### <a name="_11.2.2"></a>Variationen
 
 Im Rahmen dieses Projekts wurden verschiedene Variationen spezifiziert, um den Einsatz von Identity-Providern und Token-Konfigurationen zu optimieren. Diese Variationen zielen darauf ab, unterschiedliche Szenarien zu unterstützen und die Flexibilität sowie Sicherheit der Systemarchitektur zu erhöhen.
 
-Die folgenden Abschnitte erläutern die einzelnen Varianten im Detail und bieten eine umfassende Übersicht über ihre Zielsetzung und Begründung sowie die Konfiguration von Keycloak.
-
-Für die Umsetzung des Szenarios wird zunächst die Basisvariante umgesetzt und getestet, um einen PoC im Rahmen der noch verfügbaren Projektlaufzeit zu finalisieren. Diese Variante wird ausführlich in Kapitel 2.5.2.1 beschrieben. Weitere Varianten mit zwei Identity Providern und zwei Token werden in den Kapiteln 2.5.2.2 (Zwei Identity Providern) und 2.5.2.3 (Zwei Token Variante) beschrieben.
-
-#### Shared Identity-Provider / Basisvariante
+#### <a name="_11.2.2.1"></a>Shared Identity-Provider / Basisvariante
 
 Ein Keycloak-Server wird verwendet, um die Authentifizierung zu zentralisieren und den Zugriff auf geschützte Ressourcen zu steuern. Für die Kommunikation zwischen den Teilnehmern wird ein Tunnel zwischen dem Consumer und dem Provider über die EDCs der beiden Teilnehmer aufgebaut. Diese Kommunikation erfolgt durch eine Vertragsverhandlung über die EDC Control Plane.
 
@@ -238,7 +307,7 @@ Dieses Dokument hat die wesentlichen Aspekte der technischen Umsetzung eines Sys
 ![image](https://github.com/user-attachments/assets/c519d678-7f9a-40a2-90f0-d600c3b4a49d)     
 Abbildung 2-5: Architekturübersicht
 
-#### Zwei Identity-Provider Variation
+#### <a name="_11.2.2.2"></a>Zwei Identity-Provider Variation
 
 Für die Variante der Nutzung von zwei Identity-Providern wird ein Keycloak für die föderierten Tractus-X Services verwendet, während ein weiterer Keycloak vom Provider selbst eingesetzt wird. Diese Konfiguration bietet mehrere Implementierungsoptionen, welche den Grad der Kontrolle und Flexibilität des Providers erhöhen. Eine Übersicht des entwickelten Vorgehens ist in Abbildung 2-6 dargestellt.
 
@@ -251,9 +320,9 @@ Die beschriebenen Ansätze bieten dem Provider die Möglichkeit, das Zugangskont
 ![image](https://github.com/user-attachments/assets/95042763-1f62-4199-9085-21af291d153c)     
 Abbildung 2-6: Architekturübersicht mit zwei Identity Providern
 
-#### Zwei Token Variation
+#### <a name="_11.2.2.3"></a>Zwei Token Variation
 
-Die entscheidende Differenz bei dieser Variante besteht darin, dass nach der Weiterleitung des Requests über den EDC-Tunnel ein weiterer Token vom EDC generiert und intern für den Proxy genutzt wird. Eine Übersicht des entwickelten Vorgehens ist in Abbildung 2-7dargestellt.
+Die entscheidende Differenz bei dieser Variante besteht darin, dass nach der Weiterleitung des Requests über den EDC-Tunnel ein weiterer Token vom EDC generiert und intern für den Proxy genutzt wird. Eine Übersicht des entwickelten Vorgehens ist in Abbildung 2-7 dargestellt.
 
 Dies bietet erweiterte Sicherheit, da der Zugang zu den Ressourcen noch stärker kontrolliert werden kann. Allerdings führt dies auch zu einem höheren Implementierungsaufwand beim EDC, weil zusätzliche Schritte zur Token-Generierung und Verwaltung erforderlich sind.
 
@@ -262,18 +331,21 @@ Diese zusätzliche Sicherheitsebene garantiert, dass nur autorisierte Anfragen d
 ![image](https://github.com/user-attachments/assets/2306f16a-be21-44e3-951e-203cbda9d02b)     
 Abbildung 2-7: Architekturübersicht mit zwei Token Variation
 
-### Deployment
+### <a name="_11.2.3"></a>Deployment
 
 Zur Nutzung der bereitgestellten föderierten Services, werden erweiterte Umbrella-Charts von Tractus-X genutzt. In diesem Szenario wird ein Provider- und ein Consumer-EDC inkl. peripherer Service deployt, siehe Abbildung 2-8.
 
 Die konkrete Definition der values.yaml kann in dem entsprechenden Repository überprüft werden. Die folgenden Schritte zeigen den genauen Ablauf dieses Prozesses:
 
+#### <a name="_11.2.3.1"></a>Umbrella-Charts
 1.  Wechseln auf das Verzeichnis der Umbrella Charts:
     -   cd .\\charts\\umbrella\\
 2.  Erstellen der Abhängigkeiten der Helm Charts:
     -   helm repo add tractusx-dev <https://eclipse-tractusx.github.io/charts/dev/>
     -   helm repo add runix <https://helm.runix.net>
     -   helm dependency build
+
+#### <a name="_11.2.3.2"></a>Schritte zur Installation
 3.  Installieren der Charts mit dem folgenden Befehl auf der entsprechenden Kubernetes Umgebung:
     -   helm install --create-namespace -n vws4ls -f values-vws4ls.yaml vws4ls .
 4.  Setze Secret für Keycloak Token Request in dem EDC-Vault-Pod per Shell:
@@ -282,20 +354,23 @@ Die konkrete Definition der values.yaml kann in dem entsprechenden Repository ü
 ![image](https://github.com/user-attachments/assets/d3e27a88-653e-408b-a24e-8796a410771b)     
 Abbildung 2-8: Deployment-Diagramm
 
-### Durchführung Szenario
+### <a name="_11.2.4"></a>Durchführung Szenario
 
 Zu Beginn muss der EDC im Portal (siehe Abbildung 2-9) für den eigenen Nutzer registriert werden. Dies kann man unter dem Punkt „Connector Management“ durchführen:
 
 ![image](https://github.com/user-attachments/assets/a8a2b9b5-bd8c-4607-9451-5d95926d3110)     
 Abbildung 2-9: Connector Management (links) und -Registration (rechts)
 
+#### <a name="_11.2.4.1"></a>Connector Management
 Konkret sind die durchzuführenden Konfigurationen (siehe Abbildung 2-10) unter dem hell-blauen Panel ersichtlich:
 
 ![image](https://github.com/user-attachments/assets/4d0a9c91-599a-4f8d-8a49-96ee280cbe6d)     
 Abbildung 2-10: Connector Configuration
 
+#### <a name="_11.2.4.2"></a>Connector Configuration
 Diese User-spezifischen Werte müssen in den entsprechenden Umbrella-Charts hinterlegt werden. Für das vorliegende Szenario werden einfachheitshalber automatisch generierte EDCs der Umbrella-Charts genutzt, die mit den korrekten Daten vorbefüllt sind.
 
+#### <a name="_11.2.4.3"></a>Connector Registration
 Zuletzt werden die deployten EDCs mit ihren konkreten Endpoints registriert, siehe Abbildung 2-11. Ein Beispiel für Endpoints ist folgende Adresse:
 
 <https://dataprovider-vws4ls.e34eabb8a136438fafe9.germanywestcentral.aksapp.io/api/v1/dsp>
@@ -303,7 +378,7 @@ Zuletzt werden die deployten EDCs mit ihren konkreten Endpoints registriert, sie
 ![image](https://github.com/user-attachments/assets/a46ee9aa-a4fd-4ac2-85c2-f7e480524b77)     
 Abbildung 2-11: Abschluss Connector Registration
 
-#### Data Provisioning
+### <a name="_11.2.5"></a>Data Provisioning
 
 Folgend wird der Data-Provisioning-Teil beschrieben, bestehend aus der Population des BaSyx-Backends, sowie der Anlegung der Assets, Policies und Contracts im EDC.
 
@@ -311,12 +386,14 @@ Für die Durchführung des Szenarios wird eine Postman Collection beigelegt, wel
 
 Die folgenden Schritte müssen an den entsprechenden Endpoints der Provider EDC Management API und des BaSyx-Environments durchgeführt werden, um die Submodelle bereitzustellen, eine Contract Negotiation und den dazugehörigen Transfer des Keycloak-Tokens durchzuführen und schlussendlich den Zugriff auf die Submodelle zu ermöglichen.
 
-##### BaSyx-Backend
+#### <a name="_11.2.5.1"></a>BaSyx-Backend
 
 Im Rahmen des Berichtzeitraums wurde das Eclipse BaSyx Sicherheitsfeature eingesetzt und weiterentwickelt, um eine regelbasierte Zugriffssteuerung zu ermöglichen. BaSyx gliedert sich in mehrere Komponenten: das AAS-Repository, Submodel-Repository und ConceptDescription-Repository sowie die AAS-Registry, Submodel Registry und den AAS-Discovery Service. Die ersten drei Repository-Komponenten werden häufig als "AAS-Environment" zusammengefasst.
 
+##### <a name="_11.2.5.1.1"></a>Sicherheitsfeature und RBAC
 Das Sicherheitsfeature implementiert zunächst eine RBAC in Verbindung mit Keycloak, das als Identity Provider fungiert. Nutzer und deren Rollen werden in Keycloak gespeichert, während die Zugriffsregeln in BaSyx hinterlegt sind, um den Zugriff auf Ressourcen im Backend zu steuern. Diese Regeln werden in einer oder mehreren JSON-Dateien als Array abgelegt und folgen dem JSON-Schema in Listing 2-1, welches die Definition von Rollen, erlaubten Aktionen und Zielinformationen, bzw. die betroffenen Ressourcen umfasst.
 
+##### <a name="_11.2.5.1.2"></a>JSON-Schema für RBAC-Regeln
 ```
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
@@ -417,16 +494,14 @@ Das Sicherheitsfeature implementiert zunächst eine RBAC in Verbindung mit Keycl
     "additionalProperties": false
   }
 }
-
-````    
+```    
 Listing 2-1: RBAC Rules JSON Schema
 
+##### <a name="_11.2.5.1.3"></a>Beispielregeln
 Die als JSON-Objekte definierten Regeln bestehen aus mehreren Schlüssel-Properties. Die "role" beschreibt den Namen der Rolle, während "action" die erlaubten Aktionen wie "CREATE", "READ", "UPDATE", "DELETE" und "EXECUTE" umfasst. Die "targetInformation" gibt die Ressource an, auf welche die Regel angewendet wird. Hierbei ist "@type" entscheidend, da es den Typ der Ressource festlegt, wobei die Optionen "aas", "submodel", "concept-description", "aas-environment", "aas-registry", "submodel-registry" und "aas-discovery-service" zur Verfügung stehen. Zusätzlich können für die spezifischen Ressourcen, je nach Typ ("@type"), weitere Properties definiert werden, die die Identifizierung von AAS-, Submodel- oder Concept-Description-Repository, sowie den Registries und dem Discovery Service ermöglichen. Die Typen "aas", "submodel" und "concept-description" können auch hier wieder als "aas-environment" zusammengefasst werden
 
-Für "@type": "aas" lautet die nachfolgende Property "aasIds", welche als Wert entweder einen String oder einen Array von Strings mit den AASIdentifiern, für die diese Regel gilt, hat.
-
-**Beispiel**
-````
+**Beispiel für "@type": "aas"**
+```
 {
   "role": "basyx-reader",
   "action": "READ",
@@ -435,13 +510,11 @@ Für "@type": "aas" lautet die nachfolgende Property "aasIds", welche als Wert e
     "aasIds": "*"
   }
 }
-````
+```    
 Listing 2-2: Beispiel einer AAS Repository Rolle
 
-Für "@type": "submodel" lauten die nachfolgenden Properties "submodelIds" und optional "submodelElementIdShortPaths", welche als Wert entweder einen String oder einen Array von Strings mit dem SubmodelIdentifiern bzw. SubmodelElementIdShortPaths für die diese Regel gilt, haben. Werden die SubmodelElementsIdShortPaths nicht explizit angegeben, sind implizit alle SubmodelElemente des betroffenen Submodels für die definierten Aktionen zugänglich.
-
-**Beispiel**
-````
+**Beispiel für "@type": "submodel"**
+```
 {
   "role": "basyx-reader",
   "action": "READ",
@@ -451,13 +524,11 @@ Für "@type": "submodel" lauten die nachfolgenden Properties "submodelIds" und o
     "submodelElementIdShortPaths": "*"
   }
 }
-````     
+```     
 Listing 2-3: Beispiel einer Submodel Repository Rolle
 
-Für "@type": "concept-description" lautet die nachfolgende Property "conceptDescriptionIds", welche als Wert entweder einen String oder einen Array von Strings mit dem ConceptDescriptionIdentifiern, für welche diese Regel gilt, hat.
-
-**Beispiel:**
-````     
+**Beispiel für "@type": "concept-description"**
+```     
 {
   "role": "basyx-reader",
   "action": "READ",
@@ -466,13 +537,11 @@ Für "@type": "concept-description" lautet die nachfolgende Property "conceptDes
     "conceptDescriptionIds": "*"
   }
 }
-````     
+```     
 Listing 2-4: Beispiel einer Concept Description Repository Rolle
 
-Für "@type": "aas-environment" können dieselben Properties der Typen "aas", "submodel" und "concept-description" folgen.
-
-**Beispiel**
-````     
+**Beispiel für "@type": "aas-environment"**
+```     
 {
   "role": "admin",
   "action": ["CREATE", "READ", "UPDATE", "DELETE"],
@@ -482,13 +551,11 @@ Für "@type": "aas-environment" können dieselben Properties der Typen "aas", "s
     "submodelIds": "*"
   }
 }
-````     
+```     
 Listing 2-5: Beispiel einer AAS Environment Rolle
 
-Für "@type": "aas-registry" lautet die nachfolgende Property, wie bei "aas", ebenfalls "aasIds" welche als Wert entweder einen String oder einen Array von Strings mit dem AASIdentifiern, für welche diese Regel gilt, hat.
-
-**Beispiel**
-````     
+**Beispiel für "@type": "aas-registry"**
+```     
 {
   "role": "basyx-reader",
   "action": "READ",
@@ -497,13 +564,11 @@ Für "@type": "aas-registry" lautet die nachfolgende Property, wie bei "aas", eb
     "aasIds": "*"
   }
 }
-````     
+```     
 Listing 2-6: Beispiel einer AAS Registry Rolle
 
-Für "@type": "submodel-registry" lautet die nachfolgende Property, wie bei "submodel", ebenfalls "submodelIds", welche als Wert entweder einen String oder einen Array von Strings mit dem SubmodelIdentifiern, für welche diese Regel gilt, hat.
-
-**Beispiel**
-````     
+**Beispiel für "@type": "submodel-registry"**
+```     
 {
   "role": "basyx-reader",
   "action": "READ",
@@ -512,14 +577,11 @@ Für "@type": "submodel-registry" lautet die nachfolgende Property, wie bei "sub
     "submodelIds": "*"
   }
 }
-
-````     
+```     
 Listing 2-7: Beispiel einer Submodel Registry Rolle
 
-Für "@type": "aas-discovery-service" lautet die nachfolgende Property, wie bei "aas" und "aas-registry", ebenfalls "aasIds", welche als Wert entweder einen String oder einen Array von Strings mit dem AASIdentifiern, für welche diese Regel gilt, hat, gefolgt von der Property "assetIds", durch welche die erlaubten AssetIds bestimmt werden. Hier gilt die Besonderheit, dass eine AssetId selbst aus zwei Werten bestimmt wird, daher als Objekt, bestehend aus den Properties "name" und "value" angegeben wird. wenn keine AssetIds erlaubt sein sollen, muss diese Property als leeres Array angegeben werden. andernfalls als Array von Objekten mit den genannten Properties.
-
-**Beispiel**
-````     
+**Beispiel für "@type": "aas-discovery-service"**
+```     
 {
   "role": "basyx-aas-discoverer",
   "action": "READ",
@@ -534,13 +596,13 @@ Für "@type": "aas-discovery-service" lautet die nachfolgende Property, wie bei 
     ]
   }
 }
-````     
+```     
 Listing 2-8: Beispiel AAS Discovery Service Rolle
 
 Für Alle Properties nach @type kann auch das Wildcard Symbol "\*" angegeben werden, um alle Ressourcen der betroffenen Komponente zu erlauben (Wie in den Beispielen bereits exzessiv genutzt). Es existiert keine Ausschluss-Syntax, um auszudrücken, dass "*alle außer ...*" erlaubt sind. Daher müssen alle zulässigen Ressourcen stets explizit angegeben werden, sofern nicht alle Ressourcen erlaubt sind.
 
 Für die Anbindung an Catena-X wurde eine klare Zuordnung zwischen Rolle und BPN geschaffen, indem die BPN selbst direkt als Rolle verwendet wurde. Eine Beispielregel könnte damit folgendermaßen aussehen:
-````     
+```     
 {
   "role": "BPNL000000OEM1AT",
   "action": "READ",
@@ -557,19 +619,19 @@ Für die Anbindung an Catena-X wurde eine klare Zuordnung zwischen Rolle und BPN
       "https://example.com/ids/sm/1203_7012_1142_2277_OEM1"]
   }
 }
-````     
+```     
 Listing 2-9: CATENA-X Regel mit BPN als Rolle
 
 Diese Regeln werden in einer oder mehreren JSON-Dateien in einem bestimmten Verzeichnis gepflegt. Da die BaSyx Komponenten jeweils in einem eigenen Docker Container liegen, wird dieses Verzeichnis entsprechend für jeden Container explizit gemountet, also in den jeweiligen Container gespiegelt.
 
 Um den Authentifizierungsworkflow abzuschließen, ist es notwendig, die entsprechenden Nutzer und Rollen in Keycloak anzulegen.
 
-##### Konnektoren
+#### <a name="_11.2.5.2"></a>Konnektoren
 
-###### **Asset**
+##### <a name="_11.2.5.2.1"></a>Asset
 
 **POST** {{PROVIDER_MANAGEMENT_URL}}/v3/assets
-````     
+```     
 {
   "@context": {
     "edc": "https://w3id.org/edc/v0.0.1/ns/",
@@ -595,13 +657,13 @@ Um den Authentifizierungsworkflow abzuschließen, ist es notwendig, die entsprec
     "oauth2:clientSecretKey": "{{PROVIDER_CLIENT_SECRET_KEY}}"
   }
 }
-````     
+```     
 Listing 2-10: Asset
 
-###### Policy
+##### <a name="_11.2.5.2.2"></a>Policy
 
 **POST** {{PROVIDER_MANAGEMENT_URL}}/v3/policydefinitions
-````     
+```     
 {
   "@context": {
     "odrl": "http://www.w3.org/ns/odrl/2/"
@@ -632,13 +694,13 @@ Listing 2-10: Asset
     ]
   }
 }
-````     
+```     
 Listing 2-11: Policy
 
-###### Contract
+##### <a name="_11.2.5.2.3"></a>Contract
 
 **POST** {{PROVIDER_MANAGEMENT_URL}}/v3/contractdefinitions
-````     
+```     
 {
     "@context": {},
     "@id": "{{ASSET_ID}}-contract",
@@ -652,10 +714,10 @@ Listing 2-11: Policy
         "operandRight": "{{ASSET_ID}}"
     }
 }
-````     
+```     
 Listing 2-12: Contract
 
-#### Data Consumption
+### <a name="_11.2.6"></a>Data Consumption
 
 Zuerst muss der Katalog angefragt werden, um eine Offer-ID zu erhalten. Dies geschieht durch eine Anfrage an den Katalog via POST zu der URL {{CONSUMER_MANAGEMENT_URL}}/v3/catalog/request. Dabei müssen die relevanten Parameter wie *counterPartyAddress* und *counterPartyId* angegeben werden.
 
@@ -665,12 +727,10 @@ Nachdem die Contract Negotiation abgeschlossen ist, wird das daraus resultierend
 
 Zuletzt wird der Transferprozess durchgeführt, wobei ein Token generiert wird, der zum Zugriff auf BaSyx genutzt werden kann. Dieser Token ermöglicht den sicheren und autorisierten Zugriff auf die Daten und Ressourcen, die im BaSyx-System gespeichert sind.
 
-##### Datentransfer über Konnektoren
-
-**Catalog Request**
+#### <a name="_11.2.6.1"></a>Catalog Request
 
 **POST** {{CONSUMER_MANAGEMENT_URL}}/v3/catalog/request
-````     
+```     
 {
     "@context": {
         "@vocab": "https://w3id.org/edc/v0.0.1/ns/"
@@ -684,13 +744,13 @@ Zuletzt wird der Transferprozess durchgeführt, wobei ein Token generiert wird, 
         "limit": 50
     }
 }
-````     
+```     
 Listing 2-13: Catalog Request
 
-**Contract Negotiation**
+#### <a name="_11.2.6.2"></a>Contract Negotiation
 
 **POST** {{CONSUMER_MANAGEMENT_URL}}/v3/contractnegotiations
-````     
+```     
 {
     "@context": {
         "@vocab": "https://w3id.org/edc/v0.0.1/ns/"
@@ -723,15 +783,15 @@ Listing 2-13: Catalog Request
         "odrl:obligation": []
     }
 }
-````     
+```     
 Listing 2-14: Contract Negotiation
 
-**Transfer Process**
+#### <a name="_11.2.6.3"></a>Transfer Process
 
 **GET** {{CONSUMER_MANAGEMENT_URL}}/v3/contractnegotiations/{{NEGOTIATION_ID}}
 
 **POST** {{CONSUMER_MANAGEMENT_URL}}/v3/transferprocesses
-````     
+```     
 {
     "@context": {
         "@vocab": "https://w3id.org/edc/v0.0.1/ns/"
@@ -748,13 +808,13 @@ Listing 2-14: Contract Negotiation
     "privateProperties": {},
     "callbackAddresses": []
 }
-````     
+```     
 Listing 2-15: Transfer Process
 
-**Zugriff auf das Token**
+#### <a name="_11.2.6.4"></a>Zugriff auf das Token
 
 Der Datentransfer, der im vorherigen Kapitel durchgeführt wurde, ermöglicht die Generierung eines Access-Tokens für einen Client aus dem Keycloak Identity-Provider, welcher eine Berechtigung auf das BaSyx-Backend besitzt.
-````     
+```     
 {
   "@context": "https://w3id.org/dspace/2024/1/context.json",
   "@type": "dspace:TransferStartMessage",
@@ -787,10 +847,10 @@ Der Datentransfer, der im vorherigen Kapitel durchgeführt wurde, ermöglicht di
     ]
   }
 }
-````     
+```     
 Listing 2-16: Zugriff auf das Token
 
-**Zugriff auf das BaSyx-Backend**
+#### <a name="_11.2.6.5"></a>Zugriff auf das BaSyx-Backend
 
 Der Zugriff auf das BaSyx Backend ist durch OAuth 2.0 mit Json-Web-Tokens (JWT) gesichert und erfolgt in zwei Schritten (Siehe Kapitel 2.6.4.1.2). Dabei müssen sich die Benutzer gegenüber Keycloak mit Basic Auth authentifizieren. Dadurch erhalten sie ein JWT-Token, mit dem sie sich im Anschluss gegen das Backend authentifizieren können. Dies Authentifizierung gegen Keycloak erfolgt über die Access Token URL, die bei der verwendeten Version 25.0.6 stets dem Schema *https://\<KEYCLOAK-HOST\>/realms/\<REALM-NAME\>/protocol/openid-connect/token* folgt. Für die initiale Authentifizierung gibt es zwei Möglichkeiten:
 
@@ -806,11 +866,11 @@ Abbildung 2-12: Keycloak Admin Console – Client ID + Client Secret
 Dafür meldet man sich in der Keycloak Admin Console an, wechselt zu dem gewünschten Realm und wählt im Linken Menü *Clients* aus. Daraufhin wird eine Liste von Clients angezeigt, aus der man den betroffenen Client auswählt. Unter dem Reiter *Settings* findet man die Client ID und unter *Credentials* das Client Secret.
 
 Um zusätzlich einen Nutzer zu Authentifizieren (2), werden die User Credentials im Body der Authentifizierungs Anfrage in dem Folgenden Format mitgegeben:
-````     
+```     
 grant_type=password
 username=<username>
 password=<password>scope=openid
-````     
+```     
 Listing 2-17: User Credentials im Body einer Authentifizierungsanfrage
 
 Da die User Credentials im Body im Klartext übertragen werden und auch die Client Credentials im Header ohne weiteres in ein lesbares Format gebracht werden können, ist an dieser Stelle unbedingt die Verwendung von https zu empfehlen.
@@ -819,31 +879,29 @@ Nach erfolgreicher Authentifizierung stellt Keycloak ein JWT-Token aus. Dieses T
 
 Der weitere Authentifizierungsfluss mit dem Token erfolgt so, dass das JWT-Token in den HTTP-Header jeder nachfolgenden Anfrage an das Backend eingefügt wird. Dies geschieht im Header-Feld "Authorization" mit dem Präfix "Bearer ". Das Token wird bei jeder Anfrage an das BaSyx Backend überprüft, um sicherzustellen, dass er gültig ist und die erforderlichen Berechtigungen für den angeforderten Zugriff vorhanden sind. Keycloak selbst wird nicht für jede Anfrage direkt angesprochen; stattdessen erfolgt die Validierung des Tokens durch die Backend-Anwendung, die sicherstellt, dass der Token nicht abgelaufen ist und die richtigen Rollen und Berechtigungen enthält.
 
-### Ergebnis
+### <a name="_11.2.7"></a>Ergebnis
 
 Als Ergebnis steht am Ende dieses Arbeitspakets ein voll funktionsfähiger Projektdemonstrator zur Verfügung, der nicht nur die technische Machbarkeit des PoCs beweist, sondern auch konkrete Vorschläge und technische Spezifikationen liefert. Diese können die Grundlage für zukünftige Standardisierungsprozesse innerhalb relevanter Organisationen wie Catena-X und der IDTA bilden.
 
-## <a name="_11.3">AP 11.3 – Identity & Access Management (IAM)
+## <a name="_11.3"></a>AP 11.3 – Identity & Access Management (IAM)
 
-### Zielsetzung
+### <a name="_11.3.1"></a>Zielsetzung
 
 In diesem Abschnitt werden die in den vorherigen Arbeitspaketen gewonnenen Erkenntnisse im Hinblick auf Security-Aspekte zusammengefasst. Zudem werden relevante Begriffe erläutert und ein Ausblick darauf gegeben, wie die erarbeiteten Lösungen in der Zukunft noch optimiert und weitergeführt werden können.
 
-### Vorgehensweise und Inhalte
+### <a name="_11.3.2"></a>Vorgehensweise und Inhalte
 
-Grundsätzlich lassen sich zwei Ebenen bei der Betrachtung von Security-Aspekten unterscheiden. Die erste Ebene bezieht sich auf die Authentifizierung und Autorisierung von Benutzern oder Systemen. Hier stellt sich die Frage, wer sich wie authentifizieren kann und welche zusätzlichen Informationen zur Autorisierung bereitgestellt werden müssen.
+Grundsätzlich lassen sich zwei Ebenen bei der Betrachtung von Security-Aspekten unterscheiden.
 
+#### <a name="_11.3.2.1"></a>Authentifizierungsebene
+Die erste Ebene bezieht sich auf die Authentifizierung und Autorisierung von Benutzern oder Systemen. Hier stellt sich die Frage, wer sich wie authentifizieren kann und welche zusätzlichen Informationen zur Autorisierung bereitgestellt werden müssen.
+
+#### <a name="_11.3.2.2"></a>Infrastrukturebene
 Die zweite Ebene bezieht sich auf die verwendete Infrastruktur. Dabei geht es darum, wie die Authentifizierung geregelt wird (zentral oder dezentral) und welche Kombinationen möglich sind.
 
-Im ersten Abschnitt werden wir uns mit der Idee hinter der IDTA Security Spezifikation beschäftigen, die sich hauptsächlich auf RBAC und ABAC stützt. Dabei spielt auch die Verwendung von Identity Providern eine wichtige Rolle und wie diese in verschiedenen Szenarien eingesetzt werden können. Es werden verschiedene Szenarien durchgespielt, um zu verdeutlichen, wie Identity Provider in der Praxis eingesetzt werden können. Dabei wird auch auf die Vor- und Nachteile verschiedener Implementierungen eingehen.
+### <a name="_11.3.3"></a>Authentifizierung
 
-Nach Aufbau der Verbindung schlägt die IDTA-Sicherheitsspezifikation die Verwendung eines JSON-Web-Tokens (JWT-Tokens) zur Absicherung des Kommunikationskanals vor. JWT-Tokens sind in der aktuellen Kommunikation mit REST nicht mehr wegzudenken und hinlänglich bekannt. In einem der nachfolgenden Kapitel wird deshalb nur kurz auf JWT-Tokens und weitere Möglichkeiten eingegangen.
-
-Um einen sicheren Kommunikationskanal einzurichten, ist es in der Regel erforderlich, sicherzustellen, dass der Kommunikationspartner ein berechtigtes Interesse an den zu übermittelnden Daten hat. In der Umgebung von Catena-X wird dazu eine Business Partner Number (BPN) verwendet, die entsprechend abzusichern ist. Die BPN kann durch eine Signatur des zentralen Anbieters geschützt oder alternativ eine Dezentrale ID (DID) verwendet werden.
-
-### Authentifizierung
-
-#### Der allgemeine Ablauf
+#### <a name="_11.3.3.1"></a>Der allgemeine Ablauf
 
 Die Authentifizierung bei einem Data Provider erfolgt derzeit über die BPN, siehe Abbildung 2-13. Mit der BPN kann man bei einem Data Provider einen Katalog anfordern, welcher Informationen über den möglichen Zugriff enthält. Ohne die BPN stellt der Data Provider entweder keine oder nur allgemeine Daten zur Verfügung.
 
@@ -852,17 +910,13 @@ Eingeschränkt wird diese Liste vom Data Provider, durch die Angabe von Regeln (
 ![image](https://github.com/user-attachments/assets/ab19ec08-f5a2-4b91-a0b1-a4adee5acee6)     
 Abbildung 2-13: Authentifizierungs-Workflow
 
-Aus dem Katalog (catalog) wird ein passendes Angebot (offer) ausgewählt. Der Data Provider bestätigt das Angebot anschließend in Form einer Vereinbarung (agreement). Damit kommt ein Vertrag (contract) zwischen dem Data Consumer und Data Provider zustande. Auf Basis der ausgetauschten Daten wird dann der Zugriff auf bestimmte Bereiche des Data Providers freigegeben.
-
-##### Policies
-
+##### <a name="_11.3.3.1.1"></a>Policies
 Der Katalog mit den Angeboten wird für einen Interessenten dynamisch erstellt. Um die Auswahl der relevanten Angebote für den Interessenten im Katalog einzuschränken, sind Auswahlregeln notwendig. Hierfür werden in diesem Fall Policies verwendet. Policies sind "Wenn-Dann"-Regeln – wenn die Bedingung erfüllt ist, wird das Angebot in den Katalog aufgenommen.
 
-##### IDTA Security Spezifikation
-
+##### <a name="_11.3.3.1.2"></a>IDTA Security Spezifikation
 Diese Spezifikation zielt darauf ab Einschränkungen der zu übermittelten Daten (und nicht des Angebots) vorzunehmen. Grundsätzlich spricht nichts dagegen die Regeln der IDTA Security Spezifikation auch auf die Angebote des Katalogs anzuwenden. Im Moment findet die Auswahl des Angebots auf Basis der Policies statt. Um die IDTA Security Spezifikation auch auf die Filterung des Angebotskatalogs anzuwenden, müssen die bisherigen Implementierungen auf Basis der Policies angepasst oder ersetzt werden.
 
-#### Konsequenzen aus dem allgemeinen Ablauf
+#### <a name="_11.3.3.2"></a>Konsequenzen aus dem allgemeinen Ablauf
 
 Wie aus den Ausführungen hervorgeht, gibt es auf Data Provider Seite keine speziellen Zugriffe für ausgewählte Personen, Personengruppen oder Subjekte (z.B. eine Maschine). Mit der BPN identifiziert man sich als interessierter Business Partner.
 
@@ -870,7 +924,7 @@ Die tatsächliche Auswahl geht vom Data Consumer aus, indem er aus dem Katalog e
 
 Exkurs: Durch die Einführung einer individuellen Anmeldung eines Users kann der Data Provider die Kontrolle über den Zugriff auf seine Daten verbessern. Erreichen könnte man dies, indem man einen speziellen Eintrag im Katalog anbietet, der eine individuelle Anmeldung eines Users erforderlich macht. Hierfür ist eine Erweiterung (Extension) des EDC auf Seiten des Data Providers notwendig. Zusätzlich muss der Data Provider eine Erfassung der angemeldeten User ermöglichen, indem er eine Identity Provider Funktionalität bereitstellt. Durch die individuelle Anmeldung eines Users kann der Data Provider sicherstellen, dass nur autorisierte Benutzer Zugriff auf seine Daten erhalten. Hierbei kann er auch die Rollen und Berechtigungen der Benutzer berücksichtigen und so ein höheres Maß an Sicherheit gewährleisten.
 
-#### BPN Security
+#### <a name="_11.3.3.3"></a>BPN Security
 
 Aktuell sind zwei Verfahren spezifiziert, welche die Absicherung der BPN gewährleisten.
 
@@ -880,11 +934,11 @@ Eine weitere Möglichkeit ist die Verwendung einer DID. Dieses Verfahren ist äh
 
 Exkurs: Da der Besitzer einer DID diese anpassen kann, könnte man sich beispielsweise vorstellen, dass der Consumer seine DID bzw. die VC so erweitert, dass der Data Provider zusätzliche Informationen erhält (z.B. eine Rolle), die es ermöglichen, den Katalog gezielter anzupassen. Im Gegensatz zur ursprünglichen Variante kann der Data Provider nun genauer entscheiden, welche Angebote er welchem Anfragenden anbietet.
 
-### Autorisierung
+### <a name="_11.3.4"></a>Autorisierung
 
 Die Autorisierung erfolgt in zwei verschieden Abschnitten. Zunächst findet beim Data Provider eine Filterung der möglichen Angebote anhand der BPN statt. Hat der Data Consumer dann einen Vertrag mit dem Data Provider geschlossen, bekommt der Data Consumer ein Access-Token, welcher weitere Informationen (Claims) enthält. Diese Informationen machen bei Zugriffen auf die Daten des Data Provider anschließend eine weitere Filterung der Daten möglich.
 
-Die Prüfungen, welche bei Zugriff erfolgen, sind in der IDTA Security Spezifikation beschrieben. Grundlage zur Autorisierung ist ein JWT-Token.
+Die Prüfungen, welche bei Zugriff erfolgen, sind in der IDTA Security Spezifikation beschrieben. Grundlage zur Autorisierung ist ein JWT-Token.Die Prüfungen, welche bei Zugriff erfolgen, sind in der IDTA Security Spezifikation beschrieben. Grundlage zur Autorisierung ist ein JWT-Token.
 
 #### Token
 
