@@ -40,32 +40,28 @@ Das Modul wurde als eigenständiges BaSyx UI-Modul umgesetzt und nutzt das zuvor
 
 Der Benutzer wählt ein konkretes Produkt aus, das produziert werden soll. In unserem Anwendungsfall handelt es sich um ein Kabel mit definiertem Querschnitt, das als Halbfabrikat klassifiziert ist, siehe Abbildung 5-1.
 
-![A screenshot of a computer AI-generated content may be incorrect.](media/9e3913eeb0f1637f62022faf4a162302.png)
-
+![image](https://github.com/user-attachments/assets/aff67ae1-14eb-4955-9677-5786564e688a)   
 Abbildung 5-1: BaSyx-Modul VWS4LS Demonstrator - Produktauswahl
 
 **Schritt 2: Auftragsbestätigung**
 
 Im nächsten Schritt, siehe Abbildung 5-2 wird die Auftragsgröße festgelegt. Für Demonstrationszwecke wird ein einfacher Auftrag mit einer Charge (engl. Batch), einem Los (engl. Lot) und einem Produkt abgebildet.
 
-![A screenshot of a computer AI-generated content may be incorrect.](media/2a40cffd7a8dd222d1252a707052f089.png)
-
+![image](https://github.com/user-attachments/assets/35ddcdcb-0e1f-41cd-a4f9-93fb83ba12e5)    
 Abbildung 5-2: BaSyx-Modul VWS4LS Demonstrator - Auftragsdaten
 
 **Schritt 3: Maschinenverhandlung**
 
 Auf Basis der Produktspezifikation wird ein Produktionsprozess abgeleitet. Eine Flowable-Engine wird genutzt, um eine Verhandlung über mögliche Produktionsressourcen (Maschinen) anzustoßen, siehe Abbildung 5-3. In dieser Phase geben verschiedene virtuelle Produktionssysteme Gebote ab.
 
-![A screenshot of a computer AI-generated content may be incorrect.](media/bc81a40e63559735ca75622054776c6f.png)
-
+![image](https://github.com/user-attachments/assets/3340a490-9bd6-452e-9343-dbd919a4330f)    
 Abbildung 5-3: BaSyx-Modul VWS4LS Demonstrator – Verhandlungsprozess
 
 **Schritt 4: Maschinenauswahl**
 
 Die Ergebnisse der Verhandlung werden dem Nutzer präsentiert. Er kann nun eine geeignete Maschine auswählen, auf der der Produktionsprozess durchgeführt werden soll, siehe Abbildung 5-4.
 
-![Ein Bild, das Text, Screenshot, Webseite, Software enthält. KI-generierte Inhalte können fehlerhaft sein.](media/a890dea295a511b76f446c44df07f42c.png)
-
+![image](https://github.com/user-attachments/assets/46b3151e-f0e1-4d5f-8e8e-e11be4a56130)    
 Abbildung 5-4: BaSyx-Modul VWS4LS Demonstrator - Maschinenauswahl
 
 **Schritt 5: Asset-Bestätigung per Scan**
@@ -79,24 +75,21 @@ Vor dem Produktionsstart werden alle relevanten Assets durch QR-Code-Scans best�
 
 Die Validierung dient der Sicherstellung, dass alle für die Produktion benötigten Komponenten korrekt bereitgestellt wurden.
 
-![A screenshot of a computer AI-generated content may be incorrect.](media/c3a989f32627a54c57355c5e35b29e5a.png)
-
+![image](https://github.com/user-attachments/assets/07f844df-d505-4254-94c6-c2d63f2fd280)    
 Abbildung 5-5: BaSyx-Modul VWS4LS Demonstrator - Asset Identifikation (Spezifische Asset ID)
 
 **Schritt 6: Prozessdurchführung**
 
 Der Produktionsprozess wird auf Basis eines BPMN-Diagramms visualisiert, siehe Abbildung 5-6. Das Diagramm wird mit *bpmn.io* eingebettet und zeigt stets den aktuellen Zustand des Prozesses an, z. B. „Schneiden“, „Abisolieren“ oder „Crimpen“.
 
-![Ein Bild, das Text, Screenshot, Software, Computersymbol enthält. KI-generierte Inhalte können fehlerhaft sein.](media/1fe44bfe481dec2de18c7d9961595043.png)
-
+![image](https://github.com/user-attachments/assets/7995db3c-e46e-40aa-85aa-4e011e252c61)
 Abbildung 5-6: BaSyx-Modul VWS4LS Demonstrator - Prozessdurchführung
 
 **Schritt 7: Qualitätsprüfung der Crimpung**
 
 Nach dem Crimpvorgang wird die sogenannte Crimpkurve als Qualitätsmerkmal ausgewertet. Die Kurve wird in einem Diagramm visualisiert und mit definierten Grenzwerten verglichen, siehe Abbildung 5-7. Der Benutzer erhält eine Rückmeldung darüber, ob der Produktionsschritt innerhalb der Qualitätsparameter liegt.
 
-![Ein Bild, das Text, Screenshot, Reihe, Zahl enthält. KI-generierte Inhalte können fehlerhaft sein.](media/71d814859c74d3c12c18a537b4d7174d.png)
-
+![image](https://github.com/user-attachments/assets/ec5f3ece-f304-4d72-a8dc-553995c0b3ff)    
 Abbildung 5-7: BaSyx-Modul VWS4LS Demonstrator – Qualitätsprüfung der Crimpung
 
 ## Änderungsmanagement Einleitung
@@ -115,14 +108,12 @@ Teilmodellen, Teilmodellelementen, Verwaltungsschalen und Concept Descriptions b
 
 Das derzeitige Metamodell definiert das Event Element als Teilmodellelement, wodurch dessen Implementierung implizit auf das Innere einer VWS, genauer gesagt auf ein Teilmodell, beschränkt ist. Es kann rein logisch gesehen daher nur Ereignisse beobachten, die innerhalb dieser bestimmten VWS auftreten. Die Beobachtung der Erstellung einer VWS-Instanz ist logisch gesehen nicht möglich: In welchem Teilmodell würde man ein Event-Element platzieren, das die Existenz einer VWS überwacht, die entweder noch nicht existiert? Das gleiche Problem gilt für die in Abbildung 5-8 gezeigte Sicherheits-, Alarm- und Infrastruktur, da solche Event Elemente typischerweise nicht dem durch eine einzelne VWS repräsentierten Asset zuzuordnen sind. Diese Einschränkung könnte nur durch die Instanziierung einer VWS überwunden werden, die die VWS-Umgebung selbst repräsentiert. Eine Entscheidung, die diskutiert werden muss. Diese Probleme motivieren eine Neupositionierung des Event Elements innerhalb des VWS-Metamodells. Da die Abbildung auf Englisch ist, wurde für den Begriff VWS die englische Abkürzung AAS (Asset Administration Shell) genutzt.
 
-![](media/f99cc404e42470313f3c02dcaf34cdb0.jpg)
-
+![image](https://github.com/user-attachments/assets/b3eb40e3-664b-476f-9ce1-be981546c96d)    
 Abbildung 5-8: VWS-Entitäten und ihre Eventtypen
 
 Das entwickelte technische Konzept wurde im VWS4LS-Demonstrator prototypisch umgesetzt und evaluiert. Über die entwickelte Weboberfläche (siehe Kapitel 5.1.1) können VWS-Entitäten, im folgenden „Element“ genannt, abonniert und über Änderungen der abonnierten Elemente informiert werden. Je nach Szenario, sollen diese Änderungen vom Nutzer angenommen oder abgelehnt werden dürfen. Das allgemeine Anwendungsfalldiagramm dazu ist in Abbildung 5-9 zu sehen.
 
-![](media/5555609aafc8b4b69c3f9240c8a9a502.jpg)
-
+![image](https://github.com/user-attachments/assets/c096e8ea-8923-4efa-8a16-28b9ba80751a)    
 Abbildung 5-9: Anwendungsfalldiagramm Änderungsmanagement
 
 Ziel dieses Anwendungsfalls ist es nicht nachgeschaltete Automatismen, nach einer Änderung auszuführen, sondern lediglich über eine erfolgte Änderung zu informieren. Solche Automatismen beziehen sich im Änderungsmanagement der Leitungssatzentwicklung beispielsweise auf Entscheidungs- und Anpassungsvorgänge, wenn z. B. die Länge einer Leitung geändert werden muss. Das ist nicht Teil des hier definierten Änderungsmanagements.
@@ -133,16 +124,14 @@ Aus dem allgemeinen Anwendungsfall und den zuvor in Abbildung 5-8 definierten VW
 
 In diesem Szenario wird sich auf das Abonnieren einer Änderung eines Teilmodellelements fokussiert. D.h. der Abonnent möchte informiert werden, sobald sich der Wert eines Teilmodellelements verändert. Dies kann die Metainformation des Teilmodellelements betreffen oder aber den Wert des Elements selbst. Das Szenario ist in Abbildung 5-10 dargestellt. Als Voraussetzung wird angenommen, dass der VWS-Designer bereits eine VWS mit ihren Teilmodellen erstellt hat (1). Über einen Event-Broker abonniert der VWS-Designer anschließend ein Teilmodellelement (2). Sobald eine Applikation den Wert dieses Teilmodellelements ändert (3), wird der VWS-Designer durch den Broker über diese Änderung informiert (4).
 
-![](media/4e84172992d962cfe21bdc6daf792694.jpg)
-
+![image](https://github.com/user-attachments/assets/23633b0e-9999-4f31-8c28-7cad182b950a)    
 Abbildung 5-10: allgemeines Szenario - Abonnieren eines Teilmodellelements (update)
 
 Bezug zu dem VWS4LS-Demonstrator
 
 Bezogen auf den VWS4LS-Demonstrator nimmt der Produktionsleiter die Rolle des VWS-Designers ein und die externe Applikation wird von einem Manufacturing Execution System (MES) eingenommen, siehe Abbildung 5-11. Der Produktionsleiter legt eine Auftrags-VWS an (1) und abonniert den Auftragsstatus (2). Ein Mitarbeiter führt die notwendigen Produktionsschritte aus und trägt deren Ergebnisse in das MES ein. Dieses wiederum aktualisiert die Auftrags-VWS und ändert unter anderem auch das Teilmodellelement „Produktionsstatus“. Sobald eine Änderung vorgenommen wird, informiert der Broker den Produktionsleiter über die aktuelle Änderung mit Hilfe einer Pop-Up Benachrichtigung.
 
-![](media/37655a84f950395d424bd21df8cdc640.jpg)
-
+![image](https://github.com/user-attachments/assets/08c7d0d5-1db4-4fa7-a532-48dda1107153)    
 Abbildung 5-11: VWS4LS Szenario - Abonnieren eines Teilmodellelements (update)
 
 ### Szenario 2: Abonnieren eines neuen Teilmodells in einer VWS (create)
@@ -151,32 +140,28 @@ Dieses Szenario behandelt die Nachverfolgung von neu hinzugefügten Teilmodellen
 
 Um über ein neu hinzugekommenes Teilmodell informiert zu werden, wählt der VWS-Abonnent zuerst den Eventtyp *create* und danach die VWS, in der die Teilmodelle beobachtet werden sollen aus (1). Dies erledigt er mit Hilfe einer Weboberfläche, die in der Abbildung nicht dargestellt ist. Danach wird im Broker ein Event angelegt, das auslöst, sobald ein neues Teilmodell in der originalen VWS erstellt wurde (2). Sobald ein neues Teilmodell durch den VWS-Designer in der originalen VWS hinzugefügt wird, sendet der Event Broker eine Benachrichtigung an den VWS-Nutzer.
 
-![](media/0cbc6648e3e8149839f4416092fc1e28.jpg)
-
+![image](https://github.com/user-attachments/assets/8d4f3ac2-c294-4103-a774-366730fd61f3)    
 Abbildung 5-12: allgemeines Szenario - Abonnieren eines neuen Teilmodell in einer VWS (create)
 
 Bezug zu dem VWS4LS-Demonstrator
 
 Bezogen auf den VWS4LS-Demonstrator kann in diesem Szenario der Komponentenkatalog eines Konfektionärs herangezogen werden. Die originalen VWS der Komponentenhersteller (VWS-Designer) liegen in diesem Katalog als Kopien und haben aber noch eine Referenz zu der originalen VWS. Der Konfektionär kann bei Durchsicht der Komponenten die VWS auswählen, zu denen er benachrichtigt werden möchte, sobald ein neues Teilmodell hinzugefügt wird (2). Sobald dann die abonnierte Änderung eintritt (3), wird der Konfektionär mittels einer Pop-Up Benachrichtigung über die Änderung informiert (4). Danach kann der Konfektionär entscheiden, ob er dieses neue Teilmodell in seine VWS-Kopie übernehmen möchte oder nicht. Das angewandte Szenario ist mit Ausnahme des letzten Schritts, der Änderungsübernahme, in Abbildung 5-13 dargestellt.
 
-![](media/e0507b4a41d05b22b1a0d45b8667a421.jpg)
-
+![image](https://github.com/user-attachments/assets/2e5c2468-a085-4700-b686-e052d9115ba5)     
 Abbildung 5-13: VWS4LS Szenario - Abonnieren eines neuen Teilmodell in einer VWS (create)
 
 ### Szenario 3: Abonnieren einer neuen VWS (create)
 
 In diesem Szenario (siehe Abbildung 5-14) soll der Abonnent über das Hinzufügen einer neuen VWS informiert werden. Dazu abonniert der Abonnent über den Broker ein Event, dass mit dem Hinzufügen einer neuen VWS in einem Repository auslöst (1). Sobald der VWS-Designer eine neue VWS in das Repository hochlädt (2), informiert der Broker den Abonnenten über die Änderung (3).
 
-*![](media/45b54dc89371162c4e36251a331a2717.jpg)*
-
+![image](https://github.com/user-attachments/assets/81b68379-ccc6-45fd-95d4-55fe479283aa)    
 Abbildung 5-14: allgemeines Szenario - Abonnieren einer neuen VWS (create)
 
 Bezug zu dem VWS4LS-Demonstrator
 
 Bezogen auf den VWS4LS-Demonstrator könnte es ein Repository mit Leitungssatz-VWS für einen definierten OEM geben, siehe Abbildung 5-15. Der OEM kann dann die Benachrichtigung über neu hinzugefügte VWS mit Hilfe des Eventtyps „create“ und dem zu beobachtenden Repository abonnieren (1). Sobald ein Leitungssatz hergestellt wurde, lädt der Konfektionär die zugehörige VWS in das Repository des OEM (2) und der Broker sendet dem OEM eine Pop-Up Benachrichtigung (3).
 
-![](media/c8531af3ef29087102789518038f70c6.jpg)
-
+![image](https://github.com/user-attachments/assets/2adfb7e6-3474-48d7-bb52-c666b6bd27c3)    
 Abbildung 5-15: VWS4LS Szenario - Abonnieren einer neuen VWS (create)
 
 Das Ziel der Arbeit ist es zu beschreiben, wie diese Änderungsarten mithilfe des Event-Elements aus der Metamodell-Spezifikation übertragen werden können. Dazu gehören unter anderem folgende Fragen:
@@ -195,8 +180,7 @@ Um ein Asset in seiner VWS zu beschreiben, ist die Rolle des VWS-Designers erfor
 
 Der Ablauf für das Änderungsmanagement ist in Abbildung 5-16 schematisch für das Abonnieren einer einzelnen Verwaltungsschale dargestellt und erfolgt für alle anderen VWS-Elemente in gleicher Weise.
 
-![](media/6db04be317e3a01525e8b66793c80807.jpg)
-
+![image](https://github.com/user-attachments/assets/e8d4fd4c-a604-420c-94cb-125b6ed380b0)    
 Abbildung 5-16: Sequenzdiagramm des allgemeinen Änderungsmanagements
 
 ## Anforderungsanalyse
@@ -214,8 +198,7 @@ Wie im vorherigen Abschnitt beschrieben werden vier Aspekte betrachtet:
 
 Aus dem Anwendungsfall und den abgeleiteten Szenarien ergeben sich die in Abbildung 5-17 dargestellten Elemente der VWS, die der Nutzer bezüglich des Änderungsmanagements abonnieren kann. Dies ist eine Untermenge der in Abbildung 5-8 dargestellten VWS-Elemente und Eventtypen, da nicht alle Möglichkeiten im Projekt aufgrund der zeitlichen Begrenzung umgesetzt werden konnten. Tabelle 51 schlüsselt hierbei die einzelnen Eventtypen, die abonniert werden können (*create*, *update*, *delete*) mit ihren Anforderungen (Tabelle 54) für die gezeigten Elemente auf. Hierbei wurde der Eventtyp „Structure“ in die zwei Subtypen *create* und *delete* aufgeschlüsselt.
 
-![](media/eb5be90cc69672c635608fa88418aa4a.jpg)
-
+![image](https://github.com/user-attachments/assets/8b4585d0-ba85-4a7e-8c18-1361d4be15e2)    
 Abbildung 5-17: Varianten der zu abonnierenden VWS-Elemente mit ausgewählten Eventtypen
 
 Die konkrete Anwendung des Event-Elements auf die in Abbildung 5-17 gezeigten VWS-Elemente erfolgt in Kapitel 5.3.4.
@@ -258,8 +241,7 @@ Elemente, die durch ein Event abonniert werden können, sind wie in der Abbildun
 
 Das Event-Element selbst ist, wie in Abbildung 5-18 zu sehen, spezifiziert.
 
-![](media/ad0d43750c34e93e18f1240293d23d44.jpg)
-
+![image](https://github.com/user-attachments/assets/9ad83b32-38ee-47b9-adcf-2a5014557cd9)    
 Abbildung 5-18: Spezifikation Event-Element [1]
 
 Die aufgeführten Attribute des Event-Element haben folgende Bedeutung:
@@ -290,8 +272,7 @@ Der Inhalt des Events ist durch den *EventPayload* in Abbildung 5-19 definiert. 
 -   **timestamp**: Zeitstempel, an dem das Event ausgelöst wurde.
 -   **payload**: Spezifisch auf das Event angepasster Inhalt als Blob Element. ([\#AF_10](bookmark://AF_10))
 
-![](media/c53bd40024e5f3d2dd813ba6fbd09d50.jpg)
-
+![image](https://github.com/user-attachments/assets/d9a9a51f-097a-4631-8fbd-c8f9f923dd53)    
 Abbildung 5-19: Spezifikation EventPayload [1]
 
 Die ausführliche Spezifikation des Event-Elements, angepasst auf den Anwendungsfall des Änderungsmanagements, erfolgt in Kapitel 5.3.2.
@@ -314,8 +295,7 @@ Bei dieser Option wird das zu einem Teilmodellelement zugehörige Event-Element 
 
 Hinweis: Bei Befolgung dieses Schemas wird das Abonnieren von Änderungen an Verwaltungsschalen, deren Metainformationen und Concept Descriptions ausgeschlossen.
 
-![](media/2c7777f1bbe3e7f3c971b55ce991484d.jpg)
-
+![image](https://github.com/user-attachments/assets/8434388b-9862-4a7f-98c2-b95c45251f27)    
 Abbildung 5-20: Abonnieren durch Hinzufügen des BasicEventElement zu einem Teilmodell
 
 ##### Option 2: Ein Teilmodell nur für Events
@@ -324,8 +304,7 @@ In dieser Option ist es vorgesehen, dass ein Teilmodell zur Sammlung aller Event
 
 Hinweis: Bei Befolgung dieses Schemas wird das Abonnieren von Informationen über das Hinzufügen bzw. Löschen einer Verwaltungsschale ausgeschlossen.
 
-![](media/d73203a5331385fb9b8937cc975a74da.jpg)
-
+![image](https://github.com/user-attachments/assets/73f69ad8-68c8-4376-ad08-da08262809ed)    
 Abbildung 5-21: Abonnieren durch Sammlung von EventElements in spezifischem Teilmodell
 
 Die Vor- und Nachteile beider Optionen sind in Tabelle 52 zusammengefasst.
@@ -341,14 +320,12 @@ Tabelle 52: Vor- und Nachteile der Integration des Event-Elements als Teilmodell
 
 Nachdem das Event-Element im vorhergehenden Abschnitt als Teilmodellelement betrachtet wurde, sieht das folgende Konzept vor, das Event-Element wie eine VWS oder ein Teilmodell gemäß Abbildung 5-22 zu spezifizieren.
 
-![](media/5b2a71540e108e3aa54562e6f5990fd1.jpg)
-
+![image](https://github.com/user-attachments/assets/28386146-6f5a-4c85-845c-e93a89b63595)    
 Abbildung 5-22: Neue Spezifizierung des Event-Elements in der VWS-Umgebung
 
 Dieses Konzept bedingt die Definition neuer Infrastrukturkomponenten (Repository und Registry), wie sie es auch bereits für VWS, Teilmodelle und Concept Descriptions gibt. Das bedeutet, dass die aktuelle Spezifikation des VWS-Metamodells [1] geändert und für die Event-Registry, die die Endpunkte zu den Event-Elementen beinhaltet, ein Descriptor mit Metainformationen spezifiziert werden muss. Die Events selbst werden in einem bzw. mehreren separaten Repositories gehostet. Über ein Eventing Feature, das das Repository nutzt, können die Nachrichten des Events, der sogenannte Event Payload, zwischen Teilnehmern versendet werden. Das allgemeine Konzept ist in Abbildung 5-23 zu sehen. Die genaue Spezifizierung erfolgt in Kapitel 5.5. Notwendige Anpassungen am definierten Event-Element ([\#AF_17](bookmark://AF_17)) und die Definition der Schnittstellen der Infrastrukturkomponeten ([\#AF_18](bookmark://AF_18)) sind weitere Anforderungen.
 
-![](media/01407027067ad543fbdb2d4ce7515eaa.jpg)
-
+![image](https://github.com/user-attachments/assets/4ec58617-59d5-4ea6-9a47-c5e54e83d57c)    
 Abbildung 5-23: Infrastrukturkomponenten für das Event
 
 Die Vor- und Nachteile des Konzepts sind in Tabelle 53 aufgeführt.
@@ -404,8 +381,7 @@ Der erste Abschnitt beschäftigt sich mit der Systemarchitektur für das Event-E
 
 In Abbildung 5-24 ist die technologieneutrale Systemarchitektur für das Event als eigenständiges Element des VWS-Metamodells zu sehen. Zentrales Element bildet das Eventing-Feature, dass die Verteilung der *EventPayloads* ermöglicht, während das Event Repository und die Event Registry die Event-Elemente und -Descriptoren speichern. Das Eventing-Feature selbst besteht aus einem Orchestration-Layer, dass die Kommunikation zwischen den Subkomponenten orchestriert. Dazu zählt die Konfiguration des Event Payload Transformers und des Event Routers durch die Events im Event Repository. Der Event Payload Transformer empfängt über einen externen Observer die stattfindenden Änderungen in einem VWS Repository. Diese Nachrichten werden noch nicht im spezifizierten *EventPayload* übertragen, sodass der Event Payload Transformer für verschiedene Observer die Umwandlung in den *EventPayload* vornimmt. Diese *EventPayloads* werden anschließend an den Event Router weitergeleitet. Der Event Router erzeugt mit seiner eigenen Konfiguration die Message Broker, die in den Event-Elementen spezifiziert sind. Mit dem Empfang des *EventPayloads*, verteilt der Event Router den Payload auf den richtigen Message Broker. Von außen kann nun ein Subscriber ein Event-Element aus dem Event-Repository lesen und mit Hilfe des darin beschriebenen Endpunktes des Message Brokers sich direkt mit dem jeweiligen Broker verbinden und die *EventPayloads* direkt empfangen. Die Schnittstellenspezifikation der Event-Registry und des Event-Repository erfolgt in Abschnitt 5.5.3.
 
-![](media/555c6f91c3d341196ba1a11e8b1d4239.jpg)
-
+![image](https://github.com/user-attachments/assets/ba0ff595-7e1a-4845-8006-bbb22fb66220)    
 Abbildung 5-24: Systemarchitektur für das Event
 
 ## Definition der Event-Metamodellelemente
@@ -414,20 +390,17 @@ In der allgemeinen Systemarchitektur aus Abbildung 5-22 sind die drei wichtigen 
 
 Begonnen wird mit dem *EventDescriptor* (s. Abbildung 5-25). Er soll unter anderem semantische Informationen über die Art des Event-Elements beinhalten. Dies geschieht über die *semanticId* und *supplementalSemanticId*. (Die genaue Definition der semanticId erfolgt in Abschnitt 5.3.3) Des Weiteren muss der Endpunkt, administrative Informationen und Benennungen des *BasicEventElements* erfolgen. Die genannten Punkte sind bereits alle im *SubmodelDescriptor* aus ​[3]​ spezifiziert, weshalb diese Struktur für den *EventDescriptor* übernommen wurde.
 
-![](media/209055b6e3d4d17ee17d98fa08d77a1a.jpg)
-
+![image](https://github.com/user-attachments/assets/63c23df1-7042-4a61-85e2-f04324b4344d)    
 Abbildung 5-25: VWS4LS Definition EventDescriptor
 
 In Abbildung 5-26 erfolgt die neue Definition des *BasicEventElement*. Da es in dieser Lösung nicht als Teilmodellelement betrachtet wird, sind Anpassungen notwendig. Das *EventElement* muss die gleichen Metainformationen erhalten, wie ein Teilmodell, da es nun als eigenständiges Element neben dem Teilmodell betrachtet wird. Das heißt, das *EventElement* erbt von den Klassen *Identifiable*, *HasSemantics*, *Qualifiable* und *HasDataSpecification*. Die Elemente im abgeleiteten *BasicEventElement* bleiben bis auf eine Änderung der Attribute „observed“ und „messageBroker“ von „Referable“ auf „Reference“ gleich. Der Grund für die Änderung liegt darin, dass im Falle des Eventtyps „create“ für eine neue VWS, das zu beobachtende Environment verlinkt werden muss. Dies geht nicht über das Element „Referable“.
 
-![](media/bb8356bdfbdf3f5e2d3512be62825157.jpg)
-
+![image](https://github.com/user-attachments/assets/2551688b-f920-4e51-a004-2b353ff58cf7)    
 Abbildung 5-26: a) derzeitige EventElement Spezifikation und b) VWS4LS Spezifikation
 
 Der *EventPayload* wird ebenfalls einer kleinen Veränderung unterzogen. Der Typ der „observableReference“ wird von „Referable“ zu „Reference“ geändert, siehe Abbildung 5-27.
 
-![](media/7a89bb65d19d2d82f7c0e47069b88a6b.jpg)
-
+![image](https://github.com/user-attachments/assets/c4829b37-0760-4ed4-b6f9-67c6eaeaffbc)    
 Abbildung 5-27: VWS4LS Definition EventPayload
 
 ### Festlegung der Eventtypen
@@ -436,8 +409,7 @@ Für die Definition der semantischen ID von Eventtypen, wurde ein Schema entwick
 
 Erste Eventtypen sind, wie bereits erwähnt, in der Spezifikation des VWS-Metamodells [1] aufgelistet. Diese Auflistung ist in Abbildung 5-28 zu sehen, wobei die für den Anwendungsfall relevanten Eventtypen rot eingerahmt sind. Im Projekt werden für die strukturellen Änderungen Structural Change (SC) verwendet und für die Updates von bestehenden Elementen das Kürzel „**UEE**“ (Update Existing Element). Die Definition der Kürzel für die anderen Eventtypen wird hier nicht vorgenommen.
 
-![Grafik 32, Bild](media/f9ed24767e659313f97d12414201d77f.png)
-
+![image](https://github.com/user-attachments/assets/3d9beab5-0b34-4fcd-b05f-40df2777e25a)    
 Abbildung 5-28: Kategorisierung von Eventtypen nach [1]
 
 Die Änderungsarten wurden bereits mehrfach erwähnt und umfassen **Create, Update und Delete**.
@@ -487,8 +459,7 @@ Am Beispiel der Szenarien aus Kapitel 5.2 wird in den folgenden Abschnitten die 
 
 Das Event-Element selbst ist, wie in Abbildung 5-29 zu sehen, erweitert worden.
 
-![](media/790ccb382d12b8f8012f8dd4b186ebd0.jpg)
-
+![image](https://github.com/user-attachments/assets/b632fe51-a98d-479f-8786-c381e4b9e371)    
 Abbildung 5-29: VWS4LS Definition EventElement und BasicEventElement
 
 Die aufgeführten Attribute des Event-Element haben folgende Bedeutung:
@@ -513,8 +484,7 @@ Der Inhalt des Events ist durch den *EventPayload* in Abbildung 5-30 definiert u
 -   **timestamp**: Zeitstempel, an dem das Event ausgelöst wurde.
 -   **payload**: Spezifisch auf das geänderte Element angepasster Inhalt als serialisierter JSON-String. Im Falle einer strukturellen Änderung in einem Teilmodell, wird das gesamte Teilmodell übergeben. Sollte kein Payload angegeben werden, kann der Inhalt des Elements über die observaleReference und einem Zugriff auf den Server, der das Element hostet, abgerufen werden. Das ist vor allem sinnvoll, wenn Files in einem Teilmodellelement gespeichert werden, die nicht als JSON-String übertragen werden können.
 
-![](media/9de9d26279a8447e4f1ed99b075b1414.jpg)
-
+![image](https://github.com/user-attachments/assets/4f2ef267-b5a6-4fed-bea3-7adf0bf30f7d)    
 Abbildung 5-30: VWS4LS Definition EventPayload
 
 #### Update von Teilmodellelementen
@@ -529,8 +499,7 @@ Listing 53: Beispielhafte Umsetzung
 
 Als „source“ des *EventPayload* wird das *Identifiable* des zugehörigen *BasicEventElement* definiert. Das Attribut „sourceSemanticId“ entspricht dabei exakt dem Attribut „HasSemantics“ des *BasicEventElements*. Das Attribut „observableReference“ enthält in diesem Beispiel analog zum „observed“ des *BasicEventElements* das *Referable* der überwachten Property. Im Falle, dass im „observed“ des *BasicEventElements* die Updates einer VWS beobachtet werden sollen, kann im Attribut „observableReference“ die Referenz auf das Teilmodellelement erfolgen, wenn sich nur dies geändert hat. Die „observableSemanticID“ enthält die semantische ID der beobachteten Property. Das Attribut „Topic“ übernimmt denselben Wert wie das Attribut „messageTopic“ des *BasicEventElement*.
 
-![](media/0e86c84c54fa8d1f51563ad65528690b.jpg)
-
+![image](https://github.com/user-attachments/assets/c40d304f-6dd0-4391-b3b9-f2aa887a8627)     
 Abbildung 5-31: Modellierung update-Event für ein Teilmodellelement (Szenario 1)
 
 #### Create von Teilmodellen
@@ -543,8 +512,7 @@ Das Attribut „observed“ des *BasicEventElement* verweist auf die aasId der �
 
 Als „source“ des *EventPayload* wird das *Identifiable* des zugehörigen *BasicEventElements* definiert. Das Attribut „sourceSemantic“ entspricht dabei exakt dem Attribut „HasSemantics“ des *BasicEventElements*. Das Attribut „observableReference“ im *EventPayload* verweist in diesem Fall auf das neu hinzugefügte Teilmodell. Die „observableSemanticID“ des „EventPayload“ enthält die semantische ID des neuen Teilmodells. Das Attribut „topic“ übernimmt denselben Wert wie das Attribut „messageTopic“ des *BasicEventElements*. Der „payload“ des Events ist das neu hinzugefügte Teilmodell.
 
-![](media/e3fa2dbbd27bb1e59fa4412e52fb79f2.jpg)
-
+![image](https://github.com/user-attachments/assets/b7bf3adc-93c9-46d0-9f57-ecaba4584cc0)     
 Abbildung 5-32: Modellierung create-Event für neue Teilmodelle in einer VWS (Szenario 2)
 
 #### Create von VWS
@@ -557,8 +525,7 @@ Listing 54: Beispielhafte Umsetzung
 
 Als Quelle im *EventPayload* wird das *Identifiable* des *BasicEventElements* angegeben und die „sourceSemanticId“ enthält den gleichen Wert wie die semanticID des *BasicEventElements*. Das Attribut „observableReference“ enthält die Referenz (*Identifiable*) auf die neue VWS. Die „observableSemanticID“ ist in diesem Fall leer, da eine VWS keine semanticID besitzt. Als „payload“ wird die neue VWS in JSON-Serialisierung übergeben. Ist kein Payload angefügt, kann über die „observableReference“ die VWS mittels eines Zugriffs auf das Environment vollständig heruntergeladen werden.
 
-![](media/ebc3d7028f01a45317a0a282b2b4b9b1.jpg)
-
+![image](https://github.com/user-attachments/assets/12f13fb3-78b9-4126-ab30-e735ca326050)     
 Abbildung 5-33: Modellierung creat-Events für neue VWS in definiertem Environment (Szenario 3)
 
 ### Spezifikation der Infrastrukturkomponenten-Schnittstellen
@@ -782,14 +749,12 @@ Nach dem Anhaken aller für den Anwender relevanten Elemente kann dieser über d
 
 Bei Erfolgreicher Erstellung eines Abonnements von Elementen einer Verwaltungsschale, werden die angelegten „Subscription-Objekte“ zurückgegeben. Somit hat der Anwender Einblick, welche Elemente er bereits abonniert hat. Diese Information kann jederzeit ebenfalls eingesehen werden, wenn auf den „Abonnieren“-Reiter auf der Hauptseite des Moduls navigiert wird. Dort wird zu Beginn eine Anfrage an das Event-Feature gesendet, welche Elemente abonniert wurden. Ein Löschen von Abonnements ist ebenfalls möglich durch das Entfernen des Hakens neben dem betreffenden Element der ausgewählten Verwaltungsschale.
 
-![Ein Bild, das Text, Screenshot, Software, Webseite enthält. KI-generierte Inhalte können fehlerhaft sein.](media/62fb2d78118783ad261f96e19962b4da.png)
-
+![image](https://github.com/user-attachments/assets/fd3c1a28-bdf8-4937-8568-4c8dd5fefc95)    
 Abbildung 5-34: BaSyx UI - Änderungsmanagement abonnieren
 
 Im Weiteren werden die Änderungsbenachrichtigungen betrachtet (siehe Abbildung 5-35). Auch hier wird zunächst eine Anfrage an das Event-Feature gesendet, auf die es mit einer Liste aller ungelesenen Event Payloads antwortet. Diese werden grafisch im Modul unterteilt nach ungelesenen, also neuen Event Payloads bzw. Nachrichten und bereits gelesenen Nachrichten (vgl. Abbildung 3-3). Nachrichten können durch den Nutzer angewählt werden. Erfolgt dies, wird im Zentrum der Oberfläche die neue Änderung dargestellt. Dies erfolgt bisher prototypisch im JSON-Format. Angewählte und damit auch angesehene Nachrichten werden automatisch als gelesen markiert. Im Hintergrund erfolgt eine Anfrage an den Server, die den Status des Event Elements auf „gelesen“ aktualisiert. Ein neu Laden der Seite führt dazu, dass bereits gelesene Nachrichten ausgeblendet werden. Als Nachrichtentitel in der linken Spalte wird bisher die ID des Event Payloads angezeigt. Dies kann jedoch abgeändert werden und Informationen aus dem verlinkten Event Element können hier eingesetzt werden. Im Event Payload ist die Referenz auf das zu beobachtende Element zu sehen. Im Beispiel aus Abbildung 5-35 ist dies die URI des Produkts, die zuvor in Abbildung 5-34 abonniert wurde. Der Payload wird als byte[] übertragen und kann entsprechend decodiert werden.
 
-![Ein Bild, das Text, Screenshot, Zahl, Schrift enthält. KI-generierte Inhalte können fehlerhaft sein.](media/a91a5c464f72fb2d00df21dffbf7300d.png)
-
+![image](https://github.com/user-attachments/assets/2fd7d5c1-d38d-4024-ad9b-9e32c39e3b7d)     
 Abbildung 5-35: BaSyx UI - Änderungsmanagement Nachrichten
 
 ## Zusammenfassung
