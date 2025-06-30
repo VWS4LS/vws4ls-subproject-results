@@ -1,5 +1,9 @@
 # vws4ls-subproject-results
-Dieses Repository stellt die Ergebnis-Dokumentation zum Projekt VWS4LS bereit ([Gesamtbericht als PDF](https://VWS4LS.github.io/VWS4LS_Abschlussbericht_Gesamtprojekt.pdf)). 
+Dieses Repository stellt die Ergebnis-Dokumentation zum Projekt VWS4LS bereit:
+
+1. [Hauptprojekt als PDF (TP1-TP10)](https://VWS4LS.github.io/VWS4LS_Abschlussbericht_Gesamtprojekt.pdf)
+2. [Projektverlängerung als PDF (TP11-TP14)](https://vws4ls.github.io/VWS4LS_Abschlussbericht_Projektverlaengerung.pdf)
+   
 Ebenso die in der Projektdokumentation referenzierten Artefakte wie z.B. JSON- and AASX-Dateien.
 
 **[Projektübersicht](https://vws4ls.github.io/)**
@@ -15,6 +19,10 @@ Ebenso die in der Projektdokumentation referenzierten Artefakte wie z.B. JSON- a
 * [TP8: Data Storage Policy, Sicherheit, Anbindung an Catena-X](TP08)
 * [TP9: Pilotierung, Erprobung, Demonstrator](TP09)
 * [TP10: Transfer und Koordination](TP10)
+* [TP11: Anbindung an Catena-X](TP11)
+* [TP12: VWS-Produktkatalog](TP12)
+* [TP13: Standards und Middleware](TP13)
+* [TP14: Demonstrator](TP14)
 * [Literaturverzeichnis](/General/Literaturverzeichnis.md)
 * [Abkürzungsverzeichnis](/General/Abkuerzungsverzeichnis.md)
 * [Autorenverzeichnis](/General/Autoren.md)
