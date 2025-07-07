@@ -8,7 +8,10 @@ Weiterhin wurde der aktuelle Entwicklungsstand der OPC-UA Companion Specificatio
 
 Darüber hinaus werden vorhandene semantische Beschreibungen, wie beispielsweise der VEC (Vehicle Electric Container), ECLASS und IEC, auf ihre Kompatibilität und ihren Mehrwert für die Verwaltungsschale geprüft.
 
-Ein weiterer Fokus lag auf der Analyse und dem Vergleich von bereits etablierten Lösungen wie Eclipse BaSyx, dem AAS-Designer sowie MNESTIX, um die Einsatzmöglichkeiten der Verwaltungsschale (VWS) in der industriellen Praxis zu bewerten.
+Ein weiterer Fokus lag auf der Analyse und dem Vergleich von bereits etablierten Lösungen wie Eclipse BaSyx (siehe Abbildung 4-1), dem AAS-Designer sowie MNESTIX, um die Einsatzmöglichkeiten der Verwaltungsschale (VWS) in der industriellen Praxis zu bewerten. 
+
+![image](https://github.com/user-attachments/assets/670adad0-3c1a-447e-a295-740e8bb07c4d)     
+Abbildung 4 1: BaSyx: Neue AAS Editor Funktionalitäten
 
 ## AP 13.1 – Abgleich von Aspekt- und Teilmodellen
 
