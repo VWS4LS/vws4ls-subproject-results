@@ -4,6 +4,9 @@ Im Teilprojekt 14 „Demonstrator“ des Projekts VWS4LS steht die praktische Va
 
 Die Schwerpunkte des TPs liegen darauf, die Usability des BaSyx-Frameworks für den potenziellen Nutzer entlang des Produktionsprozesses Anwenderfreundlicher zu gestalten. Die einzelnen Handlungsschritte sollen dargestellt, nachvollziehbarer und die notwendigen Informationen pro Prozessschritt aggregiert werden. Darüber hinaus, wurde ein Proof of Concept entwickelt, welches sich dem Änderungsmanagement und wie dieses umgesetzt werden kann widmet. Hierbei wird demonstriert, wie Änderungen im System effizient erkannt, verwaltet und nachvollzogen werden können. Durch die Integration dieser Komponenten wird sichergestellt, dass alle relevanten Lösungsansätze des Projekts in einem umfassenden Demonstrator abgebildet und getestet werden können.
 
+![VWS4LS_TP14_Events_1](https://github.com/user-attachments/assets/10889e10-082d-45ad-bc96-59f8f046058a)     
+Abbildung 5-0: VWS und Events
+
 Damit leistet das Teilprojekt einen entscheidenden Beitrag zur Überführung der theoretischen Konzepte in die industrielle Anwendung und schafft die Grundlage für eine spätere Implementierung im realen Produktionsumfeld.
 
 ## Workflow-gesteuerte Auftragsabwicklung
