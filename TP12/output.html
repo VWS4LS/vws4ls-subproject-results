@@ -1,0 +1,3611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.23">
+<title>Table of Contents</title>
+<link rel="stylesheet" href="./custom.css">
+<style>
+img, .image img, .imageblock img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.4); /* blur + shadow */
+}
+.toc, .toc a, #_table_of_contents, #_list_of_figures, #_list_of_tables {
+  text-align: center;
+  display: block;
+  margin: 0 auto 2em auto;
+  font-size: 1.3em;
+  font-weight: 600;
+  color: #2a3a4a;
+}
+#_table_of_contents {
+  background: #f8fafc;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  padding: 2em 1em 1em 1em;
+  margin-bottom: 2em;
+  max-width: 600px;
+}
+#_table_of_contents a {
+  color: #1a73e8;
+  text-decoration: none;
+  transition: color 0.2s;
+  display: inline-block;
+  margin: 0.3em 0;
+}
+#_table_of_contents a:hover {
+  color: #d97706;
+  text-decoration: underline;
+}
+.imageblock > .title, .tableblock > .title, table caption {
+  text-align: center !important;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.1em;
+  font-weight: 500;
+  color: #374151;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  letter-spacing: 0.01em;
+}
+</style>
+</head>
+<body class="article">
+<div id="header">
+</div>
+<div id="content">
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p><strong>AAS - Designer Manual</strong></p>
+</div>
+</blockquote>
+</div>
+<div class="paragraph">
+<p><strong><em>TP 12 – „Produktkatalog"
+</em></strong></p>
+</div>
+<div class="literalblock">
+
+<div class="paragraph shadowed-image">
+<p><span class="image"><img src="./media/media/image1.jpeg" alt="Ein Bild" width="135" height="136"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/media/image4.jpeg" alt="Ein Bild" width="613" height="307"></span>*<br>
+*</p>
+</div>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Elegant TOC</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .toc-container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      background-color: #fdfdfd;
+    }
+
+    .toc-container h2 {
+      font-size: 24px;
+      margin-bottom: 16px;
+      color: #333;
+    }
+
+    .toc-item {
+      margin: 8px 0;
+    }
+
+    .toc-link {
+      text-decoration: none;
+      color: #2c3e50;
+      display: inline-block;
+      padding: 4px 0;
+      transition: color 0.2s ease;
+    }
+
+    .toc-link:hover {
+      color: #007acc;
+    }
+
+    .indent-0 { margin-left: 0em; }
+    .indent-1 { margin-left: 1.5em; }
+    .indent-2 { margin-left: 3em; }
+    .indent-3 { margin-left: 4.5em; }
+  </style>
+</head>
+<body>
+
+<div class="toc-container">
+  <h2>Table of Contents</h2>
+
+  <div class="toc-item indent-0"><a class="toc-link" href="#getting-started-with-aas-designer">1 Getting Started with AAS Designer</a></div>
+  <div class="toc-item indent-1"><a class="toc-link" href="#_login">1.1 Login</a></div>
+  <div class="toc-item indent-1"><a class="toc-link" href="#_user_registration">1.2 User Registration</a></div>
+  <div class="toc-item indent-1"><a class="toc-link" href="#_version_information">1.3 Version Information</a></div>
+
+  <div class="toc-item indent-0"><a class="toc-link" href="#_aas-designer-overview">2 AAS-Designer Overview</a></div>
+
+  <div class="toc-item indent-0"><a class="toc-link" href="#_aas-designer-features">3 AAS-Designer Features</a></div>
+  <div class="toc-item indent-1"><a class="toc-link" href="#_dashboard">3.1 Dashboard</a></div>
+  <div class="toc-item indent-1"><a class="toc-link" href="#_shells">3.2 Shells</a></div>
+  <div class="toc-item indent-1"><a class="toc-link" href="#_concept-description">3.3 Concept Description</a></div>
+  <div class="toc-item indent-1"><a class="toc-link" href="#_create">3.4 Create</a></div>
+  <div class="toc-item indent-1"><a class="toc-link" href="#_idta-submodels">3.5 IDTA Submodels</a></div>
+  <div class="toc-item indent-1"><a class="toc-link" href="#_my-area">3.6 My Area</a></div>
+  <div class="toc-item indent-1"><a class="toc-link" href="#_feed-mapping">3.7 Feed Mapping</a></div>
+
+  <div class="toc-item indent-0"><a class="toc-link" href="#_select-aas-infrastructure">4 Select AAS Infrastructure</a></div>
+  <div class="toc-item indent-1"><a class="toc-link" href="#_for-admin-users">4.1 For Admin Users</a></div>
+  <div class="toc-item indent-1"><a class="toc-link" href="#_for-users-with-lower-privileges">4.2 For Users with Lower Privileges</a></div>
+
+  <div class="toc-item indent-0"><a class="toc-link" href="#_operating-the-tree-structure">5 Operating the Tree Structure</a></div>
+  <div class="toc-item indent-1"><a class="toc-link" href="#_inserting-elements">5.1 Inserting Elements</a></div>
+  <div class="toc-item indent-2"><a class="toc-link" href="#_Toc193098548">a. Operating the Elements in AAS</a></div>
+  <div class="toc-item indent-1"><a class="toc-link" href="#_property">5.2 Property</a></div>
+  <div class="toc-item indent-2"><a class="toc-link" href="#details">5.2.1 Details</a></div>
+  <div class="toc-item indent-2"><a class="toc-link" href="#content">5.2.2 Content</a></div>
+  <div class="toc-item indent-2"><a class="toc-link" href="#semantic-description">5.2.3 Semantic Description</a></div>
+  <div class="toc-item indent-2"><a class="toc-link" href="#qualifier">5.2.4 Qualifier</a></div>
+  <div class="toc-item indent-2"><a class="toc-link" href="#data-definition">5.2.5 Data Definition</a></div>
+  <div class="toc-item indent-1"><a class="toc-link" href="#range">5.3 Range</a></div>
+  <div class="toc-item indent-1"><a class="toc-link" href="#submodelelementlist">5.4 SubmodelElementList</a></div>
+  <div class="toc-item indent-1"><a class="toc-link" href="#submodelelementcollection">5.5 SubmodelElementCollection</a></div>
+  <div class="toc-item indent-2"><a class="toc-link" href="#custom-qualifiers">5.5.1 Custom Qualifiers</a></div>
+  <div class="toc-item indent-2"><a class="toc-link" href="#cardinality">5.5.2 Cardinality</a></div>
+
+  <div class="toc-item indent-0"><a class="toc-link" href="#handling-aas-shells">6 Handling AAS Shells</a></div>
+  <div class="toc-item indent-1"><a class="toc-link" href="#view">6.1 View</a></div>
+  <div class="toc-item indent-1"><a class="toc-link" href="#modify">6.2 Modify</a></div>
+  <div class="toc-item indent-1"><a class="toc-link" href="#delete">6.3 Delete</a></div>
+  <div class="toc-item indent-1"><a class="toc-link" href="#advanced">6.4 Advanced</a></div>
+  <div class="toc-item indent-2"><a class="toc-link" href="#create-feed-mapping">6.4.1 Create Feed Mapping</a></div>
+  <div class="toc-item indent-2"><a class="toc-link" href="#duplicate">6.4.2 Duplicate</a></div>
+  <div class="toc-item indent-1"><a class="toc-link" href="#exports">6.5 Exports</a></div>
+  <div class="toc-item indent-1"><a class="toc-link" href="#create-link-for-sharing">6.6 Create Link for Sharing</a></div>
+
+  <div class="toc-item indent-0"><a class="toc-link" href="#navigating-the-aas-shell">7 Navigating the AAS Shell</a></div>
+  <div class="toc-item indent-1"><a class="toc-link" href="#id-validation">7.1 ID Validation</a></div>
+  <div class="toc-item indent-1"><a class="toc-link" href="#import-from-reference-catalogs">7.2 Import from Reference Catalogs</a></div>
+  <div class="toc-item indent-1"><a class="toc-link" href="#submodel">7.3 Submodel</a></div>
+  <div class="toc-item indent-1"><a class="toc-link" href="#handover-documentation-wizard">7.4 Handover Documentation-Wizard</a></div>
+  <div class="toc-item indent-1"><a class="toc-link" href="#_validate_errors">7.5 Validate Errors</a></div>
+  <div class="toc-item indent-1"><a class="toc-link" href="#save">7.6 Save</a></div>
+  <div class="toc-item indent-1"><a class="toc-link" href="#delete-1">7.7 Delete</a></div>
+  <div class="toc-item indent-1"><a class="toc-link" href="#reset">7.8 Reset</a></div>
+  <div class="toc-item indent-1"><a class="toc-link" href="#undo">7.9 Undo</a></div>
+  <div class="toc-item indent-1"><a class="toc-link" href="#redo">7.10 Redo</a></div>
+  <div class="toc-item indent-1"><a class="toc-link" href="#export-views">7.11 Export Views</a></div>
+
+  <div class="toc-item indent-0"><a class="toc-link" href="#identification-schemas-and-their-importance">8 Identification Schemas and their Importance</a></div>
+  <div class="toc-item indent-1"><a class="toc-link" href="#uuidguid">8.1 UUID/GUID</a></div>
+  <div class="toc-item indent-1"><a class="toc-link" href="#irdi-iso-29005-5">8.2 IRDI (ISO 29005-5)</a></div>
+  <div class="toc-item indent-2"><a class="toc-link" href="#understand-the-iec-irdi-structure">8.2.1 Understand the IEC IRDI Structure</a></div>
+  <div class="toc-item indent-2"><a class="toc-link" href="#understand-the-eclass-irdi-structure">8.2.2 Understand the ECLASS IRDI Structure</a></div>
+  <div class="toc-item indent-1"><a class="toc-link" href="#uriiri">8.3 URI/IRI</a></div>
+
+  <div class="toc-item indent-0"><a class="toc-link" href="#semantic-databases">9 Semantic Databases</a></div>
+  <div class="toc-item indent-1"><a class="toc-link" href="#iec-cdd">9.1.1 IEC-CDD</a></div>
+  <div class="toc-item indent-1"><a class="toc-link" href="#eclass">9.1.2 ECLASS</a></div>
+  <div class="toc-item indent-1"><a class="toc-link" href="#vec">9.1.3 VEC</a></div>
+
+  <div class="toc-item indent-0"><a class="toc-link" href="#concept-description-1">10 Concept Description</a></div>
+  <div class="toc-item indent-0"><a class="toc-link" href="#_Toc201556504">11 Literaturverzeichnis</a></div>
+  <div class="toc-item indent-0"><a class="toc-link" href="#list-of-figures">12 List of Figures</a></div>
+</div>
+
+</body>
+</html>
+
+</div>
+<div class="sect1">
+<h2 id="_getting_started_with_aas_designer"><strong>Getting Started with AAS Designer</strong></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Follow the following steps to get started with AAS Designer.</p>
+</div>
+<div class="paragraph">
+<p>To get started with the AAS Designer, please open the following
+link: <a href="https://designer.aas-suite.com/" class="bare">https://designer.aas-suite.com/</a> . You will then be redirected to
+the login page.</p>
+</div>
+<div class="sect2">
+<h3 id="_login">Login</h3>
+<div class="paragraph">
+<p>Once you reach the login screen, you will have several options
+available, including:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Login</p>
+</li>
+<li>
+<p>User Registration</p>
+</li>
+<li>
+<p>Show T&amp;C <em>(This displays the General Terms and Conditions of the AAS
+Suite, provided by Meta-Level Software AG, along with relevant pricing
+information.)</em></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/media/image5.png" alt="C:\Users\avdul002\AppData\Local\Microsoft\Windows\INetCache\Content.MSO\38372856.tmp" width="461" height="410"></span></p>
+</div>
+<div class="paragraph">
+<div class="title"><span id="_Toc201654250 " class="anchor">#</span>#Figure 1‑1: Logging into the AAS Suite Designer</div>
+<p>image::./media/media/image6.png[A screenshot of a computer screen
+AI-generated content may be incorrect.,width=490,height=182]</p>
+</div>
+<div class="paragraph">
+<p><span id="_Toc201654251 " class="anchor">#</span>#Figure 1‑2: Screenshot of Pricing and Terms
+in AAS Suite</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_user_registration">User registration</h3>
+<div class="paragraph">
+<p>Registration can be initiated by clicking on 'Request Registration'.
+This will redirect to the registration page, where the form to create an
+account and gain access to the AAS Suite can be filled in. Please make
+sure to select 'Request Registration' under the 'Topic' field in the
+form to ensure your request is processed correctly. Once registered, log
+in and begin using the platform as needed is possible.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./media/media/image7.png" alt="C:++\++Users++\++avdul002++\++AppData++\++Local++\++Microsoft++\++Windows++\++INetCache++\++Content.MSO++\++7BD1EED4.tmp" width="397" height="353">
+</div>
+<div class="title">Figure 1. <span id="_Toc201654252 " class="anchor">#</span>#Figure 1‑3: Registration Page for AAS Suite</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_version_information">Version Information</h3>
+<div class="paragraph">
+<p><span class="image"><img src="./media/media/image8.png" alt="C:\Users\avdul002\AppData\Local\Microsoft\Windows\INetCache\Content.MSO\79E44002.tmp" width="657" height="216"></span>To
+view the version number, click on the highlighted profile section at the
+top right of the page.</p>
+</div>
+<div class="paragraph">
+<p><span id="_Toc201654253 " class="anchor">#</span>#Figure 1‑4: Accessing AAS Suite Version
+Details</p>
+</div>
+<div class="paragraph">
+<p>You can see that the version number of the software displayed above is
+8. This indicates the current version of the AAS Suite you&#8217;re using.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./media/media/image9.png" alt="C:++\++Users++\++avdul002++\++AppData++\++Local++\++Microsoft++\++Windows++\++INetCache++\++Content.MSO++\++CE9D45BB.tmp" width="144" height="185">
+</div>
+<div class="title">Figure 2. <span id="_Toc201654254 " class="anchor">#</span>#Figure 1‑5: AAS Suite Version Information</div>
+</div>
+<div class="paragraph">
+<p>By clicking on License Info, you can access additional details such as
+the License Name, Copyright Information, and the Validity period of your
+current license.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./media/media/image10.png" alt="./media/media/image10" width="310" height="136">
+</div>
+<div class="title">Figure 3. <span id="_Toc201654255 " class="anchor">#</span>#Figure 1‑6: AAS Suite License Information</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_aas_designer_overview"><strong>AAS-Designer Overview</strong></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The <a href="https://aas-suite.com/en">AAS Suite</a> is a comprehensive platform
+designed to simplify the creation, validation, and sharing of Asset
+Administration Shells (AAS) in Industry 4.0 environments. It includes
+multiple tools such as the <a href="https://designer.aas-suite.com/">AAS
+Designer</a>, which enables users to create, edit, and validate AAS with
+ease, and the <a href="https://market.aas-suite.com/">AAS Marketplace</a>, where AAS
+can be shared and accessed. Additional tools like the Viewer, Reader,
+Feed Application, and <a href="https://compare.aas-suite.com/">Compare Tool</a>
+further enhance AAS management and usability.</p>
+</div>
+<div class="paragraph">
+<p>The AAS Designer is a user-friendly tool that caters to both beginners
+and experts. It provides step-by-step guidance for creating
+administration shells with essential submodels, such as the digital
+nameplate and handover documentation, while also offering an expert mode
+for advanced users to efficiently create, validate, and edit AAS. Users
+can collaborate with their company by sharing AAS through the Designer
+or publish them on the AAS Marketplace. Also, AAS can be deployed and
+instantiated into an AAS registry or repository system directly from the
+Designer. The AAS Designer addresses this challenge by offering
+automated assistance, a guided workflow, and an expert mode for advanced
+users, ensuring error-free AAS creation.</p>
+</div>
+<div class="paragraph">
+<div class="title"><span id="_Toc201654256 " class="anchor">#</span>#Figure 2‑1: Overview of <a href="https://aas-suite.com/en">AAS Suite</a> Platform</div>
+<p>image::./media/media/image11.png[Ein Bild, das Text, Diagramm, Schrift,
+Reihe enthält. KI-generierte Inhalte können fehlerhaft
+sein.,width=604,height=227]</p>
+</div>
+<div class="paragraph">
+<p>The <a href="https://designer.aas-suite.com/">AAS Designer</a> consists of several
+key components: <em>Dashboard</em>, <em>Shells</em>, <em>Concept Description, Create</em>,
+<em>IDTA Submodels</em>, <em>Instance Viewer, My Area</em>, and <em>Feed Mapping</em>. Each
+of these plays a role in the creation and management of Asset
+Administration Shells. We will explore these components in detail in the
+upcoming chapters.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./media/media/image12.png" alt="C:++\++Users++\++avdul002++\++AppData++\++Local++\++Microsoft++\++Windows++\++INetCache++\++Content.MSO++\++3E63D72F.tmp" width="586" height="180">
+</div>
+<div class="title">Figure 4. <span id="_Toc201654257 " class="anchor">#</span>#Figure 2‑2: Key Components in AAS-Designer</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_aas_designer_features"><strong>AAS-</strong>Designer <strong>Features</strong></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_dashboard">Dashboard</h3>
+<div class="paragraph">
+<p>The AAS-Suite provides various sections that help users manage and
+interact with Asset Administration Shells (AAS), such as the
+<em>Dashboard</em>:</p>
+</div>
+<div class="paragraph">
+<div class="title"><span id="_Toc201654258 " class="anchor">#</span>#Figure 3‑1: AAS Suite Dashboard Section</div>
+<p>image::./media/media/image13.png[A screenshot of a computer AI-generated
+content may be incorrect.,width=583,height=194]</p>
+</div>
+<div class="paragraph">
+<p>This section displays key statistics and information about your
+activities in the AAS Suite:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Created AAS: Shows the total number of AAS shells you've created. You
+can see the overall total, as well as how many were created yesterday
+and today.</p>
+</li>
+<li>
+<p>Created Users: Displays the number of users who have created AAS
+shells, with a breakdown of total, yesterday, and today.</p>
+</li>
+<li>
+<p>Published AAS: This shows how many AAS shells have been published,
+with the same daily breakdown as above.</p>
+</li>
+<li>
+<p>Statistics: Displays statistics about integrated submodels.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_shells">Shells</h3>
+<div class="paragraph">
+<div class="title"><span id="_Toc201654259 " class="anchor">#</span>#Figure 3‑2: Packages Section in AAS Suite</div>
+<p>image::./media/media/image14.png[A screenshot of a computer Description
+automatically generated,width=604,height=149]</p>
+</div>
+<div class="paragraph">
+<p>Here you will see an overview of all Asset Administration Shells (AAS)
+that have already been created within your selected infrastructure. From
+this view, you can create new AAS instances or edit existing ones.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_concept_description">Concept Description</h3>
+<div class="paragraph">
+<p><span class="image"><img src="./media/media/image15.png" alt="A screenshot of a computer Description automatically generated" width="604" height="208"></span>All concept descriptions
+added to various shells are displayed on this page. Each concept
+description includes the <strong>ID</strong>, <strong>idShort</strong>, <strong>Definition</strong>, and <strong>Unit</strong>. You
+can modify or delete any concept description directly from this page.</p>
+</div>
+<div class="paragraph">
+<p><span id="_Toc201654260 " class="anchor">#</span>#Figure 3‑3: Concept Description in AAS Suite</p>
+</div>
+<div class="paragraph">
+<p>This feature is especially helpful in identifying redundancies and
+unused concept descriptions, those created within shells but not
+referenced in any semantic descriptions. It enables easier tracking,
+management, and cleanup of such entries.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_create">Create</h3>
+<div class="paragraph">
+<p><span class="image"><img src="./media/media/image16.png" alt="C:\Users\avdul002\AppData\Local\Microsoft\Windows\INetCache\Content.MSO\FA4D2BD9.tmp" width="607" height="136"></span>There
+are several options for creating different types of AAS:</p>
+</div>
+<div class="paragraph">
+<p><span id="_Toc201654261 " class="anchor">#</span>#Figure 3‑4: Choose Type under Create in AAS
+Suite</p>
+</div>
+<div class="paragraph">
+<p>Select the type of asset administration shell to create or choose a
+template.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Use Template</strong>: If you've created an AAS before, you can use its data
+(.json, .xml, or .aasx) to create a new one by selecting the file</p>
+</li>
+<li>
+<p><strong>Instance Asset Administration Shells</strong>: Create AAS for a specific
+object, such as an asset with unique data (e.g., serial numbers).</p>
+</li>
+<li>
+<p><strong>Type Asset Administration Shells</strong>: These define types of assets and
+do not include instance-specific data like serial numbers.</p>
+</li>
+<li>
+<p><strong>Unguided New AAS</strong>: This option creates an empty Asset Administration
+Shell instance. Once created, you will be taken directly to the editing
+mode to begin configuring it.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span id="_Toc201654262 " class="anchor">#</span>#Figure 3‑5: Entering asset data under Create</p>
+</div>
+<div class="paragraph">
+<p>Enter basic information related to the asset and its shell:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Asset ID – Unique identifier for the asset</p>
+</li>
+<li>
+<p>Description – Brief overview of the asset or its purpose</p>
+</li>
+<li>
+<p>Asset Thumbnail – Upload or drag-and-drop an image to represent the
+asset
+visually<span class="image"><img src="./media/media/image18.png" alt="C:\Users\avdul002\AppData\Local\Microsoft\Windows\INetCache\Content.MSO\89727235.tmp" width="604" height="222"></span></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span id="_Toc201654263 " class="anchor">#</span>#Figure 3‑6: Entering nameplate data under
+Create</p>
+</div>
+<div class="paragraph">
+<p>The <strong>IDTA Nameplate</strong> contains mandatory identification details based on
+EU Machinery Directive 2006/42/EC as of <em>IDTA 02006-2-0 Digital
+Nameplate for Industrial Equipment</em> [1]:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Manufacturer</p>
+</li>
+<li>
+<p>Product root</p>
+</li>
+<li>
+<p>Product family</p>
+</li>
+<li>
+<p>Product designation</p>
+</li>
+<li>
+<p>Serial number</p>
+</li>
+<li>
+<p>Year of manufacturing</p>
+</li>
+<li>
+<p>Markings</p>
+<div class="ulist">
+<ul>
+<li>
+<p>+
+*</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Manufacturer Information:</strong></p>
+</div>
+<div class="paragraph">
+<p>Can be selected from the map, a list of recently used addresses, or
+entered manually:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Manufacturer Name</p>
+</li>
+<li>
+<p>Street</p>
+</li>
+<li>
+<p>Postal Code (PLZ)</p>
+</li>
+<li>
+<p>City</p>
+</li>
+<li>
+<p>State</p>
+</li>
+<li>
+<p>Country Code</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span id="_Toc201654264 " class="anchor">#</span>#Figure 3‑7: Entering Document data under
+Create</p>
+</div>
+<div class="paragraph">
+<p>Provide document-related information:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Document ID</p>
+</li>
+<li>
+<p>Primary Document? (Yes/No)Postal Code (PLZ)</p>
+</li>
+<li>
+<p>Format (e.g. PDF, DOCX)</p>
+</li>
+<li>
+<p>File Name</p>
+</li>
+</ul>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p><span class="image"><img src="./media/media/image20.png" alt="./media/media/image20" width="604" height="140"></span></p>
+</div>
+</blockquote>
+</div>
+<div class="paragraph">
+<p><span id="_Toc201654265 " class="anchor">#</span>#Figure 3‑8: Providing Summary and
+Confirmation under Create</p>
+</div>
+<div class="paragraph">
+<p>This final step summarizes the information that were given. When you
+click 'Save and continue editing', the Asset Administration Shell will
+be created within the selected infrastructure, and you will be taken to
+the editing mode where you can add additional submodels.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_idta_submodels">IDTA Submodels</h3>
+<div class="paragraph">
+<div class="title"><span id="_Toc201654266 " class="anchor">#</span>#Figure 3‑9: IDTA Submodels in AAS Suite</div>
+<p>image::./media/media/image21.png[Ein Bild, das Text, Screenshot,
+Software, Computersymbol enthält. KI-generierte Inhalte können
+fehlerhaft sein.,width=584,height=400]</p>
+</div>
+<div class="paragraph">
+<p>This section displays available <em>submodels</em>, typically from the
+Industrial Digital Twin Association (IDTA). The <em>submodels</em> represent
+different components and aspects of AAS. Some examples of <em>submodels</em>
+include:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/admin-shell-io/submodel-templates/tree/main/published/Digital%20nameplate/2/0">IDTA
+Digital Nameplate</a> [2]</p>
+</li>
+<li>
+<p><a href="https://github.com/admin-shell-io/submodel-templates/tree/main/published/Technical_Data/1/2">IDTA
+02003-1-2 Generic Frame for Technical Data for Industrial Equipment in
+Manufacturing</a> [3]</p>
+</li>
+<li>
+<p><a href="https://github.com/admin-shell-io/submodel-templates/tree/main/published/Handover%20Documentation/1/2">IDTA
+02004-1-2 Handover Documentation</a> [2]</p>
+</li>
+<li>
+<p><a href="https://github.com/admin-shell-io/submodel-templates/tree/main/published/Carbon%20Footprint/0/9">IDTA
+Product Carbon Footprint</a></p>
+</li>
+</ul>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>You can integrate these <em>submodels</em> into your AAS depending on the data
+needs.</p>
+</div>
+</blockquote>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_my_area">My Area</h3>
+<div class="paragraph">
+<div class="title"><span id="_Toc201654267 " class="anchor">#</span>#Figure 3‑10: My Area Section in AAS Suite</div>
+<p>image::./media/media/image22.png[Ein Bild, das Text, Software, Webseite,
+Computersymbol enthält. KI-generierte Inhalte können fehlerhaft
+sein.,width=604,height=332]</p>
+</div>
+<div class="paragraph">
+<p>This section contains your profile details and other personal
+information:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Profile: Displays basic user information like First Name, Last Name,
+Email, and Profile Image (you can update this image by dragging and
+dropping a new file).</p>
+</li>
+<li>
+<p>Address: Allows you to update your address information.</p>
+</li>
+<li>
+<p>Product Family: This section may show details about the product
+families you are involved with.</p>
+</li>
+<li>
+<p>Snippet: This is likely where you can add or view small pieces of
+reusable data.</p>
+</li>
+<li>
+<p>Shared Links: Shows any shared links related to your AAS or other
+content.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_feed_mapping">Feed Mapping</h3>
+<div class="paragraph">
+<p>Feed Mapping allows you to dynamically create Asset Administration
+Shells. It enables automated generation of AAS instances based on
+incoming data feeds, streamlining the integration of external data
+sources into your infrastructure.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_select_aas_infrastructure"><strong>Select AAS</strong> Infrastructure</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><span class="image"><img src="./media/media/image23.png" alt="C:\Users\avdul002\AppData\Local\Microsoft\Windows\INetCache\Content.MSO\5C9F5815.tmp" width="595" height="186"></span>As
+shown in Figure 4‑1, the top right side displays a dropdown list of
+available AAS infrastructures. This list always includes your own
+infrastructure, which is assigned to your organization. If you have
+created additional AAS infrastructures within the 'Organization'
+section, they will also appear in this list.</p>
+</div>
+<div class="paragraph">
+<p><span id="_Ref200612174 " class="anchor">#</span>#Figure 4‑1: List of shells in other servers</p>
+</div>
+<div class="paragraph">
+<p>To create additional AAS infrastructures or configure your own, you need
+the appropriate user permissions.</p>
+</div>
+<div class="sect2">
+<h3 id="_for_admin_users">For Admin Users</h3>
+<div class="paragraph">
+<p>If you are an Admin, follow these steps to view or modify the server
+configuration:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Navigate to <strong>"My Area"</strong> and click on the organization<strong>.</strong></p>
+</li>
+<li>
+<p>You will see a list of servers along with their status
+(<strong>Active/Inactive</strong>), as well as their corresponding registries and
+repositories.</p>
+</li>
+<li>
+<p><span class="image"><img src="./media/media/image24.png" alt="Ein Bild" width="517" height="341"></span>By pressing "<strong>Modify</strong>", the entries can be
+changed.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><span id="_Toc201654269 " class="anchor">#</span>#Figure 4‑2: Server Configuration for Admin</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_for_users_with_lower_privileges">For Users with Lower Privileges</h3>
+<div class="paragraph">
+<p>If you have a lower authority role and lack the necessary permissions,
+you will not be able to view the server information, as indicated in the
+below figures.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./media/media/image25.png" alt="./media/media/image25" width="604" height="207">
+</div>
+<div class="title">Figure 5. <span id="_Toc201654270 " class="anchor">#</span>#Figure 4‑3: Server Configuration for different Authority Role</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_operating_the_tree_structure"><strong>Operating the Tree Structure</strong></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To view the shell's tree structure, you first need to access the shell.
+Follow the steps below to open and modify it.</p>
+</div>
+<div class="paragraph">
+<div class="title"><span id="_Toc201654271 " class="anchor">#</span>#Figure 5‑1: Overview of Shells</div>
+<p>image::./media/media/image26.png[A screenshot of a computer Description
+automatically generated,width=604,height=230]</p>
+</div>
+<div class="paragraph">
+<p>To modify a shell, follow these steps:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>In the Shells Overview, click on the three-dot menu on the left side
+of the shell.</p>
+</li>
+<li>
+<p>Select "Modify" from the dropdown menu.</p>
+</li>
+<li>
+<p>You will now be redirected to the editing mode of the selected shell.
+This mode is divided into two main sections:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>A tree view of the Asset Administration Shell (left side)</p>
+</li>
+<li>
+<p>An editing panel for the selected information from the tree structure
+(right side)</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>Using the tree view, you can manage the following components:</p>
+</div>
+</blockquote>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Submodels</p>
+</li>
+<li>
+<p>Elements</p>
+</li>
+<li>
+<p>Files</p>
+</li>
+<li>
+<p>Concept Descriptions</p>
+</li>
+</ul>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>Refer to the figure below for a visual representation of the tree
+structure.</p>
+</div>
+</blockquote>
+</div>
+<div class="paragraph">
+<p><span id="_Toc201654272 " class="anchor">#</span>#Figure 5‑2:Understanding Tree Structure in
+AAS Designer</p>
+</div>
+<div class="paragraph">
+<p>As you click on the arrow to the left of any submodel, such as
+HandoverDocumentation, a nested structure will expand beneath it. This
+reveals additional elements contained within the submodel. Referring to
+the figure below, you will see the corresponding properties of the
+submodel. These properties can be modified as needed, allowing you to
+update existing values or add new properties to the submodel.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./media/media/image28.png" alt="C:++\++Users++\++avdul002++\++AppData++\++Local++\++Microsoft++\++Windows++\++INetCache++\++Content.MSO++\++7475AF59.tmp" width="592" height="299">
+</div>
+<div class="title">Figure 6. <span id="_Toc201654273 " class="anchor">#</span>#Figure 5‑3: Expanding the Tree Structure in AAS Designer</div>
+</div>
+<div class="paragraph">
+<p>The AAS Shell of a component follows a structured tree hierarchy, which
+can be modified by the user based on the available information. For
+example, in the figure above,
+<a href="https://produktkatalog.kostal-kontakt-systeme.com/web/kostal/de/KOSTAL/1544095543984/Steckh%C3%BClse%0ADLK%201%2C2%20ELA/PR/10002210/index.xhtm">KOSTAL_DLK12_10002210</a>
+represents a component whose AAS needs to be identified. Under this
+component, there are multiple submodels, such as HandoverDocumentation
+[2], TechnicalData [3], DigitalNameplate [1],
+MCAD and AasDesignerChangelog.</p>
+</div>
+<div class="paragraph">
+<p>Within every tree structure, one will find two common elements: Concept
+Description and Files. The AAS can define its own dictionary, which
+contains semantic definitions of its submodel elements. These semantic
+definitions are known as Concept Descriptions (ConceptDescription). The
+Files section contains all documents and files uploaded to the AAS Shell
+of the component, ensuring that relevant information is easily
+accessible and well-organized.</p>
+</div>
+<div class="paragraph">
+<p>The AAS Designer presents a tree structure that visually organizes
+different components of an Asset Administration Shell (AAS). This
+hierarchical representation includes elements such as Submodels,
+Properties, Property Values, and Concept Descriptions.</p>
+</div>
+<div class="paragraph">
+<p>[<mark>_Toc193098547 .anchor]</mark>#</p>
+</div>
+<div class="sect2">
+<h3 id="_inserting_elements">Inserting elements</h3>
+<div class="paragraph">
+<p>For example, in the AAS Designer's directory tree, you may encounter
+elements like:</p>
+</div>
+<div class="paragraph">
+<div class="title"><span id="_Toc201654274 " class="anchor">#</span>#Figure 5‑4: Inserting Elements in the AAS Designer</div>
+<p>image::./media/media/image29.png[A screenshot of a computer Description
+automatically generated,width=604,height=256]</p>
+</div>
+<div class="paragraph">
+<p>To get a better view of the elements and their functionality, refer the
+following table:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 29%;">
+<col style="width: 71%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Element Name</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Blob</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A data element representing a file that is contained in the
+value attribute with its source code.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ContactInformation</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">This element is actually a submodel,but can also
+be used as a collection.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Entity</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A submodel element used to model self-managed or co-managed
+entities.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>File</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A data element that represents an address to a file (a
+locator). The value is a URI that can represent an absolute or relative
+path.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>MultilanguageProperty</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A property data element that has a single
+value (can support multiple languages).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Operation</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A submodel element with input and output variables.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Property</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A data element that has a single value.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A data element that defines a range with minimum and maximum
+values.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ReferenceElement</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A data element that defines a logical reference to
+another element within the same or another Asset Administration Shell or
+to an external object/entity.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>RelationshipElement</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Used to define a relationship between two
+elements—either referable (model reference) or external (external
+reference).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>SubmodelElementList</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An ordered list of submodel elements.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>SubmodelElementCollection</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A logical encapsulation (struct) of
+multiple named values.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>[<mark><em>Toc201654327 .anchor]</mark>#_Table 1 Description of the elements in the
+AAS - Designer</em></p>
+</div>
+<div class="paragraph">
+<p>Submodels (SM): HandoverDocumentation [2], TechnicalData
+[3], DigitalNameplate [1], etc.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Submodel Element Collections (SMC)</p>
+</li>
+<li>
+<p>Properties (Prop): specification, data_sheet</p>
+</li>
+<li>
+<p>Property Value: It is a reference to the global ID of a coded value.
+It is unique in nature. Concept Descriptions (CD) are supported,
+allowing the generation of semantic references that define standardized
+meanings for properties.</p>
+</li>
+<li>
+<p>The value of Property/value must match the referenced coded value in
+property/valueId if both a property/value and a property/valueId exist.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>As previously mentioned, there are various types of elements available
+and selectable based on our requirements in AAS Designer.</p>
+</div>
+<div class="paragraph">
+<p>This chapter provides definitions for some of the most important
+elements in AAS.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Property: A property is a data element that possesses a single value.
+(For example, properties with specific values such as WireDiameter.)</p>
+</li>
+<li>
+<p>Range: A range data element defines a range with a minimum and maximum
+value. (For example, TemperatureRange.)</p>
+</li>
+<li>
+<p>SubmodelElementList: A submodel element list is an ordered list of
+submodel elements. (TechnicalData, DigitalNameplate.)</p>
+</li>
+<li>
+<p>SubmodelElementCollection: A relationship element is utilized to
+establish a connection between two elements, which can be either
+referable (model reference) or external (external reference).</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>To insert a new element, click on the three-dot menu on the left side of
+the SubModel. From the dropdown menu that appears, select the "Add"
+option. Then select in the following dropdown menu "Elements". You will
+then see a list of all available elements, such as range, property, and
+more. Now you can choose one element and it will be added to the tree
+hierarchy. </p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/media/image30.jpeg" alt="C:\Users\avdul002\AppData\Local\Microsoft\Windows\INetCache\Content.MSO\A388AF10.tmp" width="243" height="309"></span></p>
+</div>
+<div class="paragraph">
+<p><span id="_Toc201654275 " class="anchor">#</span>#Figure 5‑5: Three dot menu in the tree
+hierarchy</p>
+</div>
+<div class="paragraph">
+<p>[<mark><em>Toc201654276 .anchor]</mark>#<span class="image"><img src="./media/media/image31.png" alt="C:\Users\avdul002\AppData\Local\Microsoft\Windows\INetCache\Content.MSO\CFBEB79E.tmp" width="259" height="258"></span>_Figure
+5‑6: Adding new elements</em></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/media/image29.png" alt="A screenshot of a computer Description automatically generated" width="563" height="238"></span></p>
+</div>
+<div class="paragraph">
+<p>[<mark><em>Toc201654277 .anchor]</mark>#_Figure 5‑7: Options of
+Elements</em> <em>Elements</em></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/media/image32.png" alt="C:\Users\avdul002\AppData\Local\Microsoft\Windows\INetCache\Content.MSO\B8D655C.tmp" width="186" height="247"></span></p>
+</div>
+<div class="paragraph">
+<p>[<mark><em>Toc201654278 .anchor]</mark>#_Figure 5‑8: Adding new Element</em></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_property">Property</h3>
+<div class="paragraph">
+<p>A property can be defined in detail with semantic reference, unit
+definition and other value specific definitions (i.e. tolerance range)
+via Concept Description (CD), Embedded Data Definition (EDD) and
+Qualifiers.</p>
+</div>
+<div class="paragraph">
+<p>In the below figure, CONNECT_TERMINAL_SIZE is the property.
+Follow the same steps as above.</p>
+</div>
+<div class="paragraph">
+<div class="title"><span id="_Toc201654279 " class="anchor">#</span>#Figure 5‑9: Defining a Property in AAS Designer</div>
+<p>image::./media/media/image33.png[Ein Bild, das Text, Screenshot,
+Software, Computersymbol enthält. KI-generierte Inhalte können
+fehlerhaft sein.,width=604,height=454]</p>
+</div>
+<div class="paragraph">
+<p>CD is used to provide a standardized semantic reference for a property,
+ensuring clarity and interoperability across different systems. It
+defines the meaning and context of the property within an asset
+administration shell.</p>
+</div>
+<div class="paragraph">
+<p>EDD specifies additional characteristics of a property, such as data
+type, value range, or constraints. It is useful when an external
+reference is not available or needed for defining detailed attributes.</p>
+</div>
+<div class="paragraph">
+<p>Qualifiers provide contextual information about a property, such as
+accuracy, validity period, or measurement conditions. They help refine
+the meaning and usage of a property without altering its core
+definition.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./media/media/image34.png" alt="./media/media/image34" width="481" height="165">
+</div>
+<div class="title">Figure 7. <span id="_Toc201654280 " class="anchor">#</span>#Figure 5‑10: Reference to a Concept Description in AAS Designer}</div>
+</div>
+<div class="sect3">
+<h4 id="_5_2_1_details">5.2.1. Details</h4>
+<div class="paragraph">
+<p>The Property definition begins in the "Details" section, where the name
+of the property is assigned in the <em>idShort</em>. In addition, a
+language-dependent short <em>description</em> and a <em>display name</em> of the
+respective property can be described. If present, please make sure that
+at least an english version is present. In the datatype section, NULL or
+CONSTANT is usually specified for type definitions. The choice of ID
+Short varies from company to company, but generally they follow the
+naming of the property. For eg. For the family DLK 1,2 which happens to
+be the terminal family, the id short used could be terminal_family
+or contact_family. ID-short of Referables shall only feature
+letters, digits, underscore (``_``); starting mandatory with a
+letter. *I.e.* ``[a-zA-Z][a-zA-Z0-9_]*``.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/media/image35.png" alt="Ein Bild" width="604" height="246"></span></p>
+</div>
+<div class="paragraph">
+<p>[<mark><em>Toc201654281 .anchor]</mark>#_Figure 5‑11: Details section area</em></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_5_2_2_content">5.2.2. Content</h4>
+<div class="paragraph">
+<p>In the "Content" section a nominal value can be assigned. If available,
+<em>valueId</em> can be filled in with a semantic reference to a value
+definition (e.g.
+<a href="https://cdd.iec.ch/cdd/iec61360/iec61360.nsf/TerminologiesAllVersions/0112-2---61360_4%23AUA1F0" class="bare">https://cdd.iec.ch/cdd/iec61360/iec61360.nsf/TerminologiesAllVersions/0112-2---61360_4%23AUA1F0</a>).</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/media/image36.png" alt="C:\Users\avdul002\AppData\Local\Microsoft\Windows\INetCache\Content.MSO\1996DC6E.tmp" width="603" height="104"></span></p>
+</div>
+<div class="paragraph">
+<p>[<mark><em>Toc201654282 .anchor]</mark>#_Figure 5‑12: Content section area</em></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_5_2_3_semantic_description">5.2.3. Semantic Description</h4>
+<div class="paragraph">
+<p>Next up the <em>semanticID</em> can be added. If indirect referencing is
+desired, a so called "Concept Description" (CD) must be additionally
+created. Otherwise in the case of direct referencing to an external
+reference, the semantic ID is sufficient.</p>
+</div>
+<div class="paragraph">
+<p>[<mark><em>Toc201654283 .anchor]</mark>#<span class="image"><img src="./media/media/image37.png" alt="./media/media/image37" width="604" height="174"></span>_Figure
+5‑13: Semantic description area</em></p>
+</div>
+<div class="paragraph">
+<p>This contrasts with the "Qualifiers" and "Data Definitions", which are
+directly embedded in the local property definition.</p>
+</div>
+<div class="paragraph">
+<p>Any Property in an AAS that has its definition source in an outside
+system that can be referenced, should be referenced. Properties defined
+in IDTA templates usually come with semantic reference information
+pointing to ECLASS and/or IEC. Such semantic references should not be
+changed. When a proprietary property is created in an AAS, it is
+recommended to also attach semantic references to them and create its id
+with the potential capability to be used as a reference by others.</p>
+</div>
+<div class="paragraph">
+<p>Sometimes even property values are defined in semantic reference systems
+and should therefore be used and tagged with reference information in
+the associated <em>ValueId</em>. Typical examples are color codes, IP codes
+etc. which are defined in several reference systems like ECLASS and IEC.</p>
+</div>
+<div class="paragraph">
+<p>In the below figure, <em>DocumentId</em> is the property value. Follow the same
+steps as above.</p>
+</div>
+<div class="paragraph">
+<div class="title"><span id="_Toc201654284 " class="anchor">#</span>#Figure 5‑14: Assigning a Property Value in AAS Designer</div>
+<p>image::./media/media/image38.png[A screenshot of a computer AI-generated
+content may be incorrect.,width=528,height=283]</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_5_2_4_qualifier">5.2.4. Qualifier</h4>
+<div class="paragraph">
+<p>Qualifiers in Asset Administration Shell (AAS) provide additional
+metadata about elements, acting as type-value pairs that define
+properties related to value, semantics, or existence.</p>
+</div>
+<div class="paragraph">
+<p>Additional definitions for a property can be done via the "Qualifier"
+concept, i.e. definition of Upper- and Lower-Boundaries as shown below:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/media/image39.png" alt="Ein Bild" width="566" height="84"></span></p>
+</div>
+<div class="paragraph">
+<p>[<mark><em>Toc201654285 .anchor]</mark>#_Figure 5‑15: Qualifier area</em></p>
+</div>
+<div class="paragraph">
+<p>Qualifiers in Asset Administration Shell (AAS) provide additional
+metadata about elements, acting as type-value pairs that define
+properties related to value, semantics, or existence.</p>
+</div>
+<div class="paragraph">
+<p>There are three main types: <strong>ValueQualifier</strong>, which describes how a
+value was determined (e.g., "measured" or "substitute value" for
+temperature); <strong>ConceptQualifier</strong>, which differentiates semantically
+similar elements based on lifecycle stages (e.g., "as planned" vs. "as
+maintained" for a Bill of Material); and <strong>TemplateQualifier</strong>, which
+defines whether a submodel element is "mandatory" or "optional."
+Constraints ensure consistency, such as AASd-006, which requires a
+qualifier's <em>value</em> and <em>valueId</em> to be identical if both are present,
+and AASd-020, which enforces data type consistency. In terms of
+referencing, AAS elements can be <strong>identifiable</strong> (globally unique ID),
+<strong>referable</strong> (having an <em>idShort</em> within a namespace), or <strong>neither</strong> (such
+as qualifiers, which are attributes). A referable element's namespace is
+determined by its parent, ensuring structured relationships, such as a
+submodel serving as the namespace for its contained properties.</p>
+</div>
+<div class="paragraph">
+<p>Definitions from the AASXPE can be found here:
+<a href="https://github.com/admin-shell-io/aasx-package-explorer/blob/main/src/AasxPackageExplorer/qualifier-presets.json" class="bare">https://github.com/admin-shell-io/aasx-package-explorer/blob/main/src/AasxPackageExplorer/qualifier-presets.json</a></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_5_2_5_data_definition">5.2.5. Data Definition</h4>
+<div class="paragraph">
+<p>Arbitrary embedded data definitions can be added that use the same
+IEC61360 data structure as used for Concept Descriptions. and was
+initially designed to describe an IEC-CDD reference. But it can also be
+used for referencing other systems or definition purposes, such as to
+define a unit definition and/or a range of preset values (enums).</p>
+</div>
+<div class="paragraph">
+<p>A typical usage would be for an embedded unit definition can be done as
+shown below.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/media/image40.png" alt="./media/media/image40" width="604" height="414"></span></p>
+</div>
+<div class="paragraph">
+<p>[<mark><em>Toc201654286 .anchor]</mark>#_Figure 5‑16: Data definition area</em></p>
+</div>
+<div class="paragraph">
+<p>The embedded data definitions use the same IEC61360 data structure as
+used for Concept Descriptions and was initially designed to describe an
+IEC-CDD reference. But it can also be used for referencing other systems
+or definition purposes, such as to define a range of preset values
+(enums).</p>
+</div>
+<div class="paragraph">
+<p>A typical usage would be for an embedded unit definition can be done as
+shown below.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/media/image41.png" alt="A screenshot of a computer Description automatically generated" width="529" height="299"></span></p>
+</div>
+<div class="paragraph">
+<p>[<mark><em>Toc201654287 .anchor]</mark>#_Figure 5‑17: Example of a filled in Data
+definition</em></p>
+</div>
+<div class="paragraph">
+<p>In the beginning of the Data definition, you can choose between the Type
+ModelReference and ExternalReference. A ReferenceID can be included in
+the following. In the Data definition you can assign a Preference name
+in different languages. You can give the definition a name in the
+"Preferred Name" Section. To shorten it up you can give the Preferred
+Name in "Short Name". In the Definition Section you can describe it in a
+short sentence. To give a reference for the definition you can fill in
+the "Source of Definition". The most important feature in the Data
+definition is the Value List. In the Value List you can Insert a List of
+entities pertaining to the selected element.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_range">Range</h3>
+<div class="paragraph">
+<p>The only difference between Range and Property is the Content.</p>
+</div>
+<div class="paragraph">
+<p>In the "Content" part you can now select Datatype from a dropdown List,
+which will open when you click on the bar at the Datatype. You can also
+define a Range from Minimum and Maximum.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/media/image42.png" alt="C:\Users\avdul002\AppData\Local\Microsoft\Windows\INetCache\Content.MSO\73F2E99A.tmp" width="630" height="106"></span></p>
+</div>
+<div class="paragraph">
+<p>[<mark><em>Toc201654288 .anchor]</mark>#_Figure 5‑18: Content part of Range</em></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_submodelelementlist">SubmodelElementList</h3>
+<div class="paragraph">
+<p>This section will explain how to insert a SubmodelElementList and which
+features it contains. A SubmodelElementList is a structural element in
+the Asset Administration Shell (AAS) that organizes multiple submodel
+elements in a structured and ordered manner. It is particularly useful
+for handling sets, lists, arrays, and ordered collections of elements
+with the same semantic meaning.</p>
+</div>
+<div class="paragraph">
+<p>Unlike a SubmodelElementCollection, which allows heterogeneous elements,
+a SubmodelElementList enforces semantic and type consistency among its
+elements.</p>
+</div>
+<div class="paragraph">
+<p>Common use cases include:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Representing multi-dimensional arrays (e.g., a 2D table of values).</p>
+</li>
+<li>
+<p>Storing repeated elements that follow a predefined format (e.g., lists
+of technical specifications).</p>
+</li>
+<li>
+<p>Grouping structured information, such as a series of sensor readings
+over time​.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The SubmodelElementList inherits the basic definition structure from
+Property, including idShort, description, and display name. It includes
+a specific attribute called 'Order Relevant' which Indicates whether the
+order of elements in the list is semantically meaningful.</p>
+</div>
+<div class="paragraph">
+<p>The semantic description of a SubmodelElementList is defined using
+Concept Descriptions (CDs), as outlined in the Property section.</p>
+</div>
+<div class="paragraph">
+<p>Any IDTA submodel template comes with a semantic reference on its own
+which should not be changed. When a proprietary submodel is created, it
+is recommended to also create a dedicated submodel template id with the
+potential capability to be used as a reference by others.</p>
+</div>
+<div class="paragraph">
+<p>In the below figure, as discussed earlier IDTA's HandoverDocumentation
+is the Submodel.</p>
+</div>
+<div class="paragraph">
+<div class="title"><span id="_Toc201654289 " class="anchor">#</span>#Figure 5‑19: Adding Semantic References in AAS Designer</div>
+<p>image::./media/media/image43.png[A screenshot of a computer Description
+automatically generated,width=604,height=215]</p>
+</div>
+<div class="paragraph">
+<p>To add semantic reference to HandoverDocumentation, follow the following
+steps:</p>
+</div>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Either search for an existing description in the repository, but in
+our case there is no description available so let's create a new
+description.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<div class="title"><span id="_Toc201654290 " class="anchor">#</span>#Figure 5‑20: Creating a New Semantic Description in AAS Designer</div>
+<p>image::./media/media/image44.png[A screenshot of a computer Description
+automatically generated,width=604,height=239]</p>
+</div>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a" start="2">
+<li>
+<p>Add the relevant ECLASS/IEC/IRDI/VEC ID to the ID placeholder.</p>
+</li>
+<li>
+<p>Click Save</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<div class="title"><span id="_Toc201654291 " class="anchor">#</span>#Figure 5‑21: Adding ECLASS/IEC/IRDI/VEC ID to the ID Placeholder</div>
+<p>image::./media/media/image45.png[A screenshot of a computer Description
+automatically generated,width=604,height=208]</p>
+</div>
+<div class="paragraph">
+<p>The Qualifier of SubmodelElementList is defined using Qualifer <em>under
+<strong>Property</strong> for how constraints (e.g., upper/lower bounds) can be applied
+to list elements.</em></p>
+</div>
+<div class="paragraph">
+<p>The Data Definition of SubmodelElementList is defined using Data
+Definition as outlined in the Property section.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_submodelelementcollection">SubmodelElementCollection</h3>
+<div class="paragraph">
+<p>In the following all the important definitions will be explained which
+are necessary for a <em>SubmodellElementCollection</em>. A
+<em>SubmodelElementCollection</em> (SMC) is a structural element used within
+the Asset Administration Shell (AAS) to organize and manage multiple
+related <em>SubmodelElements</em>. Unlike a <em>SubmodelElementList</em>, which
+primarily deals with ordered and homogeneous elements, a
+<em>SubmodelElementCollection</em> serves as a container for heterogeneous
+elements with a predefined semantic structure. It is particularly useful
+when defining complex assets that consist of multiple distinct
+properties grouped under a common semantic meaning. Each property within
+the collection should have a clearly defined semantic representation,
+referenced by its <em>semanticId</em>​.</p>
+</div>
+<div class="paragraph">
+<p>For example, a document may have properties such as <em>title</em>, <em>version</em>,
+<em>author</em>, and <em>date</em>, all of which belong together. A single document is
+therefore represented as a <em>SubmodelElementCollection</em>. If there are
+multiple documents, they may be stored in a <em>SubmodelElementList</em>
+containing multiple <em>SubmodelElementCollections</em>​.</p>
+</div>
+<div class="paragraph">
+<p>A <em>SubModellCollection</em> is used for a kind of structure which includes
+the connection of multiple named values. The elements which you can fill
+in in the <em>SubmodellElementCollection</em> are the same as explained in the
+Property Topic. The only difference is the Content part. In the Content
+Part you will See a listing of the Values which are created in the
+<em>SubModelList</em>. In the following picture is an example for how the
+listing will look like. It allows for organizing related elements into a
+logical collection while maintaining their individual properties and
+semantics.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/media/image46.png" alt="./media/media/image46" width="592" height="214"></span></p>
+</div>
+<div class="paragraph">
+<p>[<mark><em>Toc201654292 .anchor]</mark>#_Figure 5‑22: Example of a listing in the
+Content part</em></p>
+</div>
+<div class="paragraph">
+<p>SMCs are a structuring element to hierarchically group other SMCs and/or
+properties inside a SM. Sometimes it can make sense to also semantically
+reference an SMC, especially when the SMC reflects a datamodel that was
+defined outside the AAS.</p>
+</div>
+<div class="paragraph">
+<p><em>SubmodelElementCollection</em> follows the same structural definition as
+Property for <em>idShort</em>, description, and display name. It also includes
+'Category', which indicates whether the collection represents static
+parameters or runtime variables.</p>
+</div>
+<div class="paragraph">
+<p>A <em>SubmodelElementCollection</em> refers to Concept Descriptions (CDs) for
+semantic meaning, consistent with the approach used for Properties.</p>
+</div>
+<div class="paragraph">
+<p>As described under <em>Property</em>, qualifiers add metadata. Within
+<em>SubmodelElementCollections</em>, specific qualifiers like <strong>Cardinality</strong> or
+<strong>Custom Types</strong> (Type, Datatype, Value) define collection-specific
+constraints.</p>
+</div>
+<div class="paragraph">
+<p>Qualifiers allow additional contextual constraints and metadata for
+elements within a <em>SubmodelElementCollection</em>.</p>
+</div>
+<div class="sect3">
+<h4 id="_custom_qualifiers">Custom Qualifiers</h4>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Type: Defines the specific context of the qualifier.</p>
+</li>
+<li>
+<p>Datatype: Specifies the expected format of the qualifier value.</p>
+</li>
+<li>
+<p>Value: Represents the actual qualifier value.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>[<mark><em>Toc201654293 .anchor]</mark>#<span class="image"><img src="./media/media/image47.png" alt="A screenshot of a computer Description automatically generated" width="604" height="113"></span>_Figure 5‑23: Custom Qualifier of
+SubmodelElementCollection</em></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_cardinality">Cardinality</h4>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Type: Specifies how many elements the collection can contain. Eg.
+Multiplicity</p>
+</li>
+<li>
+<p>Value: Specifies cardinality constraints. Example: "0..1" (optional
+element), "1..*" (mandatory and multiple elements).</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/media/image48.png" alt="A screenshot of a computer Description automatically generated" width="604" height="119"></span></p>
+</div>
+<div class="paragraph">
+<p>[<mark><em>Toc201654294 .anchor]</mark>#_Figure 5‑24: Cardinality Qualifier of
+SubmodelElementCollection</em></p>
+</div>
+<div class="paragraph">
+<p>The Data Definition of <em>SubmodelElementCollection</em> is defined using Data
+Definition as outlined in the Property section.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_handling_aas_shells"><strong>Handling AAS Shells</strong></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In the AAS Designer, <em>Shells</em> represent a list of Asset Administration
+Shells (AAS), which serve as digital representations of physical or
+virtual assets. Each Shell contains structured information about a
+specific asset, including its metadata, submodels, and associated files.</p>
+</div>
+<div class="paragraph">
+<p>Within the Shells section of the AAS Designer, users can:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>View and manage all created AAS types or instances.</p>
+</li>
+<li>
+<p>Edit and modify existing shells based on updated information.</p>
+</li>
+<li>
+<p>Search and filter shells based on specific criteria.</p>
+</li>
+<li>
+<p>Validate AAS structures to ensure compliance with industry standards.</p>
+</li>
+<li>
+<p>AAS can be shared within your organization, published on the AAS
+Marketplace, or made available via a public link that can be protected
+with a password and an expiration date.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Each AAS Shell consists of submodels, such as Technical Data, Digital
+Nameplate, Handover Documentation, and more, allowing for a modular and
+flexible approach to structuring asset-related data.</p>
+</div>
+<div class="paragraph">
+<div class="title"><span id="_Toc201654295 " class="anchor">#</span>#Figure 6‑1: Managing Asset Administration Shells (AAS) in AAS Suite</div>
+<p>image::./media/media/image49.png[A screenshot of a computer Description
+automatically generated,width=604,height=271]</p>
+</div>
+<div class="paragraph">
+<div class="title"><span id="_Toc201654296 " class="anchor">#</span>#Figure 6‑2: AAS Shell Management Options</div>
+<p>image::./media/media/image50.png[A screenshot of a computer AI-generated
+content may be incorrect.,width=424,height=200]</p>
+</div>
+<div class="paragraph">
+<p>If you click on the three dots on the left side of an AAS component, you
+will find several options such as View, Modify, Delete, Advanced,
+Export, and Create Link for sharing. Let's explore each of these options
+one by one:</p>
+</div>
+<div class="sect2">
+<h3 id="_view">View</h3>
+<div class="paragraph">
+<p>After clicking the 'View' button, you will be redirected to the detail
+page of the Asset Administration Shell. This page presents the
+information in a structured and easy-to-read format. On the left side,
+you'll find an overview of the component, while the right side displays
+additional details such as product information, manufacturer data, and
+other relevant metadata. These details are also accessible on mobile
+devices, ensuring a consistent experience across platforms.</p>
+</div>
+<div class="paragraph">
+<div class="title"><span id="_Toc201654297 " class="anchor">#</span>#Figure 6‑3: Viewing Detailed Information of an AAS Shell</div>
+<p>image::./media/media/image51.png[A screenshot of a computer Description
+automatically generated,width=591,height=290]</p>
+</div>
+<div class="paragraph">
+<p>One can view various details of the submodels by clicking on each of
+them. In the figure above, you can notice submodels such as
+<em>HandoverDocumentation</em>, <em>DigitalNameplate</em>, and <em>TechnicalData</em> listed
+on the left side. When you select any of these submodels, you will be
+able to explore their specific details.</p>
+</div>
+<div class="paragraph">
+<p>Additionally, there is an option to view the data added to the AAS in
+different formats:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Formatted View: A user-friendly, structured view for easy reading and
+understanding of the data.</p>
+</li>
+<li>
+<p>Unformatted View: A simpler, raw view of the data without any layout
+or styling.</p>
+</li>
+<li>
+<p>JSON View: A machine-readable format, showing the data in JSON
+(JavaScript Object Notation), which is commonly used for data exchange.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This flexibility allows users to choose the most suitable format
+depending on their requirements.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_modify">Modify</h3>
+<div class="paragraph">
+<p>After clicking the 'Modify' button, you will enter the editing mode of
+the selected Asset Administration Shell. This topic is already addressed
+earlier in the document (see…).. Overall, it would be helpful to review
+the structure of the document to avoid redundancy and ensure a clear,
+streamlined flow of information.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_delete">Delete</h3>
+<div class="paragraph">
+<p>The menu entry "Delete" allows you to remove the AAS shell from the
+system. When you use this option, the selected AAS shell and all its
+associated data will be permanently deleted. Make sure to double-check
+before confirming the deletion, as this action cannot be undone.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./media/media/image52.png" alt="./media/media/image52" width="213" height="179">
+</div>
+<div class="title">Figure 8. <span id="_Toc201654298 " class="anchor">#</span>#Figure 6‑4: Delet options in AAS Designer</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_advanced">Advanced</h3>
+<div class="paragraph">
+<p>There are 2 Advanced Options you can choose from <em>Create Feed Mapping</em>
+and <em>Duplicate</em>.</p>
+</div>
+<div class="paragraph">
+<div class="title"><span id="_Toc201654299 " class="anchor">#</span>#Figure 6‑5: Advanced Options in AAS Designer</div>
+<p>image::./media/media/image53.png[A screenshot of a computer AI-generated
+content may be incorrect.,width=432,height=174]</p>
+</div>
+<div class="sect3">
+<h4 id="_6_4_1_create_feed_mapping">6.4.1. Create Feed Mapping</h4>
+<div class="paragraph">
+<p>Feed Mapping allows you to dynamically create Asset Administration
+Shells using external data sources. Selected data fields from sources
+such as CSV or JSON files are manually linked to specific information
+elements within the AAS. This enables the structured generation of AAS
+instances based on incoming data, without the need for manual entry of
+each shell.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/media/image54.png" alt="A screenshot of a computer AI-generated content may be incorrect." width="561" height="181"></span></p>
+</div>
+<div class="paragraph">
+<p><span id="_Toc190860784 " class="anchor">#</span>#Figure 6‑6: Creating Feed Mapping in AAS
+Designer</p>
+</div>
+<div class="paragraph">
+<p>The structure typically includes the following fields:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Field: The name of the field or attribute within the AAS that is being
+mapped (e.g., KOSTAL_MLK12_32140734113).</p>
+</li>
+<li>
+<p>Type: The type of data expected (e.g., String, Integer, etc.).</p>
+</li>
+<li>
+<p>Mapping Type: This defines how the mapping is performed, such as
+whether it's a direct Key-Value mapping, or if it follows a specific
+JSONPath to extract values.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Value / JSONPath: The value or path from the external data source that
+will be mapped to the field in the AAS (e.g., CSV-FILE or a No file
+chosen indicator for file upload).</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_6_4_2_duplicate">6.4.2. Duplicate</h4>
+<div class="paragraph">
+<p>Duplicate helps to duplicate the entire AAS File.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_exports">Exports</h3>
+<div class="paragraph">
+<p>The file can be downloaded in either. aasx or .json format. In a
+separate window, you can select the specific submodels you wish to
+include in the export.</p>
+</div>
+<div class="paragraph">
+<div class="title"><span id="_Toc201654301 " class="anchor">#</span>#Figure 6‑7: Exporting AAS Data</div>
+<p>image::./media/media/image55.png[A screenshot of a computer AI-generated
+content may be incorrect.,width=556,height=197]</p>
+</div>
+<div class="paragraph">
+<div class="title"><span id="_Toc201654302 " class="anchor">#</span>#Figure 6‑8: "Export *.aasx": Selection of Submodels to export</div>
+<p>image::./media/media/image56.png[A screenshot of a computer Description
+automatically generated,width=604,height=265]</p>
+</div>
+<div class="paragraph">
+<p>For the case "Export *.aasx", one can choose the serialization
+format (XML or JSON) and the submodels to be placed in the AASX file.</p>
+</div>
+<div class="paragraph">
+<p>In the case "Export *.json", a JSON file of the whole AAS will be
+directly created and downloaded.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_create_link_for_sharing">Create Link for Sharing</h3>
+<div class="paragraph">
+<div class="title"><span id="_Toc201654303 " class="anchor">#</span>#Figure 6‑9: Creating a Shareable Link in AAS Designer</div>
+<p>image::./media/media/image57.png[A white paper with black lines
+AI-generated content may be incorrect.,width=614,height=116]</p>
+</div>
+<div class="paragraph">
+<p>You can create and share a link to an AAS, allowing others to access the
+shell in view-only mode. This shared link provides read-only access
+through a publicly available viewer and does not permit any
+modifications such as creating, updating, or deleting data.</p>
+</div>
+<div class="paragraph">
+<div class="title"><span id="_Toc201654304 " class="anchor">#</span>#Figure 6‑10: Configuring a Shareabale Link in AAS Designer</div>
+<p>image::./media/media/image58.png[A screenshot of a computer AI-generated
+content may be incorrect.,width=364,height=243]</p>
+</div>
+<div class="paragraph">
+<p>To create the link:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Write a message</strong>: You can include a custom message to provide context
+or instructions for the recipient.</p>
+</li>
+<li>
+<p><strong>Set validity</strong>: Specify the validity period for the link, such as an
+expiration date, to control access over time.</p>
+</li>
+<li>
+<p><strong>Add a password</strong>: For security, you can set a password that will be
+required to access the AAS Shell via the link.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Once you press the 'Create Link for Sharing' button, the link will be
+generated and automatically copied to your clipboard. This feature
+allows secure and controlled sharing of AAS shells with team members,
+collaborators, or stakeholders.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_navigating_the_aas_shell">Navigating the AAS Shell</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_id_validation">ID Validation</h3>
+<div class="paragraph">
+<p>The consistent filling and maintenance of IDs in an asset administration
+shell is an error-prone process, especially if it is carried out
+manually and no suitable tool support is available. A consistency check
+has therefore been added to the AAS Designer with the "Validate IDs"
+feature shows an example of the results of such a check process.</p>
+</div>
+<div class="paragraph">
+<div class="title"><span id="_Toc201654305 " class="anchor">#</span>#Figure 7‑1: ID Validation</div>
+<p>image::./media/media/image59.png[Ein Bild, das Text, Screenshot,
+Software, Computersymbol enthält. KI-generierte Inhalte können
+fehlerhaft sein.,width=529,height=239]</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_import_from_reference_catalogs">Import from Reference Catalogs</h3>
+<div class="paragraph">
+<p>In the context of properties (valueId), value references can be imported
+from reference catalogs(ECLA:SS,VEC,etc.)</p>
+</div>
+<div class="paragraph">
+<div class="title"><span id="_Toc201654306 " class="anchor">#</span>#Figure 7-2: Import von Wertereferenzen aus VEC</div>
+<p>image::./media/media/image60.png[Ein Bild, das Text, Screenshot,
+Software, Zahl enthält. KI-generierte Inhalte können fehlerhaft
+sein.,width=472,height=306]</p>
+</div>
+<div class="paragraph">
+<p>In the context of concept descriptions (unitId / referenceId), units can
+be imported from reference catalogs (ECLASS, QUDT, SI units):</p>
+</div>
+<div class="paragraph">
+<div class="title"><span id="_Toc201654307 " class="anchor">#</span>#Figure 7-3: Import von Einheiten aus QUDT.org</div>
+<p>image::./media/media/image61.png[Ein Bild, das Text, Screenshot,
+Software, Zahl enthält. KI-generierte Inhalte können fehlerhaft
+sein.,width=478,height=309]</p>
+</div>
+<div class="paragraph">
+<div class="title"><span id="_Toc201654308 " class="anchor">#</span>#Figure 7‑4: Import von Einheiten aus SI-Units</div>
+<p>image::./media/media/image62.png[Ein Bild, das Text, Screenshot, Zahl,
+Schrift enthält. KI-generierte Inhalte können fehlerhaft
+sein.,width=480,height=312]</p>
+</div>
+<div class="paragraph">
+<p>There are also references to other potentially relevant reference
+catalogs.</p>
+</div>
+<div class="paragraph">
+<div class="title"><span id="_Toc201654309 " class="anchor">#</span>#Figure 7‑5: References to reference catalogs</div>
+<p>image::./media/media/image63.png[Ein Bild, das Text, Screenshot,
+Software, Zahl enthält. KI-generierte Inhalte können fehlerhaft
+sein.,width=500,height=322]</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/media/image64.png" alt="C:\Users\avdul002\AppData\Local\Microsoft\Windows\INetCache\Content.MSO\E61E0FFB.tmp" width="649" height="225"></span>The
+following shell structure opens up after clicking the "Modify" Button.</p>
+</div>
+<div class="paragraph">
+<p><span id="_Toc201654310 " class="anchor">#</span>#Figure 7‑6: Inside the AAS Shell</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_submodel">Submodel</h3>
+<div class="paragraph">
+<p>On the left side of the shell interface, a tree-like structure
+displaying submodels is presented. Various types of information related
+to the shell such as technical properties, carbon footprint data, and
+handover documentation can be added here. One such example is
+<em>HandoverDocumentation</em>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_handover_documentation_wizard">Handover Documentation-Wizard</h3>
+<div class="paragraph">
+<p><span class="image"><img src="./media/media/image65.png" alt="C:\Users\avdul002\AppData\Local\Microsoft\Windows\INetCache\Content.MSO\22722D6F.tmp" width="607" height="303"></span>The
+AAS Designer now supports the simplified creation of elements in
+Submodel Handover Documentation: </p>
+</div>
+<div class="paragraph">
+<p><span id="_Toc201654311 " class="anchor">#</span>#Figure 7‑7: Wizard HandoverDocumentation</p>
+</div>
+<div class="paragraph">
+<p>At the top right corner, three important operations can be performed.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_validate_errors">Validate Errors</h3>
+<div class="paragraph">
+<p><span class="image"><img src="./media/media/image66.png" alt="C:\Users\avdul002\AppData\Local\Microsoft\Windows\INetCache\Content.MSO\805E6D3.tmp" width="606" height="285"></span>It
+is recommended to validate any errors by clicking on the grey section
+shown in the figure, which will highlight any issues or inconsistencies
+that need to be addressed. This validation process ensures that your AAS
+remains accurate and compliant with standards.</p>
+</div>
+<div class="paragraph">
+<p><span id="_Toc201654312 " class="anchor">#</span>#Figure 7‑8: Validation Errors in the AAS
+Designer</p>
+</div>
+<div class="paragraph">
+<p>As shown in the figure, a list of all issues within the AAS shell is
+displayed during validation. Each error is clearly identified and can be
+directly navigated to, allowing users to quickly address the problems.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./media/media/image67.png" alt="C:++\++Users++\++avdul002++\++AppData++\++Local++\++Microsoft++\++Windows++\++INetCache++\++Content.MSO++\++29F5EFCF.tmp" width="600" height="216">
+</div>
+<div class="title">Figure 9. <span id="_Toc201654313 " class="anchor">#</span>#Figure 7‑9: Resolving Validation Errors in the AAS Designer</div>
+</div>
+<div class="paragraph">
+<p>Once the specific issue is located, the necessary adjustments can be
+made to resolve the error. The Designer automatically guides the user to
+the problem area once the button is clicked. This process ensures that
+the AAS shell is free from issues and fully compliant with the required
+standards before it is finalized or shared.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_save">Save</h3>
+<div class="paragraph">
+<p>After the required changes have been made, they can be saved by clicking
+the green Save button located at the top right corner of the page.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_delete_2">Delete</h3>
+<div class="paragraph">
+<p>The AAS shell can be deleted by clicking the red Delete button.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_reset">Reset</h3>
+<div class="paragraph">
+<p><span class="image"><img src="./media/media/image68.png" alt="C:\Users\avdul002\AppData\Local\Microsoft\Windows\INetCache\Content.MSO\23EB19B5.tmp" width="625" height="230"></span>The
+Reset button, located immediately after the Delete button (as shown in
+the figure below), can be used to reset all the current changes made
+within the Designer.</p>
+</div>
+<div class="paragraph">
+<p><span id="_Toc201654314 " class="anchor">#</span>#Figure 7‑10: Reset, Undo, Redo Button in the
+AAS Shell</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_undo">Undo</h3>
+<div class="paragraph">
+<p>The Undo button is used to revert the most recent change, allowing any
+unintended modifications to be undone.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_redo">Redo</h3>
+<div class="paragraph">
+<p>The Redo button is used to reapply a change that was previously undone
+using the Undo function.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_export_views">Export Views</h3>
+<div class="paragraph">
+<p>As shown in the figure below, the Export options become visible after
+clicking the three-dot menu. The AAS shell can be exported either as a
+.aasx or .json file. Also, an option to view the AAS shell in Viewer
+Mode is available under the View function in the Shells Overview.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./media/media/image69.jpeg" alt="C:++\++Users++\++avdul002++\++AppData++\++Local++\++Microsoft++\++Windows++\++INetCache++\++Content.MSO++\++16226A8B.tmp" width="317" height="236">
+</div>
+<div class="title">Figure 10. <span id="_Toc201654315 " class="anchor">#</span>#Figure 7‑11: Export Functions</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_identification_schemas_and_their_importance">Identification Schemas <strong>and their Importance</strong></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Unique identifiers are required for referencing both an AAS and its
+Submodels. Unique identifiers are also used to reference external
+semantic information. The ID schemes described in the following are
+relevant for the AAS concept.</p>
+</div>
+<div class="sect2">
+<h3 id="_uuidguid">UUID/GUID</h3>
+<div class="paragraph">
+<p><strong>UUID</strong> stands for Universally Unique
+Identifier<sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup>.
+It is a 128-bit (16-byte) identifier standardized by the Open Systems
+Interconnection (OSI) framework and detailed in the RFC 4122
+specification. The goal is to generate IDs that are unique across time
+and space—without needing a central authority to coordinate them. Their
+uniqueness relies on probability (for V4) or careful design (for V1, V3,
+V5), making collisions astronomically unlikely—think 1 in 2^122 for
+random UUIDs.</p>
+</div>
+<div class="paragraph">
+<p><strong>GUID</strong> stands for Globally Unique Identifier and is Microsoft's term,
+while it is functionally equivalent to a UUID.</p>
+</div>
+<div class="paragraph">
+<p><strong>Format</strong>: A UUID is typically written as a 36-character string in
+hexadecimal, split into five groups by hyphens: 8-4-4-4-12. For example:</p>
+</div>
+<div class="paragraph">
+<p>550e8400-e29b-41d4-a716-446655440000</p>
+</div>
+<div class="paragraph">
+<p>That's 32 hex digits (representing 128 bits) plus 4 hyphens.</p>
+</div>
+<div class="paragraph">
+<p><strong>Structure</strong>: Internally, it's 16 bytes, often broken down into fields
+like time, clock sequence, and node ID, depending on the version (more
+on that soon).</p>
+</div>
+<div class="paragraph">
+<p><strong>Variants</strong>: RFC 4122 defines a specific "variant" (bits 64-65 set to 10)
+to distinguish it from other 128-bit ID schemes. Most UUIDs you
+encounter follow this.</p>
+</div>
+<div class="paragraph">
+<p>UUIDs are often generated by AAS-Tools to be used in the AAS- and
+Submodel-IDs. This might be appropriate in many cases for Instance-AAS,
+but can become problematic for Type-AAS. Therefore, AAS publishers
+should make a careful decision regarding the usage of UUIDs.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_irdi_iso_29005_5">IRDI (ISO 29005-5)</h3>
+<div class="paragraph">
+<p>The International Registration Data Identifier (IRDI) is a global
+identification system for properties, values, and concepts. It is
+defined by ISO 29005-5 and ISO/IEC 11179-6 as an established means to
+create manageable unique identifiers that remain consistent across
+different languages and IT systems. IRDIs are used in ECLASS, IEC, and
+ISO standards.</p>
+</div>
+<div class="paragraph">
+<div class="title"><span id="_Toc201654316 " class="anchor">#</span>#Figure 8‑1: Identification Schema According to ISO 29005-5<sup class="footnote">[<a id="_footnoteref_2" class="footnote" href="#_footnotedef_2" title="View footnote.">2</a>]</sup><sup class="footnote">[<a id="_footnoteref_3" class="footnote" href="#_footnotedef_3" title="View footnote.">3</a>]</sup></div>
+<p>image::./media/media/image70.png[A diagram of a data identifier
+AI-generated content may be incorrect.,width=364,height=253]</p>
+</div>
+<div class="paragraph">
+<p>IRDIs are a historically established referencing mechanism that must be
+dealt with in the AAS. However, as they require external management, it
+is not recommended to specify new IRDIs for elements in the AAS</p>
+</div>
+<div class="sect3">
+<h4 id="_8_2_1_understand_the_iec_irdi_structure">8.2.1. Understand the IEC IRDI Structure</h4>
+<div class="paragraph">
+<p>An IEC-CDD follows this general format: <strong>ICD</strong>/<strong>OI</strong>/<strong>AI</strong><mark><strong>IC</strong></mark><strong>VI</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>ICD (International Code Designator)</strong>: Identifies the registration
+authority (e.g., "0112" for IEC).</p>
+</li>
+<li>
+<p><strong>OI (Organization Identifier)</strong>: Specifies the organization within the
+authority (e.g., "2" for IEC).</p>
+</li>
+<li>
+<p><strong>AI (Application Identifier)</strong>: Indicates the specific dictionary or
+standard (e.g., "61360_4" for IEC 61360-4 DB).</p>
+</li>
+<li>
+<p><strong>IC (Item Code)</strong>: A unique code for the item within the dictionary
+(e.g., "AAB123").</p>
+</li>
+<li>
+<p><strong>VI (Version Identifier)</strong>: Denotes the version of the item (e.g.,
+"001").</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="underline">Example</span>: 0112/2///61360_4#AAB123#001</p>
+</div>
+<div class="paragraph">
+<div class="title"><span id="_Toc190860829 " class="anchor">#</span>#Table 2 Breakdown of IRDI Example</div>
+<p>(0112/2///61360_4#AAA032)</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">0112/2///61360_4#AAA032</th>
+<th class="tableblock halign-left valign-top"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Code:</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>description</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0112/2/</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Issuing Agency Code (IEC)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">61360_4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">IEC 61360 Standard Reference</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">#AAA032</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unique identifier for a property/class</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_8_2_2_understand_the_eclass_irdi_structure">8.2.2. Understand the ECLASS IRDI Structure</h4>
+<div class="paragraph">
+<p>An ECLASS IRDI typically follows this format:
+<strong>ICD</strong>/<strong>OI</strong>/<strong>CSI</strong><mark><strong>Code</strong></mark><strong>Version</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>ICD (International Code Designator)</strong>: A code for the registration
+authority, e.g., "0173" for ECLASS.</p>
+</li>
+<li>
+<p><strong>OI (Organization Identifier)</strong>: Identifies the organization, often
+omitted or left empty in ECLASS as it's implicit.</p>
+</li>
+<li>
+<p><strong>CSI (Code Space Identifier)</strong>: Indicates the type of structural
+element (e.g., "01" for classification class, "02" for property, "07"
+for value).</p>
+</li>
+<li>
+<p><strong>Code</strong>: A unique identifier for the specific item (e.g., "27-22-01-01"
+for a class or "AAB123" for a property).</p>
+</li>
+<li>
+<p><strong>Version</strong>: A version number (e.g., "001").</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="underline">Example</span>: 0173-1#01-27-22-01-01#001 (a classification class
+in ECLASS)</p>
+</div>
+<div class="paragraph">
+<div class="title"><span id="_Toc190860828 " class="anchor">#</span>#Table 3 Breakdown of IRDI Example</div>
+<p>(0173-1#01-AAA123#001)</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">0173-1#01-AAA123#001</th>
+<th class="tableblock halign-left valign-top"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Code:</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>description</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0173</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ICD code for eCl@ss</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">eCl@ss Office</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">01</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AAA123</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">identifier of class</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">001</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">version of class</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_uriiri">URI/IRI</h3>
+<div class="paragraph">
+<p>An <strong>URI</strong> (Uniform Resource Identifier) is a string of characters that
+identifies a resource, standardized by RFC 3986. It is a concept
+encompassing anything that can be named or located, whether it's a
+webpage, a file, or an abstract entity.</p>
+</div>
+<div class="paragraph">
+<p><strong>Example</strong>: <a href="http://example.com/resource/123" class="bare">http://example.com/resource/123</a>.</p>
+</div>
+<div class="paragraph">
+<p><strong>Components</strong>: <em>Scheme</em> (http), <em>authority</em> (example.com), <em>path</em>
+(/resource/123), and optionally <em>query</em> (?key=value) or <em>fragment</em>
+(#section1).</p>
+</div>
+<div class="paragraph">
+<p><strong>Subtypes</strong>: Includes URLs (locators, like <a href="http://example.com" class="bare">http://example.com</a>) and URNs
+(names, like urn:isbn:0451450523).</p>
+</div>
+<div class="paragraph">
+<p>An <strong>IRI</strong> (Internationalized Resource Identifier) is an extension of URI,
+defined by RFC 3987, that supports non-ASCII characters (e.g., accents,
+Chinese characters) for global accessibility. IRIs are technically a
+superset of URIs, thus every URI is an IRI, but not vice versa.</p>
+</div>
+<div class="paragraph">
+<p><strong>Example</strong>: <a href="http://exâmple.com/资源/123" class="bare">http://exâmple.com/资源/123</a> encoded by</p>
+</div>
+<div class="paragraph">
+<p><a href="https://xn--exmple-xta.com/%E8%B5%84%E6%BA%90/123" class="bare">https://xn--exmple-xta.com/%E8%B5%84%E6%BA%90/123</a>.</p>
+</div>
+<div class="paragraph">
+<p>The AAS needs globally unique, machine-readable, and interoperable
+identifiers. IRIs fit this role perfectly because they extend URIs
+(Uniform Resource Identifiers) to support international characters,
+aligning with Industry 4.0's global scope via the following features:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Global Uniqueness</strong>: IRIs leverage namespaces (e.g., domain names) to
+ensure no two assets clash, even across organizations.</p>
+</li>
+<li>
+<p><strong>Internationalization</strong>: IRIs allow non-ASCII characters (e.g.,
+<a href="http://工厂.cn/设备/123" class="bare">http://工厂.cn/设备/123</a> for a Chinese factory), critical for
+multinational supply chains.</p>
+</li>
+<li>
+<p><strong>Resolvability</strong>: HTTP-based IRIs can point to a resource (e.g., an AAS
+server), enabling data retrieval.</p>
+</li>
+<li>
+<p><strong>Standardization</strong>: IRIs align with web standards (RFC 3987) and
+Semantic Web practices, making AAS compatible with broader ecosystems
+like OPC UA or linked data.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>In the AAS metamodel specification [1], IRIs are explicitly
+recommended as the primary type of identifier for both the asset and the
+AAS itself and offer significant administrative advantages:</p>
+</div>
+<div class="paragraph">
+<p><strong>Namespace control</strong>: the schema and domain) act as a namespace, allowing
+organizations or systems to define their own identifiers without central
+coordination.</p>
+</div>
+<div class="paragraph">
+<p><strong>Extensibility</strong>: URIs are flexible, you can add a path, query or
+fragment to refine the identity.</p>
+</div>
+<div class="paragraph">
+<p>For use in the AAS, it is recommended to avoid the use of non-ASCII
+special characters in URIs/IRIs.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_semantic_databases">Semantic Databases</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A semantic reference is a link to an external standard or ontology that
+defines the meaning of a data element within an AAS. These references
+ensure interoperability, consistency, and automation across different
+systems in Industry 4.0.</p>
+</div>
+<div class="paragraph">
+<p>For Technical Data in Industrial Equipment, a Generic Frame to structure
+information is required. This means using standardized vocabularies and
+industry standards to define and link component attributes. A number of
+Industry Standards for Semantic References exist, i.e.:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>IEC-CDD</strong>: Focuses on electrotechnical and industrial domains, rooted
+in IEC 61360 standards, and emphasizes machine-to-machine communication
+and smart manufacturing (e.g., Industry 4.0).<br>
+<a href="https://cdd.iec.ch/cdd/iec61360/iec61360.nsf/SearchFrameset" class="bare">https://cdd.iec.ch/cdd/iec61360/iec61360.nsf/SearchFrameset</a>,
+<a href="https://cdd.iec.ch/cdd/iec61360/iec61360.nsf/TreeFrameset" class="bare">https://cdd.iec.ch/cdd/iec61360/iec61360.nsf/TreeFrameset</a>,</p>
+</li>
+<li>
+<p><strong>ECLASS</strong>: A cross-industry standard with a strong focus on detailed
+technical properties and classifications, widely used in Europe for
+engineering and manufacturing. It's highly granular and supports
+multiple domains.
+<a href="https://eclass.eu/en/eclass-standard/search-content/search" class="bare">https://eclass.eu/en/eclass-standard/search-content/search</a></p>
+</li>
+<li>
+<p><strong>ETIM</strong> (Electro-Technical Information Model): A standardized
+classification system primarily for electrical and HVAC products.
+Focused on technical product data for the electrical, building, and
+installation sectors. Popular in Europe, especially among manufacturers,
+wholesalers, and contractors for product data exchange. Similar to
+ECLASS, it provides classes, features, and values, but it's more
+specialized for electrotechnical and related industries. It's maintained
+by the ETIM International organization.
+<a href="https://prod.etim-international.com/class" class="bare">https://prod.etim-international.com/class</a>,
+<a href="https://etimapi.etim-international.com/" class="bare">https://etimapi.etim-international.com/</a></p>
+</li>
+<li>
+<p><strong>GPC</strong> (Global Product Classification): A product classification system
+developed by GS1 for global trade. Covers consumer goods, industrial
+products, and services with a focus on retail and trade. Used in
+conjunction with GS1 standards (e.g., barcodes) for supply chain
+efficiency. Broad and less technical than ECLASS or IEC-CDD, it's
+designed for interoperability in global commerce.
+<a href="https://gpc-browser.gs1.org/" class="bare">https://gpc-browser.gs1.org/</a></p>
+</li>
+<li>
+<p><strong>Electropedia:</strong> Online terminology database published by the IEC,
+contains all the terms and definitions in the International
+Electrotechnical Vocabulary (IEV) which is published in the IEC 60050
+series. Contains more than 22 000 terminological entries in English and
+French organized by subject area, with equivalent terms in various other
+languages: Arabic, Chinese, Croatian, Czech, Danish, Dutch, Finnish,
+German, Italian, Japanese, Korean, Mongolian, Norwegian, Polish,
+Portuguese, Russian, Serbian, Slovak, Slovenian, Spanish, Swedish,
+Turkish and Ukrainian (coverage varies by subject area).
+<a href="https://electropedia.org/" class="bare">https://electropedia.org/</a></p>
+</li>
+<li>
+<p><strong>VEC</strong> (Vehicle Electric Container) is an open standard developed under
+prostep ivip and VDA to describe electrical and electronic systems in
+vehicles, such as wiring harnesses, components, and connectivity. It's
+an XML-based data model but also has an ontology-like structure, a
+formalized vocabulary with classes, properties, and relationships. Its
+elements can be referenced via URIs by applying semantic web principles.
+<a href="https://ecad.prostep.org/ontologies/2024/03/vec" class="bare">https://ecad.prostep.org/ontologies/2024/03/vec</a></p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="_iec_cdd">IEC-CDD</h3>
+<div class="paragraph">
+<p>The International Electrotechnical Commission (IEC) Common Data
+Dictionary uses the International Registration Data Identifier (IRDI)
+for referencing properties, classes, and values, ensuring
+interoperability across industries, digital twins, and supply chains.
+IEC standards are widely used in industrial automation, power systems,
+electronics, and manufacturing.</p>
+</div>
+<div class="paragraph">
+<p>[<mark>_Toc201654392 .anchor]</mark>#</p>
+</div>
+<div class="sect3">
+<h4 id="_9_1_1_finding_irdis_in_iec">9.1.1. Finding IRDIs in IEC</h4>
+<div class="paragraph">
+<p><strong>Step 1</strong>: Click on the following link:</p>
+</div>
+<div class="paragraph">
+<p><a href="https://cdd.iec.ch/cdd/common/iec61360-7.nsf/TreeFrameset" class="bare">https://cdd.iec.ch/cdd/common/iec61360-7.nsf/TreeFrameset</a></p>
+</div>
+<div class="paragraph">
+<p><strong>Step 2</strong>: Select a suitable IEC standard, i.e. „IEC61360-4":</p>
+</div>
+<div class="paragraph">
+<div class="title"><span id="_Toc201654317 " class="anchor">#</span>#Figure 9‑1: Example of selecting a suitable IEC standard</div>
+<p>image::./media/media/image71.jpeg[Ein Bild, das Text, Screenshot,
+Software, Webseite enthält. KI-generierte Inhalte können fehlerhaft
+sein.,width=604,height=393]</p>
+</div>
+<div class="paragraph">
+<p><strong>Step 3</strong>: Search the selected tree for the suitable class and/or
+attribute manually via
+<a href="https://cdd.iec.ch/cdd/iec61360/iec61360.nsf/TreeFrameset" class="bare">https://cdd.iec.ch/cdd/iec61360/iec61360.nsf/TreeFrameset</a> or do a text
+search via <a href="https://cdd.iec.ch/cdd/iec61360/iec61360.nsf/SearchFrameset" class="bare">https://cdd.iec.ch/cdd/iec61360/iec61360.nsf/SearchFrameset</a>.
+E.g. if you want to find the IEC-ID for 'temperature type'
+(<a href="https://cdd.iec.ch/cdd/iec61360/iec61360.nsf/TU0/0112-2---61360_4%23AAA032" class="bare">https://cdd.iec.ch/cdd/iec61360/iec61360.nsf/TU0/0112-2---61360_4%23AAA032</a>),
+either scroll down the website or you can perform a text search via for
+the relevant word search. Click the suitable search result you find most
+accurately suits your search.</p>
+</div>
+<div class="paragraph">
+<div class="title"><span id="_Toc201654318 " class="anchor">#</span>#Figure 9‑2: Searching for IEC and IRDI IDs</div>
+<p>image::./media/media/image72.png[A screenshot of a computer AI-generated
+content may be incorrect.,width=314,height=448]</p>
+</div>
+<div class="paragraph">
+<p><strong>Step 4</strong>: You will find the IEC IRDI for the selected property:</p>
+</div>
+<div class="paragraph">
+<div class="title"><span id="_Toc201654319 " class="anchor">#</span>#Figure 9‑3: IEC and IRDI Identification for a Property</div>
+<p>image::./media/media/image73.png[A screenshot of a computer AI-generated
+content may be incorrect.,width=600,height=194]</p>
+</div>
+<div class="sect4">
+<h5 id="_9_1_2_adding_it_to_semantic_description">9.1.2. Adding it to Semantic Description</h5>
+<div class="paragraph">
+<p><strong>Step 1:</strong> In the AAS Designer, click on the following option in semantic
+description under a specific subshell:</p>
+</div>
+<div class="paragraph">
+<div class="title"><span id="_Toc201654320 " class="anchor">#</span>#Figure 9‑4: Semantic description in the AAS Designer</div>
+<p>image::./media/media/image74.png[A screenshot of a computer Description
+automatically generated,width=604,height=197]</p>
+</div>
+<div class="paragraph">
+<p><strong>Step 2:</strong> Add IRDI value to the ID and specify the industry standard
+used.</p>
+</div>
+<div class="paragraph">
+<div class="title"><span id="_Toc201654321 " class="anchor">#</span>#Figure 9‑5: ID and Description in Details of Semantic description</div>
+<p>image::./media/media/image75.png[A screenshot of a computer Description
+automatically generated,width=604,height=253]</p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_9_1_3_eclass">9.1.3. ECLASS</h4>
+<div class="paragraph">
+<p>ECLASS is an internationally recognized classification system that
+provides a standardized framework for describing products and services
+in all industries. It ensures that businesses, manufacturers, and
+suppliers use a common language when exchanging product information,
+regardless of language, country, or system.</p>
+</div>
+<div class="paragraph">
+<p>ECLASS ensures consistent identification of product classes and
+properties across different languages and business ecosystems.</p>
+</div>
+<div class="paragraph">
+<p>Click on the image below redirects to the website
+(<a href="https://eclass.eu/en/eclass-standard/search-content" class="bare">https://eclass.eu/en/eclass-standard/search-content</a>):</p>
+</div>
+<div class="paragraph">
+<div class="title"><span id="_Toc201654322 " class="anchor">#</span>#Figure 9‑6: ECLASS Classification System</div>
+<p>image::./media/media/image76.png[A screenshot of a web page AI-generated
+content may be incorrect.,width=430,height=272]</p>
+</div>
+<div class="paragraph">
+<p>ECLASS elements are structured as follows:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 53%;">
+<col style="width: 47%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Code Space Identifier (CSI)</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Category of administrated item</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">44</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">04</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">property</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">01</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">unit of measurement</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">01</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">property value</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>[<mark>_Toc190860827 .anchor]</mark>#_Table 4 Excerpt of Code Space
+Identifiers (CSI) according to ISO
+290ß05-5_<sup class="footnote">[<a id="_footnoteref_4" class="footnote" href="#_footnotedef_4" title="View footnote.">4</a>]</sup></p>
+</div>
+<div class="paragraph">
+<p>Informative Links to online element descriptions can be created as
+follows:</p>
+</div>
+<div class="paragraph">
+<p><a href="https://eclass.eu/eclass-standard/content-suche/show?tx_eclasssearch_ecsearch%5Bid%5D=44040101" class="bare">https://eclass.eu/eclass-standard/content-suche/show?tx_eclasssearch_ecsearch%5Bid%5D=44040101</a></p>
+</div>
+<div class="paragraph">
+<p>ECLASS IRDIs are structured as follows:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Component</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Meaning</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0173</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Issuing agency (ECLASS)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ECLASS Office</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">02</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Property (CSI Code)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">BAA456</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unique identifier of property</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">001</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Version number</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>[<mark><em>Toc190860830 .anchor]</mark>#_Table 5 Breakdown of IRDI Example
+(0173-1#02-BAA456#001)</em></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_vec">VEC</h3>
+<div class="paragraph">
+<p>The <a href="https://ecad.prostep.org/ontologies/2024/03/vec">Vehicle Electric
+Container
+(VEC)</a><sup class="footnote">[<a id="_footnoteref_5" class="footnote" href="#_footnotedef_5" title="View footnote.">5</a>]</sup> is an
+example for an industry-standard data model designed for the exchange of
+electrical system information in the automotive and transportation
+sectors. It is developed and maintained by ProSTEP iViP, a consortium
+focused on interoperability in engineering data exchange.</p>
+</div>
+<div class="paragraph">
+<p>VEC provides a structured format for representing and exchanging
+electrical wire harness data, including components, connections,
+signals, geometries, and metadata. Ist role is enabling seamless
+communication between different Computer-Aided Design (CAD) and Product
+Lifecycle Management (PLM) systems. VEC is defined in the VDA
+Recommendation 4968 and ProSTEP iViP Recommendation PSI21, in form of a
+standardized information model, data dictionary, XML schema, and an
+ontology in "https://www.w3.org/TR/turtle/#sec-iri-references[RDF 1.1
+Turtle]" syntax is provided at
+<a href="https://ecad-wiki.prostep.org/specifications/vec/v210/vec-2.1.0-ontology.ttl" class="bare">https://ecad-wiki.prostep.org/specifications/vec/v210/vec-2.1.0-ontology.ttl</a>,
+which can be utilized in the AAS as follows:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Step 1</strong>: Go to the website link:
+<a href="https://ecad-wiki.prostep.org/specifications/vec/v210/vec-2.1.0-ontology.ttl" class="bare">https://ecad-wiki.prostep.org/specifications/vec/v210/vec-2.1.0-ontology.ttl</a></p>
+</li>
+<li>
+<p><strong>Step 2</strong>: Press Ctrl&#43;F and search for the result you need. For
+eg. you are searching for information on temperature, you can search for
+"temperature".</p>
+</li>
+<li>
+<p><strong>Step 3</strong>: One of the result is shown below. So the relevant vec for my
+search is vec:TemperatureInformation.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span id="_Toc201654323 " class="anchor">#</span>#Figure 9‑7: Searching for Temperature
+Information in the VEC Model</p>
+</div>
+<div class="paragraph">
+<p>To be used inside the AAS, a AAS-suitable ID formation must be defined,
+e.g. in the form of IRIs (Internationalized Resource Identifier):</p>
+</div>
+<div class="paragraph">
+<p><span class="underline">Reference examples to class definitions:</span></p>
+</div>
+<div class="paragraph">
+<p><a href="http://www.prostep.org/ontologies/ecad/2024/03/vec#TemperatureType" class="bare">http://www.prostep.org/ontologies/ecad/2024/03/vec#TemperatureType</a></p>
+</div>
+<div class="paragraph">
+<p><a href="http://www.prostep.org/ontologies/ecad/2024/03/vec#InsulationSpecification" class="bare">http://www.prostep.org/ontologies/ecad/2024/03/vec#InsulationSpecification</a></p>
+</div>
+<div class="paragraph">
+<p><span class="underline">Reference examples for value in enumeration</span>:</p>
+</div>
+<div class="paragraph">
+<p><a href="http://www.prostep.org/ontologies/ecad/2024/03/vec#PrimaryPartType_Wire" class="bare">http://www.prostep.org/ontologies/ecad/2024/03/vec#PrimaryPartType_Wire</a></p>
+</div>
+<div class="paragraph">
+<p><a href="http://www.prostep.org/ontologies/ecad/2024/03/vec#PrimaryPartType_PluggableTerminal" class="bare">http://www.prostep.org/ontologies/ecad/2024/03/vec#PrimaryPartType_PluggableTerminal</a><br>
+<a href="http://www.prostep.org/ontologies/ecad/2024/03/vec#TemperatureType_AmbientTemperature" class="bare">http://www.prostep.org/ontologies/ecad/2024/03/vec#TemperatureType_AmbientTemperature</a></p>
+</div>
+<div class="paragraph">
+<p><span class="underline">Reference examples on Properties</span>:</p>
+</div>
+<div class="paragraph">
+<p><a href="http://www.prostep.org/ontologies/ecad/2024/03/vec#itemVersionCompanyName" class="bare">http://www.prostep.org/ontologies/ecad/2024/03/vec#itemVersionCompanyName</a></p>
+</div>
+<div class="paragraph">
+<p><a href="http://www.prostep.org/ontologies/ecad/2024/03/vec#partVersionPrimaryPartType" class="bare">http://www.prostep.org/ontologies/ecad/2024/03/vec#partVersionPrimaryPartType</a></p>
+</div>
+<div class="paragraph">
+<p><a href="http://www.prostep.org/ontologies/ecad/2024/03/vec#partVersionPartNumber" class="bare">http://www.prostep.org/ontologies/ecad/2024/03/vec#partVersionPartNumber</a></p>
+</div>
+<div class="paragraph">
+<p><a href="http://www.prostep.org/ontologies/ecad/2024/03/vec#partVersionPreferredUseCase" class="bare">http://www.prostep.org/ontologies/ecad/2024/03/vec#partVersionPreferredUseCase</a></p>
+</div>
+<div class="paragraph">
+<p><a href="http://www.prostep.org/ontologies/ecad/2024/03/vec#insulationSpecificationBaseColor" class="bare">http://www.prostep.org/ontologies/ecad/2024/03/vec#insulationSpecificationBaseColor</a></p>
+</div>
+<div class="paragraph">
+<p><a href="http://www.prostep.org/ontologies/ecad/2024/03/vec#insulationSpecificationMaterial" class="bare">http://www.prostep.org/ontologies/ecad/2024/03/vec#insulationSpecificationMaterial</a></p>
+</div>
+<div class="paragraph">
+<p><a href="http://www.prostep.org/ontologies/ecad/2024/03/vec#conductorSpecificationCrossSectionArea" class="bare">http://www.prostep.org/ontologies/ecad/2024/03/vec#conductorSpecificationCrossSectionArea</a></p>
+</div>
+<div class="paragraph">
+<p><a href="http://www.prostep.org/ontologies/ecad/2024/03/vec#conductorSpecificationMaterial" class="bare">http://www.prostep.org/ontologies/ecad/2024/03/vec#conductorSpecificationMaterial</a></p>
+</div>
+<div class="paragraph">
+<p><a href="http://www.prostep.org/ontologies/ecad/2024/03/vec#wireElementSpecificationMinBendRadiusStatic" class="bare">http://www.prostep.org/ontologies/ecad/2024/03/vec#wireElementSpecificationMinBendRadiusStatic</a></p>
+</div>
+<div class="sect3">
+<h4 id="_9_2_1_numericalvalue_vec_as_a_property_aas">9.2.1. NumericalValue (VEC) as a Property (AAS)</h4>
+<div class="paragraph">
+<p><strong>Variant 1</strong>: Define Unit in Concept Description</p>
+</div>
+<div class="paragraph">
+<div class="title"><span id="_Toc201654324 " class="anchor">#</span>#Figure 9‑8: For a VEC-NumericalValue define Unit in Concept Description</div>
+<p>image::./media/media/image78.png[A screenshot of a computer Description
+automatically generated,width=604,height=244]</p>
+</div>
+<div class="paragraph">
+<p><strong>Problem</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The unit (e.g. in m, mm, inches) is defined globally for the
+referenced VEC property for all AASes on the AAS server.</p>
+</li>
+<li>
+<p>When another unit format comes from a native source, it may be
+necessary to convert with rounding errors.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Variant 2</strong>: Create a concept description for each unit-property
+combination, e.g.</p>
+</div>
+<div class="paragraph">
+<p>vec#thickness_m</p>
+</div>
+<div class="paragraph">
+<p>vec#thickness_mm</p>
+</div>
+<div class="paragraph">
+<p>vec#thickness_inches</p>
+</div>
+<div class="paragraph">
+<p>Problems: Semantic reference between the CDs and the VEC specification
+would be lost.</p>
+</div>
+<div class="paragraph">
+<p><strong>Variant 3</strong>: Define unit for each property in the embedded data
+specification</p>
+</div>
+<div class="paragraph">
+<div class="title"><span id="_Toc201654325 " class="anchor">#</span>#Figure 9‑9: Define Unit for each property in the embedded data specification</div>
+<p>image::./media/media/image79.png[Ein Bild, das Text, Screenshot,
+Software, Zahl enthält. KI-generierte Inhalte können fehlerhaft
+sein.,width=591,height=232]</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_mapping_of_predefined_values_from_reference_systems">Mapping of predefined values from reference systems</h3>
+<div class="paragraph">
+<p>VEC provides limited semantic definitions in some aspects. It can
+therefore be useful to combine other established reference systems.
+These often define attributes for dedicated topics such as colors,
+materials, protection classes, as for example in IEC-CDD:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 47%;">
+<col style="width: 53%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Applicable properties:</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Enumeration code list:</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://cdd.iec.ch/cdd/iec61360/iec61360.nsf/PropertiesAllVersions/0112-2---61360_4%23AAF250?opendocument">0112/2///61360_4#AAF250
+- insulation colour code</a><br>
+<a href="https://cdd.iec.ch/cdd/iec61360/iec61360.nsf/PropertiesAllVersions/0112-2---61360_4%23AAH065?opendocument">0112/2///61360_4#AAH065
+- housing colour code</a><br>
+<a href="https://cdd.iec.ch/cdd/common/iec61360-7.nsf/PropertiesAllVersions/0112-2---61360_7%23CBA018?opendocument">0112/2///61360_7#CBA018
+- IEC colour code of item</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N.A., BK, BN, RD, OG, GN, YE, BU, VT, GY,
+WH, PK, GD, TQ, SR, GNYE, BKBN, BKRD, BKOG, BKGN, BKVT, BKGY, BKWH,
+BKPK, BKGD, BKTQ, BKSR, BRRD, BROG, BRBU, BRVT, BRGY, BRWH, BRPK, BRGD,
+BRTK, BRSR, RDOG, RDBU, RDVT, RDGY, RDWH, RDPK, RDGD, RDTQ, RDSR, OGBU,
+OGVT, OGGY, OGWH, OGPK, OGGD, OGTQ, OGSR, BUVT, BUGY, BUWH, BUPK, BUGD,
+BUTQ, BUSR, VTGY, VTWH, VTPK, VTGD, VTTQ, VTSR, GYWH, GYPK, GYGD, GYTQ,
+GYSR, WHPK, WHGD, WHTQ, WHSR, PKGD, PKTQ, PKSR, GDTQ, GDSR, TQSR, OTHERS</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://cdd.iec.ch/cdd/iec61360/iec61360.nsf/PropertiesAllVersions/0112-2---61360_4%23AAF128?opendocument">0112/2///61360_4#AAF128
+- package colour</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">BG, BK, BL, BN, BZ, GN, GY, IV, NC, OR, PK, RD, TN,
+VT, WT, YL</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://cdd.iec.ch/cdd/iec61360/iec61360.nsf/PropertiesAllVersions/0112-2---61360_4%23AAF243?opendocument">0112/2///61360_4#AAF243
+- conductor configuration</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">BRAID, BUNCH, LITZ, SOLID, STRAND, TINSEL</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://cdd.iec.ch/cdd/iec61360/iec61360.nsf/PropertiesAllVersions/0112-2---61360_4%23AAJ018?opendocument">0112/2///61360_4#AAJ018
+- sealing class</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DUSTP, OPEN, SEAL</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="./media/media/image80.gif" alt="./media/media/image80"></span><a href="https://cdd.iec.ch/cdd/iec61360/iec61360.nsf/PropertiesAllVersions/0112-2---61360_4%23AAH056?opendocument">0112/2///61360_4#AAH056
+- body insulation material</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CER, GLS, PLA</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://cdd.iec.ch/cdd/iec61360/iec61360.nsf/PropertiesAllVersions/0112-2---61360_4%23AAF248?opendocument">0112/2///61360_4#AAF248
+- insulating material</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ECTFE, ENAM, E/TFE, FEP, PA, PAPER, PE, PFA,
+POLY, PP, PTFE, PUR, PVC, RUBBER, TEXTILE, UP</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="./media/media/image80.gif" alt="./media/media/image80"></span><a href="https://cdd.iec.ch/cdd/iec61360/iec61360.nsf/PropertiesAllVersions/0112-2---61360_4%23AAF241?opendocument">0112/2///61360_4#AAF241
+- conductive material</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Al, Cu, CuCd, CuCdCr, CuCr, CuNi, CuSn, CuZn,
+Fe/Cu</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="./media/media/image80.gif" alt="./media/media/image80"></span><a href="https://cdd.iec.ch/cdd/iec61360/iec61360.nsf/PropertiesAllVersions/0112-2---61360_4%23AAF240?opendocument">0112/2///61360_4#AAF240
+- conductor finish</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ag, Ni, Sn</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="./media/media/image81.png" alt="./media/media/image81"></span><a href="https://cdd.iec.ch/cdd/iec61360/iec61360.nsf/PropertiesAllVersions/0112-2---61360_4%23AAR025?opendocument">0112/2///61360_4#AAR025
+- contact material</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ag, AgCdO, AgCdO/Au, AgNi, AgNi/Au, AgPd, AgPd/Au,
+AgSnO2, AgSnO2/Au, AgW, Ag/Au, AuAg, PdCu, PdNi, Rh, Rh/Au, W</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="./media/media/image80.gif" alt="./media/media/image80"></span><a href="https://cdd.iec.ch/cdd/iec61360/iec61360.nsf/PropertiesAllVersions/0112-2---61360_4%23AAE355?opendocument">0112/2///61360_4#AAE355
+- contact body material</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">BeCu, Cu, CuSn, CuZn, Ni, PCuSn</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="./media/media/image80.gif" alt="./media/media/image80"></span><a href="https://cdd.iec.ch/cdd/iec61360/iec61360.nsf/PropertiesAllVersions/0112-2---61360_4%23AAE350?opendocument">0112/2///61360_4#AAE350
+- contact finish</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ag, Au, CuZn, Ni, PCuSn, Pd, Sn, Zn</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="./media/media/image80.gif" alt="./media/media/image80"></span><a href="https://cdd.iec.ch/cdd/iec61360/iec61360.nsf/PropertiesAllVersions/0112-2---61360_4%23AAE351?opendocument">0112/2///61360_4#AAE351
+- housing material</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CER, DAP, MET, PA, PC, PLA, PPOX, PTFE</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="./media/media/image81.png" alt="./media/media/image81"></span><a href="https://cdd.iec.ch/cdd/iec61360/iec61360.nsf/PropertiesAllVersions/0112-2---61360_4%23AAH005?opendocument">0112/2///61360_4#AAH005
+- housing finish</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ag, Au, Cr, ELOX, LAC, Ni, PLA, RAW, RUB, Sn, Zn</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="./media/media/image80.gif" alt="./media/media/image80"></span><a href="https://cdd.iec.ch/cdd/iec61360/iec61360.nsf/PropertiesAllVersions/0112-2---61360_4%23AAE634?opendocument">0112/2///61360_4#AAE634
+- terminal material</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AgPd, NiSn</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="./media/media/image81.png" alt="./media/media/image81"></span><a href="https://cdd.iec.ch/cdd/iec61360/iec61360.nsf/PropertiesAllVersions/0112-2---61360_4%23AAH028?opendocument">0112/2///61360_4#AAH028
+- terminal finish</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ag, Au, Cr, Ni, Pd, RAW, Sn</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://cdd.iec.ch/cdd/iec61360/iec61360.nsf/PropertiesAllVersions/0112-2---61360_4%23AAH011?opendocument">0112/2///61360_4#AAH011
+- designation of IP protection</a><br>
+<a href="https://cdd.iec.ch/cdd/common/iec61360-7.nsf/PropertiesAllVersions/0112-2---61360_7%23CBA025?opendocument">0112/2///61360_7#CBA025
+- IP code</a><br>
+<a href="https://cdd.iec.ch/cdd/iec61987/iec61987.nsf/PropertiesAllVersions/0112-2---61987%23ABA558?opendocument">0112/2///61987#ABA558
+- degree of protection (IP)</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">IP00, IP01, IP02, IP03, IP04, IP05, IP06,
+IP07, IP08, IP10, IP11, IP12, IP13, IP14, IP15, IP16, IP17, IP18, IP20,
+IP21, IP22, IP23, IP24, IP25, IP26, IP27, IP28, IP30, IP31, IP32, IP33,
+IP34, IP35, IP36, IP37, IP38, IP40, IP41, IP42, IP43, IP44, IP45, IP46,
+IP47, IP48, IP50, IP51, IP52, IP53, IP54, IP55, IP56, IP57, IP58, IP60,
+IP61, IP62, IP63, IP64, IP65, IP66, IP67, IP68, IP69, IPX1, IPX2, IPX3,
+IPX4, IPX5, IPX6, IPX7, IPX8, IP1X, IP2X, IP3X, IP4X, IP5X, IP6X</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>[<mark><em>Toc201654332 .anchor]</mark>#_Table 6 Applicable properties and Enumeration
+code list in IEC-CDD</em></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_concept_description_2"><strong>Concept Description</strong></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>An Asset Administration Shell (AAS) can have its own dictionary of
+sematic references where it defines the meanings of different elements
+inside it. These elements are called Concept Descriptions. A Concept
+Description (CD) in the context of the Asset Administration Shell (AAS)
+defines the semantic meaning of the elements within its submodels. A CD
+utilizes basically the same elements.</p>
+</div>
+<div class="paragraph">
+<p>The <em>semanticId</em> links the submodel elements to the corresponding
+semantic definitions, which are referenced via the HasDictionaryEntry
+relation. Also the concept description can include Add-Ins, allowing the
+use of IEC61360 data specification templates, which standardize how
+asset-related data, like units or value ranges, is represented. The
+concept descriptions help clarify the meaning of data, ensuring accurate
+interpretation across systems.</p>
+</div>
+<div class="paragraph">
+<p>In the figure below, 'AcademicTitle' is the property value. Follow the
+same steps as above.</p>
+</div>
+<div class="paragraph">
+<div class="title"><span id="_Toc201654326 " class="anchor">#</span>#Figure 10‑1: Concept Description in AAS-Designer</div>
+<p>image::./media/media/image82.png[A screenshot of a computer Description
+automatically generated,width=593,height=203]</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_list_of_references">List of References</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 5%;">
+<col style="width: 95%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">[1]</th>
+<th class="tableblock halign-left valign-top">Industrial Digital Twin Association e.V., "IDTA 02006-2-0
+Digital Nameplate for Industrial Equipment," October 2022.
+[Online]. Available:
+<a href="https://github.com/admin-shell-io/submodel-templates/tree/main/published/Digital%20nameplate/2/0" class="bare">https://github.com/admin-shell-io/submodel-templates/tree/main/published/Digital%20nameplate/2/0</a>.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[2]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Industrial Digital Twin Association e.V., "IDTA 02004-1-2
+Handover Documentation," March 2023. [Online]. Available:
+<a href="https://github.com/admin-shell-io/submodel-templates/tree/main/published/Handover%20Documentation/1/2" class="bare">https://github.com/admin-shell-io/submodel-templates/tree/main/published/Handover%20Documentation/1/2</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[3]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Industrial Digital Twin Association e.V., "IDTA 02003-1-2
+Generic Frame for Technical Data for Industrial Equipment in
+Manufacturing," August 2022. [Online]. Available:
+<a href="https://github.com/admin-shell-io/submodel-templates/tree/main/published/Technical_Data/1/2" class="bare">https://github.com/admin-shell-io/submodel-templates/tree/main/published/Technical_Data/1/2</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[4]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">"prostep ivip," prostep ivip e.V., [Online].
+Available: <a href="https://www.prostep.org/" class="bare">https://www.prostep.org/</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[5]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">J. Becker, "Whitepaper KBL vs. VEC - Similarities and
+differences - briefy and concisely summarized," 16 December 2022.
+[Online]. Available:
+<a href="https://ecad-wiki.prostep.org/post/kbl-vs-vec/" class="bare">https://ecad-wiki.prostep.org/post/kbl-vs-vec/</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[6]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OPC Foundation, "OPC 40001-3: Machinery Job Mgmt," OPC
+Foundation, [Online]. Available:
+<a href="https://reference.opcfoundation.org/Machinery/Jobs/v100/docs/" class="bare">https://reference.opcfoundation.org/Machinery/Jobs/v100/docs/</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[7]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OPC Foundation, "OPC 40001-101: Machinery Result
+Transfer," [Online]. Available:
+<a href="https://reference.opcfoundation.org/Machinery/Result/v100/docs/" class="bare">https://reference.opcfoundation.org/Machinery/Result/v100/docs/</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[8]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Platform Industrie 4.0, "RAMI 4.0: Ein
+Referenzarchitekturmodell als Kommunikationsgrundlage in der Industrie
+4.0," 11 04 2022. [Online]. Available:
+<a href="https://www.dke.de/de/arbeitsfelder/industry/rami40" class="bare">https://www.dke.de/de/arbeitsfelder/industry/rami40</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[9]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OPC Foundation, "OPC 40570: OPC UA for the Wire Harness
+Manufacturing Industry,"
+<a href="https://profiles.opcfoundation.org/workinggroup/88" class="bare">https://profiles.opcfoundation.org/workinggroup/88</a>, WiP.
+[Online]. Available:
+<a href="https://profiles.opcfoundation.org/document/214" class="bare">https://profiles.opcfoundation.org/document/214</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[10]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">IEC, "IEC 61360-4 - IEC/SC 3D - Common Data Dictionary,"
+[Online]. Available:
+<a href="https://cdd.iec.ch/cdd/iec61360/iec61360.nsf/TreeFrameset?OpenFrameSet" class="bare">https://cdd.iec.ch/cdd/iec61360/iec61360.nsf/TreeFrameset?OpenFrameSet</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[11]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ECLASS e.V., "ECLASS-Standard," [Online].
+Available: <a href="https://eclass.eu/eclass-standard/content-suche/search" class="bare">https://eclass.eu/eclass-standard/content-suche/search</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[12]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prostep ivip, "Harness Description List (KBL)," prostep
+ivip, 26 Jun 2022. [Online]. Available:
+<a href="https://ecad-wiki.prostep.org/specifications/kbl/" class="bare">https://ecad-wiki.prostep.org/specifications/kbl/</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[13]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prostep ivip, "Vehicle Electric Container (VEC)," prostep
+ivip, 8 Jan 2024. [Online]. Available:
+<a href="https://ecad-wiki.prostep.org/specifications/vec/v210/" class="bare">https://ecad-wiki.prostep.org/specifications/vec/v210/</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[14]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OPC Foundation, "OPC UA Online Reference - Released
+Specifications," 2024. [Online]. Available:
+<a href="https://reference.opcfoundation.org/" class="bare">https://reference.opcfoundation.org/</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[15]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">"Verband der Automobilindustrie (VDA)," [Online].
+Available: <a href="https://www.vda.de/de" class="bare">https://www.vda.de/de</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[16]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">"DIN 72036:2024-06 Straßenfahrzeuge - Automatisierung der
+Leitungssatzfertigung," DIN-Normenausschuss Auto und Mobilität, 06 2024.
+[Online]. Available: <a href="https://dx.doi.org/10.31030/3521962" class="bare">https://dx.doi.org/10.31030/3521962</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[17]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prostep ivip, "VEC Release Notes - Version 2.1.0,"
+prostep ivip, 08 01 2024. [Online]. Available:
+<a href="https://ecad-wiki.prostep.org/specifications/vec/v210/release-notes/" class="bare">https://ecad-wiki.prostep.org/specifications/vec/v210/release-notes/</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[18]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OPC Foundation, "OPC UA Nodesets," [Online].
+Available: <a href="https://github.com/OPCFoundation/UA-Nodeset" class="bare">https://github.com/OPCFoundation/UA-Nodeset</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[19]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">"VWS4LS-Github," ARENA2036 e.V., [Online].
+Available: <a href="https://github.com/VWS4LS" class="bare">https://github.com/VWS4LS</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[20]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">IEC, "DIN EN IEC 61406-2 Identifizierungslink Teil 2:
+Typen/Modelle, Lose/Chargen, Artikel und Merkmale," 12 2024.
+[Online]. Available:
+<a href="https://www.vde-verlag.de/normen/0800994/din-en-iec-61406-2-vde-0810-407-2024-12.html" class="bare">https://www.vde-verlag.de/normen/0800994/din-en-iec-61406-2-vde-0810-407-2024-12.html</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[21]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">IEC, "DIN EN IEC 61406-1 Identifizierungslink Teil 1:
+Allgemeine Anforderungen," 12 2023. [Online]. Available:
+<a href="https://www.vde-verlag.de/normen/0800916/din-en-iec-61406-1-vde-0810-406-1-2023-12.html" class="bare">https://www.vde-verlag.de/normen/0800916/din-en-iec-61406-1-vde-0810-406-1-2023-12.html</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[22]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Wikipedia, "ETL-Prozess," 2024. [Online].
+Available: <a href="https://de.wikipedia.org/wiki/ETL-Prozess" class="bare">https://de.wikipedia.org/wiki/ETL-Prozess</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[23]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Wikipedia, "Digitaler Zwilling," 2024. [Online].
+Available: <a href="https://de.wikipedia.org/wiki/Digitaler_Zwilling" class="bare">https://de.wikipedia.org/wiki/Digitaler_Zwilling</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[24]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Industrial Digital Twin Association e.V., "IDTA 02056-1-0
+Data Retention Policies," June 2024. [Online]. Available:
+<a href="https://industrialdigitaltwin.org/wp-content/uploads/2024/06/IDTA-02056-1-0_Submodel_Data-Retention-Policies.pdf" class="bare">https://industrialdigitaltwin.org/wp-content/uploads/2024/06/IDTA-02056-1-0_Submodel_Data-Retention-Policies.pdf</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[25]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Industrial Digital Twin Association e.V., "IDTA 02051
+Purchase Request Notification," (WiP). [Online]. Available:
+<a href="https://interopera.de/wp-content/uploads/2024/02/231113-Abschlusspraesentation-InterOpera-Purchase-Teilmodelle-Liedl.pdf" class="bare">https://interopera.de/wp-content/uploads/2024/02/231113-Abschlusspraesentation-InterOpera-Purchase-Teilmodelle-Liedl.pdf</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[26]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Industrial Digital Twin Association e.V., "IDTA 02048
+Predictive Maintenance," (WiP). [Online]. Available:
+<a href="https://interopera.de/wp-content/uploads/2023/07/230705-Predictive-Maintenance-Abschlusspraesentation.pdf" class="bare">https://interopera.de/wp-content/uploads/2023/07/230705-Predictive-Maintenance-Abschlusspraesentation.pdf</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[27]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Industrial Digital Twin Association e.V., "IDTA 02031-1-0
+Bill of Process," (WiP). [Online]. Available:
+<a href="https://industrialdigitaltwin.org/content-hub/teilmodelle" class="bare">https://industrialdigitaltwin.org/content-hub/teilmodelle</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[28]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Industrial Digital Twin Association e.V., "IDTA 02026-1-0
+Provision of 3D Models," June 2024. [Online]. Available:
+<a href="https://github.com/admin-shell-io/submodel-templates/tree/main/published/Provision%20of%203D%20Models/1/0" class="bare">https://github.com/admin-shell-io/submodel-templates/tree/main/published/Provision%20of%203D%20Models/1/0</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[29]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Industrial Digital Twin Association e.V., "IDTA 02020-1-0
+Capability Description," (WiP). [Online]. Available:
+<a href="https://industrialdigitaltwin.org/content-hub/teilmodelle" class="bare">https://industrialdigitaltwin.org/content-hub/teilmodelle</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[30]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Industrial Digital Twin Association e.V., "IDTA 02017-1-0
+Asset Interfaces Description," January 2024. [Online].
+Available:
+<a href="https://github.com/admin-shell-io/submodel-templates/tree/main/published/Asset%20Interfaces%20Description/1/0" class="bare">https://github.com/admin-shell-io/submodel-templates/tree/main/published/Asset%20Interfaces%20Description/1/0</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[31]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Industrial Digital Twin Association e.V., "IDTA 02011-1-1
+Hierarchical Structures enabling Bills of Material," 2024 June.
+[Online]. Available:
+<a href="https://github.com/admin-shell-io/submodel-templates/tree/main/published/Hierarchical%20Structures%20enabling%20Bills%20of%20Material/1/1" class="bare">https://github.com/admin-shell-io/submodel-templates/tree/main/published/Hierarchical%20Structures%20enabling%20Bills%20of%20Material/1/1</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[32]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Industrial Digital Twin Association e.V., "IDTA 02010-1-0
+Service Request Notification," October, 2023. [Online].
+Available:
+<a href="https://github.com/admin-shell-io/submodel-templates/tree/main/published/Service%20Request%20Notification/1/0" class="bare">https://github.com/admin-shell-io/submodel-templates/tree/main/published/Service%20Request%20Notification/1/0</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[33]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Industrial Digital Twin Association e.V., "IDTA 02008-1-1
+Time Series Data," 2023. [Online]. Available:
+<a href="https://github.com/admin-shell-io/submodel-templates/tree/main/published/Time%20Series%20Data/1/1" class="bare">https://github.com/admin-shell-io/submodel-templates/tree/main/published/Time%20Series%20Data/1/1</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[34]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Industrial Digital Twin Association e.V., "IDTA 02005-1-0
+Provision of Simulation Models," December 2022. [Online].
+Available:
+<a href="https://github.com/admin-shell-io/submodel-templates/tree/main/published/Provision" class="bare">https://github.com/admin-shell-io/submodel-templates/tree/main/published/Provision</a>
+of Simulation Models/1/0.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[35]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Industrial Digital Twin Association e.V., "IDTA 02002-1-0
+Submodel for Contact Information," May 2022. [Online].
+Available:
+<a href="https://github.com/admin-shell-io/submodel-templates/tree/main/published/Contact%20Information/1" class="bare">https://github.com/admin-shell-io/submodel-templates/tree/main/published/Contact%20Information/1</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[36]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Industrial Digital Twin Association e.V., "IDTA
+01005-3-0-1: Specification of the Asset Administration Shell Part 5:
+Package File Format (AASX)," 2024. [Online]. Available:
+<a href="https://admin-shell-io.github.io/aas-specs-antora/IDTA-01005/v3.0.1/index.html" class="bare">https://admin-shell-io.github.io/aas-specs-antora/IDTA-01005/v3.0.1/index.html</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[37]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Industrial Digital Twin Association e.V., "IDTA
+01001-3-0-1: Specification of the Asset Administration Shell Part 1:
+Metamodel," June 2024. [Online]. Available:
+<a href="https://admin-shell-io.github.io/aas-specs-antora/IDTA-01001/v3.0.1/index.html" class="bare">https://admin-shell-io.github.io/aas-specs-antora/IDTA-01001/v3.0.1/index.html</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[38]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ARENA2036 e.V., "VWS4LS-Github," [Online].
+Available: <a href="https://github.com/VWS4LS" class="bare">https://github.com/VWS4LS</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[39]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Plattform Industrie 4.0, "Verwaltungsschale in der
+Praxis," 2021. [Online]. Available:
+<a href="https://industrialdigitaltwin.org/wp-content/uploads/2021/09/08_verwaltungsschale_in_der_praxis_de_2020.pdf" class="bare">https://industrialdigitaltwin.org/wp-content/uploads/2021/09/08_verwaltungsschale_in_der_praxis_de_2020.pdf</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[40]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Plattform Industrie 4.0, "Vertrauensinfrastrukturen," 03
+2021. [Online]. Available:
+<a href="https://www.plattform-i40.de/IP/Redaktion/DE/Downloads/Publikation/Vertrauensinfrastrukturen.pdf" class="bare">https://www.plattform-i40.de/IP/Redaktion/DE/Downloads/Publikation/Vertrauensinfrastrukturen.pdf</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[41]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prostep ivip e.V., "Vehicle Electric Container (VEC)," 8
+Jan 2024. [Online]. Available:
+<a href="https://ecad-wiki.prostep.org/specifications/vec/v210/" class="bare">https://ecad-wiki.prostep.org/specifications/vec/v210/</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[42]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prostep ivip e.V., "VEC Release Notes - Version 2.1.0,"
+08 01 2024. [Online]. Available:
+<a href="https://ecad-wiki.prostep.org/specifications/vec/v210/release-notes/" class="bare">https://ecad-wiki.prostep.org/specifications/vec/v210/release-notes/</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[43]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">VDI/VDE, "VDI/VDE 2193 Blatt 2 - Sprache für
+I4.0-Komponenten - Interaktionsprotokoll für Ausschreibungsverfahren,"
+2020. [Online]. Available:
+<a href="https://www.vdi.de/richtlinien/details/vdivde-2193-blatt-2-sprache-fuer-i40-komponenten-interaktionsprotokoll-fuer-ausschreibungsverfahren" class="bare">https://www.vdi.de/richtlinien/details/vdivde-2193-blatt-2-sprache-fuer-i40-komponenten-interaktionsprotokoll-fuer-ausschreibungsverfahren</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[44]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">VDI/VDE, "VDI/VDE 2193 Blatt 1 - Sprache für
+I4.0-Komponenten - Struktur von Nachrichten," 2020. [Online].
+Available:
+<a href="https://www.vdi.de/richtlinien/details/vdivde-2193-blatt-1-sprache-fuer-i40-komponenten-struktur-von-nachrichten" class="bare">https://www.vdi.de/richtlinien/details/vdivde-2193-blatt-1-sprache-fuer-i40-komponenten-struktur-von-nachrichten</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[45]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ECLASS e.V., "Technical Specification Conceptual Data
+Model," 2020. [Online]. Available:
+<a href="https://eclass.eu/fileadmin/Redaktion/pdf-Dateien/Wiki/ECLASS_Technical-Specification_11_Conceptual-Data-Model_v_1.0.pdf" class="bare">https://eclass.eu/fileadmin/Redaktion/pdf-Dateien/Wiki/ECLASS_Technical-Specification_11_Conceptual-Data-Model_v_1.0.pdf</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[46]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Wikipedia, "Single Point of Truth," [Online].
+Available:
+<a href="https://de.wikipedia.org/wiki/Single_Point_of_Truth" class="bare">https://de.wikipedia.org/wiki/Single_Point_of_Truth</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[47]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Industrial Digital Twin Association e.V., "Registrierte
+IDTA Submodelle," [Online]. Available:
+<a href="https://industrialdigitaltwin.org/en/content-hub/submodels" class="bare">https://industrialdigitaltwin.org/en/content-hub/submodels</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[48]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">"Prostep ivip e.V.," [Online]. Available:
+<a href="https://www.prostep.org/" class="bare">https://www.prostep.org/</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[49]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">"OPC UA Online Reference - Released Specifications,"
+2024. [Online]. Available: <a href="https://reference.opcfoundation.org/" class="bare">https://reference.opcfoundation.org/</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[50]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">KEBA, "OPC UA – der zentrale Standard für Industrie 4.0
+im Überblick," [Online]. Available:
+<a href="https://www.keba.com/de/news/industrial-automation/ueberblick-opc-ua-zentraler-standard-industrie-4-0" class="bare">https://www.keba.com/de/news/industrial-automation/ueberblick-opc-ua-zentraler-standard-industrie-4-0</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[51]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OPC Foundation, "OPC 40570: OPC UA for the Wire Harness
+Manufacturing Industry,"
+<a href="https://profiles.opcfoundation.org/workinggroup/88" class="bare">https://profiles.opcfoundation.org/workinggroup/88</a>, WiP.
+[Online]. Available:
+<a href="https://profiles.opcfoundation.org/document/214" class="bare">https://profiles.opcfoundation.org/document/214</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[52]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OPC Foundation, "OPC 30270: Industry 4.0 Asset
+Administration Shell," [Online]. Available:
+<a href="https://reference.opcfoundation.org/I4AAS/v100/docs/" class="bare">https://reference.opcfoundation.org/I4AAS/v100/docs/</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[53]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OPC Foundation, "OPC 10031-4: ISA-95-4 Job Control,"
+[Online]. Available:
+<a href="https://reference.opcfoundation.org/ISA95JOBCONTROL/v200/docs/" class="bare">https://reference.opcfoundation.org/ISA95JOBCONTROL/v200/docs/</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[54]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OPC Foundation, "OPC 10000-210: Industrial automation -
+Relative Spatial Location," 2023. [Online]. Available:
+<a href="https://reference.opcfoundation.org/RSL/v100/docs/" class="bare">https://reference.opcfoundation.org/RSL/v100/docs/</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[55]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">VDI 2860, "Montage- und Handhabungstechnik;
+Handhabungsfunktionen, Handhabungseinrichtungen; Begriffe, Definitionen,
+Symbole," Beuth Verlag, Berlin, 1990.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[56]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ISO, "ISO/IEC 27002:2022-02: Information security,
+cybersecurity and privacy protection - Information security controls,"
+2022. [Online]. Available:
+<a href="https://www.iso.org/standard/75652.html" class="bare">https://www.iso.org/standard/75652.html</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[57]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ISO, "ISO/IEC 27001:2022 Information security,
+cybersecurity and privacy protection — Information security management
+systems — Requirements," [Online]. Available:
+<a href="https://www.iso.org/standard/27001" class="bare">https://www.iso.org/standard/27001</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[58]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ISO/IEC, "ISO/IEC 19510:2013: Business Process Model and
+Notation (BPMN)," [Online]. Available:
+<a href="https://www.iso.org/standard/62652.html" class="bare">https://www.iso.org/standard/62652.html</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[59]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Plattform Industrie 4.0, "Interoperability at Runtime -
+Exchanging Information via Application Programming Interfaces," 2021.
+[Online]. Available:
+<a href="https://www.plattform-i40.de/IP/Redaktion/EN/Downloads/Publikation/Details_of_the_Asset_Administration_Shell_Part2_V1.pdf" class="bare">https://www.plattform-i40.de/IP/Redaktion/EN/Downloads/Publikation/Details_of_the_Asset_Administration_Shell_Part2_V1.pdf</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[60]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Industrial Digital Twin Association e.V., "IDTA
+01002-3-0-2: Specification of the Asset Administration Shell Part 2:
+Application Programming Interfaces," June 2024. [Online].
+Available:
+<a href="https://admin-shell-io.github.io/aas-specs-antora/IDTA-01002/v3.0.2/index.html" class="bare">https://admin-shell-io.github.io/aas-specs-antora/IDTA-01002/v3.0.2/index.html</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[61]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prostep ivip e.V., "Harness Description List (KBL),"
+prostep ivip, 26 Jun 2022. [Online]. Available:
+<a href="https://ecad-wiki.prostep.org/specifications/kbl/" class="bare">https://ecad-wiki.prostep.org/specifications/kbl/</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[62]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ECLASS e.V., "ECLASS-Standard," [Online].
+Available: <a href="https://eclass.eu/eclass-standard/content-suche/search" class="bare">https://eclass.eu/eclass-standard/content-suche/search</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[63]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">"DIN SPEC 91345:2016-04 - Referenzarchitekturmodell
+Industrie 4.0 (RAMI4.0)," 2016. [Online]. Available:
+<a href="https://dx.doi.org/10.31030/2436156" class="bare">https://dx.doi.org/10.31030/2436156</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[64]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Plattform Industrie 4.0, "Digitale Ökosysteme global
+gestalten," 2019. [Online]. Available:
+<a href="https://www.plattform-i40.de/IP/Redaktion/DE/Downloads/Publikation/Leitbild-2030-f%C3%BCr-Industrie-4.0.pdf" class="bare">https://www.plattform-i40.de/IP/Redaktion/DE/Downloads/Publikation/Leitbild-2030-f%C3%BCr-Industrie-4.0.pdf</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[65]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Industrial Digital Twin Association e.V., "Decentralized
+Registries: Taxonomy of decentralized registries and an architectural
+overview," June 2023. [Online]. Available:
+<a href="https://industrialdigitaltwin.org/en/wp-content/uploads/sites/2/2023/06/Decentralized-Registries-Taxonomy-of-decentralized-registries-and-an-architectural-overview_.pdf" class="bare">https://industrialdigitaltwin.org/en/wp-content/uploads/sites/2/2023/06/Decentralized-Registries-Taxonomy-of-decentralized-registries-and-an-architectural-overview_.pdf</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[66]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Plattform Industrie 4.0, "Capabilities, Skills,
+Services," 11 2022. [Online]. Available:
+<a href="https://www.plattform-i40.de/IP/Redaktion/DE/Downloads/Publikation/CapabilitiesSkillsServices.pdf" class="bare">https://www.plattform-i40.de/IP/Redaktion/DE/Downloads/Publikation/CapabilitiesSkillsServices.pdf</a>?.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[67]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Plattform Industrie 4.0, "Beziehungen zwischen
+I4.0-Komponenten – Verbundkomponenten und intelligente Produktion,"
+2017. [Online]. Available:
+<a href="https://www.plattform-i40.de/IP/Redaktion/DE/Downloads/Publikation/beziehungen-i40-komponenten.pdf" class="bare">https://www.plattform-i40.de/IP/Redaktion/DE/Downloads/Publikation/beziehungen-i40-komponenten.pdf</a>.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_list_of_figures">List of Figures</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="#_Toc201654250">Figure 1‑1: Logging into the AAS Suite Designer
+link:#_Toc201654250[4</a>]</p>
+</div>
+<div class="paragraph">
+<p><a href="#_Toc201654251">Figure 1‑2: Screenshot of Pricing and Terms in AAS
+Suite link:#_Toc201654251[4</a>]</p>
+</div>
+<div class="paragraph">
+<p><a href="#_Toc201654252">Figure 1‑3: Registration Page for AAS Suite
+link:#_Toc201654252[5</a>]</p>
+</div>
+<div class="paragraph">
+<p><a href="#_Toc201654253">Figure 1‑4: Accessing AAS Suite Version Details
+link:#_Toc201654253[5</a>]</p>
+</div>
+<div class="paragraph">
+<p><a href="#_Toc201654254">Figure 1‑5: AAS Suite Version Information
+link:#_Toc201654254[6</a>]</p>
+</div>
+<div class="paragraph">
+<p><a href="#_Toc201654255">Figure 1‑6: AAS Suite License Information
+link:#_Toc201654255[6</a>]</p>
+</div>
+<div class="paragraph">
+<p><a href="#_Toc201654256">Figure 2‑1: Overview of AAS Suite Platform
+link:#_Toc201654256[7</a>]</p>
+</div>
+<div class="paragraph">
+<p><a href="#_Toc201654257">Figure 2‑2: Key Components in AAS-Designer
+link:#_Toc201654257[7</a>]</p>
+</div>
+<div class="paragraph">
+<p><a href="#_Toc201654258">Figure 3‑1: AAS Suite Dashboard Section
+link:#_Toc201654258[8</a>]</p>
+</div>
+<div class="paragraph">
+<p><a href="#_Toc201654259">Figure 3‑2: Packages Section in AAS Suite
+link:#_Toc201654259[8</a>]</p>
+</div>
+<div class="paragraph">
+<p><a href="#_Toc201654260">Figure 3‑3: Concept Description in AAS Suite
+link:#_Toc201654260[9</a>]</p>
+</div>
+<div class="paragraph">
+<p><a href="#_Toc201654261">Figure 3‑4: Choose Type under Create in AAS Suite
+link:#_Toc201654261[9</a>]</p>
+</div>
+<div class="paragraph">
+<p><a href="#_Toc201654262">Figure 3‑5: Entering asset data under Create
+link:#_Toc201654262[10</a>]</p>
+</div>
+<div class="paragraph">
+<p><a href="#_Toc201654263">Figure 3‑6: Entering nameplate data under Create
+link:#_Toc201654263[10</a>]</p>
+</div>
+<div class="paragraph">
+<p><a href="#_Toc201654264">Figure 3‑7: Entering Document data under Create
+link:#_Toc201654264[11</a>]</p>
+</div>
+<div class="paragraph">
+<p><a href="#_Toc201654265">Figure 3‑8: Providing Summary and Confirmation under
+Create link:#_Toc201654265[11</a>]</p>
+</div>
+<div class="paragraph">
+<p><a href="#_Toc201654266">Figure 3‑9: IDTA Submodels in AAS Suite
+link:#_Toc201654266[12</a>]</p>
+</div>
+<div class="paragraph">
+<p><a href="#_Toc201654267">Figure 3‑10: My Area Section in AAS Suite
+link:#_Toc201654267[13</a>]</p>
+</div>
+<div class="paragraph">
+<p><a href="#_Ref200612174">Figure 4‑1: List of shells in other servers
+link:#_Ref200612174[14</a>]</p>
+</div>
+<div class="paragraph">
+<p><a href="#_Toc201654269">Figure 4‑2: Server Configuration for Admin
+link:#_Toc201654269[14</a>]</p>
+</div>
+<div class="paragraph">
+<p><a href="#_Toc201654270">Figure 4‑3: Server Configuration for different
+Authority Role link:#_Toc201654270[15</a>]</p>
+</div>
+<div class="paragraph">
+<p><a href="#_Toc201654271">Figure 5‑1: Overview of Shells
+link:#_Toc201654271[16</a>]</p>
+</div>
+<div class="paragraph">
+<p><a href="#_Toc201654272">Figure 5‑2:Understanding Tree Structure in AAS
+Designer link:#_Toc201654272[16</a>]</p>
+</div>
+<div class="paragraph">
+<p><a href="#_Toc201654273">Figure 5‑3: Expanding the Tree Structure in AAS
+Designer link:#_Toc201654273[17</a>]</p>
+</div>
+<div class="paragraph">
+<p><a href="#_Toc201654274">Figure 5‑4: Inserting Elements in the AAS Designer
+link:#_Toc201654274[18</a>]</p>
+</div>
+<div class="paragraph">
+<p><a href="#_Toc201654275">Figure 5‑5: Three dot menu in the tree hierarchy
+link:#_Toc201654275[19</a>]</p>
+</div>
+<div class="paragraph">
+<p><a href="#<em>Toc201654276">_Figure 5‑6: Adding new elements</em>
+link:#_Toc201654276[20</a>]</p>
+</div>
+<div class="paragraph">
+<p><a href="#<em>Toc201654277">_Figure 5‑7: Options of</em> <em>Elements</em>
+link:#_Toc201654277[20</a>]</p>
+</div>
+<div class="paragraph">
+<p><a href="#<em>Toc201654278">_Figure 5‑8: Adding new Element</em>
+link:#_Toc201654278[20</a>]</p>
+</div>
+<div class="paragraph">
+<p><a href="#_Toc201654279">Figure 5‑9: Defining a Property in AAS Designer
+link:#_Toc201654279[21</a>]</p>
+</div>
+<div class="paragraph">
+<p><a href="#_Toc201654280">Figure 5‑10: Reference to a Concept Description in
+AAS Designer link:#_Toc201654280[21</a>]</p>
+</div>
+<div class="paragraph">
+<p><a href="#<em>Toc201654281">_Figure 5‑11: Details section area</em>
+link:#_Toc201654281[23</a>]</p>
+</div>
+<div class="paragraph">
+<p><a href="#<em>Toc201654282">_Figure 5‑12: Content section area</em>
+link:#_Toc201654282[24</a>]</p>
+</div>
+<div class="paragraph">
+<p><a href="#<em>Toc201654283">_Figure 5‑13: Semantic description area</em>
+link:#_Toc201654283[24</a>]</p>
+</div>
+<div class="paragraph">
+<p><a href="#_Toc201654284">Figure 5‑14: Assigning a Property Value in AAS
+Designer link:#_Toc201654284[25</a>]</p>
+</div>
+<div class="paragraph">
+<p><a href="#<em>Toc201654285">_Figure 5‑15: Qualifier area</em>
+link:#_Toc201654285[25</a>]</p>
+</div>
+<div class="paragraph">
+<p><a href="#<em>Toc201654286">_Figure 5‑16: Data definition area</em>
+link:#_Toc201654286[26</a>]</p>
+</div>
+<div class="paragraph">
+<p><a href="#<em>Toc201654287">_Figure 5‑17: Example of a filled in Data
+definition</em> link:#_Toc201654287[26</a>]</p>
+</div>
+<div class="paragraph">
+<p><a href="#<em>Toc201654288">_Figure 5‑18: Content part of Range</em>
+link:#_Toc201654288[27</a>]</p>
+</div>
+<div class="paragraph">
+<p><a href="#_Toc201654289">Figure 5‑19: Adding Semantic References in AAS
+Designer link:#_Toc201654289[28</a>]</p>
+</div>
+<div class="paragraph">
+<p><a href="#_Toc201654290">Figure 5‑20: Creating a New Semantic Description in
+AAS Designer link:#_Toc201654290[28</a>]</p>
+</div>
+<div class="paragraph">
+<p><a href="#_Toc201654291">Figure 5‑21: Adding ECLASS/IEC/IRDI/VEC ID to the ID
+Placeholder link:#_Toc201654291[28</a>]</p>
+</div>
+<div class="paragraph">
+<p><a href="#<em>Toc201654292">_Figure 5‑22: Example of a listing in the Content
+part</em> link:#_Toc201654292[29</a>]</p>
+</div>
+<div class="paragraph">
+<p><a href="#<em>Toc201654293">_Figure 5‑23: Custom Qualifier of
+SubmodelElementCollection</em> link:#_Toc201654293[30</a>]</p>
+</div>
+<div class="paragraph">
+<p><a href="#<em>Toc201654294">_Figure 5‑24: Cardinality Qualifier of
+SubmodelElementCollection</em> link:#_Toc201654294[31</a>]</p>
+</div>
+<div class="paragraph">
+<p><a href="#_Toc201654295">Figure 6‑1: Managing Asset Administration Shells
+(AAS) in AAS Suite link:#_Toc201654295[32</a>]</p>
+</div>
+<div class="paragraph">
+<p><a href="#_Toc201654296">Figure 6‑2: AAS Shell Management Options
+link:#_Toc201654296[32</a>]</p>
+</div>
+<div class="paragraph">
+<p><a href="#_Toc201654297">Figure 6‑3: Viewing Detailed Information of an AAS
+Shell link:#_Toc201654297[33</a>]</p>
+</div>
+<div class="paragraph">
+<p><a href="#_Toc201654298">Figure 6‑4: Delet options in AAS Designer
+link:#_Toc201654298[34</a>]</p>
+</div>
+<div class="paragraph">
+<p><a href="#_Toc201654299">Figure 6‑5: Advanced Options in AAS Designer
+link:#_Toc201654299[34</a>]</p>
+</div>
+<div class="paragraph">
+<p><a href="#_Toc190860784">Figure 6‑6: Creating Feed Mapping in AAS Designer
+link:#_Toc190860784[34</a>]</p>
+</div>
+<div class="paragraph">
+<p><a href="#_Toc201654301">Figure 6‑7: Exporting AAS Data
+link:#_Toc201654301[35</a>]</p>
+</div>
+<div class="paragraph">
+<p><a href="#_Toc201654302">Figure 6‑8: "Export *.aasx": Selection of Submodels to export link:#_Toc201654302[35</a>]</p>
+</div>
+<div class="paragraph">
+<p><a href="#_Toc201654303">Figure 6‑9: Creating a Shareable Link in AAS
+Designer link:#_Toc201654303[36</a>]</p>
+</div>
+<div class="paragraph">
+<p><a href="#_Toc201654304">Figure 6‑10: Configuring a Shareabale Link in AAS
+Designer link:#_Toc201654304[36</a>]</p>
+</div>
+<div class="paragraph">
+<p><a href="#_Toc201654305">Figure 7‑1: ID Validation link:#_Toc201654305[37</a>]</p>
+</div>
+<div class="paragraph">
+<p><a href="#_Toc201654306">Figure 7-2: Import von Wertereferenzen aus VEC
+link:#_Toc201654306[37</a>]</p>
+</div>
+<div class="paragraph">
+<p><a href="#_Toc201654307">Figure 7-3: Import von Einheiten aus QUDT.org
+link:#_Toc201654307[38</a>]</p>
+</div>
+<div class="paragraph">
+<p><a href="#_Toc201654308">Figure 7‑4: Import von Einheiten aus SI-Units
+link:#_Toc201654308[38</a>]</p>
+</div>
+<div class="paragraph">
+<p><a href="#_Toc201654309">Figure 7‑5: References to reference catalogs
+link:#_Toc201654309[39</a>]</p>
+</div>
+<div class="paragraph">
+<p><a href="#_Toc201654310">Figure 7‑6: Inside the AAS Shell
+link:#_Toc201654310[39</a>]</p>
+</div>
+<div class="paragraph">
+<p><a href="#_Toc201654311">Figure 7‑7: Wizard HandoverDocumentation
+link:#_Toc201654311[40</a>]</p>
+</div>
+<div class="paragraph">
+<p><a href="#_Toc201654312">Figure 7‑8: Validation Errors in the AAS Designer
+link:#_Toc201654312[40</a>]</p>
+</div>
+<div class="paragraph">
+<p><a href="#_Toc201654313">Figure 7‑9: Resolving Validation Errors in the AAS
+Designer link:#_Toc201654313[41</a>]</p>
+</div>
+<div class="paragraph">
+<p><a href="#_Toc201654314">Figure 7‑10: Reset&#44; Undo&#44; Redo Button in the
+AAS Shell link:#_Toc201654314[41</a>]</p>
+</div>
+<div class="paragraph">
+<p><a href="https://arena2036depeterfroeschle.sharepoint.com/sites/IILS35c-ProjektVerwaltungsschale/Freigegebene%20Dokumente/TP12-Produktkatalog/VWS4LS_TP12_AAS_Designer.docx#_Toc201654315">Figure
+7‑11: Export Functions <a href="#_Toc201654315">42</a></a></p>
+</div>
+<div class="paragraph">
+<p><a href="#_Toc201654316">Figure 8‑1: Identification Schema According to ISO
+29005-5 link:#_Toc201654316[44</a>]</p>
+</div>
+<div class="paragraph">
+<p><a href="#_Toc201654317">Figure 9‑1: Example of selecting a suitable IEC
+standard link:#_Toc201654317[48</a>]</p>
+</div>
+<div class="paragraph">
+<p><a href="#_Toc201654318">Figure 9‑2: Searching for IEC and IRDI IDs
+link:#_Toc201654318[49</a>]</p>
+</div>
+<div class="paragraph">
+<p><a href="#_Toc201654319">Figure 9‑3: IEC and IRDI Identification for a
+Property link:#_Toc201654319[49</a>]</p>
+</div>
+<div class="paragraph">
+<p><a href="#_Toc201654320">Figure 9‑4: Semantic description in the AAS Designer
+link:#_Toc201654320[50</a>]</p>
+</div>
+<div class="paragraph">
+<p><a href="#_Toc201654321">Figure 9‑5: ID and Description in Details of
+Semantic description link:#_Toc201654321[50</a>]</p>
+</div>
+<div class="paragraph">
+<p><a href="#_Toc201654322">Figure 9‑6: ECLASS Classification System
+link:#_Toc201654322[51</a>]</p>
+</div>
+<div class="paragraph">
+<p><a href="#_Toc201654323">Figure 9‑7: Searching for Temperature Information in
+the VEC Model link:#_Toc201654323[52</a>]</p>
+</div>
+<div class="paragraph">
+<p><a href="#_Toc201654324">Figure 9‑8: For a VEC-NumericalValue define Unit in
+Concept Description link:#_Toc201654324[53</a>]</p>
+</div>
+<div class="paragraph">
+<p><a href="#_Toc201654325">Figure 9‑9: Define Unit for each property in the
+embedded data specification link:#_Toc201654325[53</a>]</p>
+</div>
+<div class="paragraph">
+<p><a href="#_Toc201654326">Figure 10‑1: Concept Description in AAS-Designer
+link:#_Toc201654326[55</a>]</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_list_of_tables">List of Tables</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="#<em>Toc201654327">_Table 1 Description of the elements in the AAS -
+Designer</em> link:#_Toc201654327[18</a>]</p>
+</div>
+<div class="paragraph">
+<p><a href="#_Toc190860829">Table 2 Breakdown of IRDI Example
+(0112/2///61360_4#AAA032) link:#_Toc190860829[44</a>]</p>
+</div>
+<div class="paragraph">
+<p><a href="#_Toc190860828">Table 3 Breakdown of IRDI Example
+(0173-1#01-AAA123#001) link:#_Toc190860828[45</a>]</p>
+</div>
+<div class="paragraph">
+<p><a href="#<em>Toc190860827">_Table 4 Excerpt of Code Space Identifiers (CSI)
+according to ISO 290ß05-5</em> link:#_Toc190860827[51</a>]</p>
+</div>
+<div class="paragraph">
+<p><a href="#<em>Toc190860830">_Table 5 Breakdown of IRDI Example
+(0173-1#02-BAA456#001)</em> link:#_Toc190860830[51</a>]</p>
+</div>
+<div class="paragraph">
+<p><a href="#<em>Toc201654332">_Table 6 Applicable properties and Enumeration code
+list in IEC-CDD</em> link:#_Toc201654332[54</a>]</p>
+</div>
+</div>
+</div>
+</div>
+<div id="footnotes">
+<hr>
+<div class="footnote" id="_footnotedef_1">
+<a href="#_footnoteref_1">1</a>. <a href="https://de.wikipedia.org/wiki/Universally_Unique_Identifier" class="bare">https://de.wikipedia.org/wiki/Universally_Unique_Identifier</a>
+</div>
+<div class="footnote" id="_footnotedef_2">
+<a href="#_footnoteref_2">2</a>. <a href="https://eclass.eu/fileadmin/Redaktion/pdf-Dateien/Wiki/ECLASS-BMEcat-Guideline-2005_1_v2_1.pdf" class="bare">https://eclass.eu/fileadmin/Redaktion/pdf-Dateien/Wiki/ECLASS-BMEcat-Guideline-2005_1_v2_1.pdf</a>
+</div>
+<div class="footnote" id="_footnotedef_3">
+<a href="#_footnoteref_3">3</a>. <a href="https://reference.opcfoundation.org/Core/Part19/v105/docs/5.3" class="bare">https://reference.opcfoundation.org/Core/Part19/v105/docs/5.3</a>
+</div>
+<div class="footnote" id="_footnotedef_4">
+<a href="#_footnoteref_4">4</a>. <a href="https://eclass.eu/fileadmin/Redaktion/pdf-Dateien/Wiki/ECLASS-BMEcat-Guideline-2005_1_v2_1.pdf" class="bare">https://eclass.eu/fileadmin/Redaktion/pdf-Dateien/Wiki/ECLASS-BMEcat-Guideline-2005_1_v2_1.pdf</a>
+</div>
+<div class="footnote" id="_footnotedef_5">
+<a href="#_footnoteref_5">5</a>. <a href="https://ecad.prostep.org/ontologies/2024/03/vec" class="bare">https://ecad.prostep.org/ontologies/2024/03/vec</a>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2025-06-25 19:18:18 +0200
+</div>
+</div>
+</body>
+</html>
