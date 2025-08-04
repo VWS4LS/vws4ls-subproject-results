@@ -6,9 +6,8 @@ Zudem wurde ein Demonstrator erstellt, der einen beispielhaften herstellerüberg
 
 Die VWS nach IEC 63278-1 bietet als Schlüsselkonzept der Industrie 4.0 eine standardisierte Struktur für die Beschreibung von Assets (z.B. Maschinen, Komponenten oder Software) in einer digitalen Umgebung. Damit wird ein effizienter Datenaustausch zwischen verschiedenen Systemen und Anbietern ermöglicht.
 
-<img width="951" height="474" alt="image" src="https://github.com/user-attachments/assets/66a8a6e4-f686-4dac-875a-86e7e18c47e4" />       
+![image](https://github.com/user-attachments/assets/66a8a6e4-f686-4dac-875a-86e7e18c47e4)       
 Abbildung 3-1: VWS im Beschaffungsprozess der Leitungssatz-Wertkette
-
 
 In TP1 wurde daher basierend auf der VWS ein detailliertes und umfassendes Informationsmodell des Leitungssatzes spezifiziert, welches auch die Produktmodellierung des Leitungssatzes umfasst. Dies beinhaltet die detaillierten Anforderungen, die der Leitungssatz erfüllen muss.
 
