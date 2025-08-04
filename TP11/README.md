@@ -1,5 +1,8 @@
 # **TP11 – Anbindung an Catena-X**
 
+<img width="901" height="549" alt="image" src="https://github.com/user-attachments/assets/3ba31876-804f-429f-8f0b-c282218e55fe" />    
+_Abbildung 2-0: Anbindung VWS an Catena-X_   
+
 ## Inhalt
 
 [AP 11.1: Erarbeitung eines Konzepts zur Entscheidungsfindung](#_11.1)  
