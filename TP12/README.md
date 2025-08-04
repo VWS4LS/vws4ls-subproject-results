@@ -1,4 +1,4 @@
-# TP12 – VWS-Produktkatalog
+# TP12 – Produktkatalog mit der VWS
 
 Im Teilprojekt 12 „Produktkatalog“ wurden auf Basis der in [TP1 „Konzept, Informationsmodelle und Produktbeschreibung„](https://github.com/VWS4LS/vws4ls-subproject-results/tree/main/TP01) erarbeiteten Konzepte rund um das Informationsmodell und die Produktbeschreibung der Leitungssatzherstellung für die Automobilindustrie mittels Verwaltungsschalen (VWS), klare anwendungsorientierte Regeln für das Erzeugen und Verwalten von Typ-Verwaltungsschalen erarbeitet.
 
@@ -6,8 +6,9 @@ Zudem wurde ein Demonstrator erstellt, der einen beispielhaften herstellerüberg
 
 Die VWS nach IEC 63278-1 bietet als Schlüsselkonzept der Industrie 4.0 eine standardisierte Struktur für die Beschreibung von Assets (z.B. Maschinen, Komponenten oder Software) in einer digitalen Umgebung. Damit wird ein effizienter Datenaustausch zwischen verschiedenen Systemen und Anbietern ermöglicht.
 
-![image](https://github.com/user-attachments/assets/f2986e4b-0161-4e96-9f92-ebdd389e505c)     
-Abbildung 31: VWS in der Leitungssatz-Wertkette
+<img width="951" height="474" alt="image" src="https://github.com/user-attachments/assets/66a8a6e4-f686-4dac-875a-86e7e18c47e4" />       
+Abbildung 3-1: VWS im Beschaffungsprozess der Leitungssatz-Wertkette
+
 
 In TP1 wurde daher basierend auf der VWS ein detailliertes und umfassendes Informationsmodell des Leitungssatzes spezifiziert, welches auch die Produktmodellierung des Leitungssatzes umfasst. Dies beinhaltet die detaillierten Anforderungen, die der Leitungssatz erfüllen muss.
 
@@ -24,7 +25,7 @@ Im AP1.1 „Anforderungsanalyse“ wurden Grundlagen definiert sowie Zielsetzung
 Produktinformationen werden oft ähnlich -aber uneinheitlich- in Online-Produktkatalogen dargestellt, die wesentlichen technischen Daten meist als HTML-Tabellen und zusätzliche Dokumente zum Download angeboten.
 
 ![image](https://github.com/user-attachments/assets/5d4a2717-6acf-484f-b368-a106d44bdf75)     
-Abbildung 32: Typische Online-Produktkataloge
+Abbildung 3-2: Typische Online-Produktkataloge
 
 Derartige Bereitstellungen als HTML-Webseiten sowie PDFs sind jedoch nicht standardisiert maschinenlesbar oder -interpretierbar.
 
@@ -41,7 +42,7 @@ Mittels eines VWS-basierten Produktkatalogs und semantischer Klassifizierung bis
 [^1]: <https://industrialdigitaltwin.org/use-cases/collaborative-engineering-die-technologische-grundlage-zur-digitalisierten-wertschoepfungskette>
 
 ![image](https://github.com/user-attachments/assets/d7c1fca2-9e48-4011-8f2a-bcdcb0201d19)     
-Abbildung 34: Anwendungsfälle des VWS-basierten Produktkatalogs
+Abbildung 3-3: Anwendungsfälle des VWS-basierten Produktkatalogs
 
 Das TP12 widmet sich im Besonderen des Anwendungsfalls „Herstellerübergreifende maschinelle Produktauswahl (Vergleichsportale, Marktplätze)“. Angerissen wird dabei auch das Thema e-Commerce unter Anwendung der VWS.
 
@@ -83,7 +84,7 @@ Die folgenden Submodelle werden als Minimalausstattung für die Typ-VWS von LS-K
 *IDTA 02003-1-2 TechnicalData* [2] dient dazu, technische Datenblätter in maschinenlesbarer Form und unter Angabe definierte Semantiken zur Verfügung zu stellen. Der beabsichtigte Anwendungsfall ist, dass ein Hersteller sein Produkt, welches er auf den Markt bringt, mittels technischer Daten (Eigenschaften) beschreibt, die idealerweise mit Hilfe von Wörterbüchern wie ECLASS und IEC Common Data Dictionary (IEC CDD) interoperabel sind und von anderen Marktteilnehmern eindeutig verstanden werden.
 
 ![image](https://github.com/user-attachments/assets/b5eb17b9-38ff-4c6a-80ac-88fe75a5bbca)     
-Abbildung 35: IDTA 02003-1-2 TechnicalData
+Abbildung 3-4: IDTA 02003-1-2 TechnicalData
 
 Es wird für Komponenten-VWS im Leitungssatzbereich empfohlen, die Inhalte der SMC *TechnicalProperties* möglichst weitgehend anhand der VEC-Ontologie zu definieren und mit den entsprechenden semantischen Referenzen zu versehen (siehe hierzu Kapitel 3.2.7).
 
@@ -157,7 +158,7 @@ Um eine gezielte Produktsuche zu vereinfachen, wird empfohlen, Leitungssatzkompo
 
 ![Ein Bild, das Text, Screenshot, Schrift, parallel enthält. KI-generierte Inhalte können fehlerhaft sein.](media/7303e3860eef8a5a98f90be3ea1c2572.png)
 
-Abbildung 36: SM HandoverDocumentation
+Abbildung 3-6: SM HandoverDocumentation
 
 Im Teilmodell *HandoverDocumentation* müssen relativ wenige relevante Properties beachtet werden, insbesondere die SMC *DocumentVersion und DocumentClassification*. Da *DocumentId* als mandatory deklariert ist, kann es nicht weggelassen werden.
 
@@ -222,7 +223,7 @@ Tabelle 36: Konformitätserklärung: Inhalte für SMC DocumentClassification
 
 ![Ein Bild, das Text, Screenshot, Schrift, Reihe enthält. KI-generierte Inhalte können fehlerhaft sein.](media/e80c07c676e4e87f24d01d68b6b30ea1.png)
 
-Abbildung 37: SM DigitalNameplate
+Abbildung 3-7: SM DigitalNameplate
 
 Das SM DigitalNameplate enthält einige instanzbezogene Properties. Diese und sonstige Nicht-sinnvolle Properties dürfen für die Anwendung in der Typ-VWS nicht befüllt oder sollten entfernt werden. Das betrifft vor allem SerialNumber, DateOfManufacture sowie FirmwareVersion, SoftwareVersion. Eine Ausnahme wird vorgeschlagen für URIOfTheProduct, wo der Link auf eine ausserhalb des VWS-Ökosystems vorhandenen Online-Produktkatalogseite eingebracht werden kann, um hierüber eine sinnvolle Informationsverlinkung herzustellen.
 
@@ -275,7 +276,7 @@ Wenn kein zugehöriges Logo in Form einer Bilddatei vorhanden ist, wird aus Dars
 
 ![](media/9f13c45d628751558cc243314a2f3922.png)![Ein Bild, das Schwarz, Dunkelheit enthält. KI-generierte Inhalte können fehlerhaft sein.](media/8f7c74a302db50411fcea9e03763d3af.png)![](media/191cdd4bb57861b36f57a60432051a0e.png)
 
-Abbildung 38: SM Marking Logos
+Abbildung 3-8: SM Marking Logos
 
 ### Benennung der VWS
 
@@ -305,7 +306,7 @@ Die Anwendung von Uniform Resource Identifier (URI)/ Internationalized Resource 
 
 ![Ein Bild, das Text, Screenshot, Schrift, Algebra enthält. Automatisch generierte Beschreibung](media/cc42c6b4a10e526e5a13f62934be136f.png)
 
-Abbildung 39: Grammatik für URI Identifier
+Abbildung 3-9: Grammatik für URI Identifier
 
 Es wird empfohlen, diesen generischen Strukturvorschlag wie im Folgenden beschrieben in vereinfachter Form anzuwenden, ggf. im **\<path\>** auf die Elemente **\<domain\>** und **\<release\>** zu verzichten. Insbesondere **\<release\>** als Bestandteil der ID kann langfristig problematisch werden, sollte sich diese ändern. Im Falle der von Notwendigkeit von geänderten Versionsständen (die aus Wartbarkeitsgründen generell vermieden werden sollten) könnten diese besser per Query-Parameter abgefragt werden.
 
@@ -337,7 +338,7 @@ Hier eine zusammenfassende Übersicht der Empfehlungen zur ID-Definition:​
 
 ![Ein Bild, das Text, Screenshot, Schrift, Diagramm enthält. KI-generierte Inhalte können fehlerhaft sein.](media/7c42a44264591fbb4235848366e4493d.jpeg)
 
-Abbildung 310: Basic URL Structure
+Abbildung 3-10: Basic URL Structure
 
 1.  Protocol (scheme) „https://“ (nicht „http://“) verwenden wegen Linkfähigkeit
 2.  Domain-Name (authority) des Komponentenherstellers verwenden
@@ -356,11 +357,11 @@ Abbildung 310: Basic URL Structure
 
 ### Benennung der Submodelle
 
-Es wird empfohlen, die Benennung der IDTA-Submodelle möglichst nicht zu verändern. In untergeordneten Strukturen werden bspw. für SMC-Listenelemente menschenlesbare Benennungen empfohlen, anstelle der in den SMT-Spezifikationen manchmal empfohlenen fortlaufenden Nummerierungen (siehe Abbildung 311).
+Es wird empfohlen, die Benennung der IDTA-Submodelle möglichst nicht zu verändern. In untergeordneten Strukturen werden bspw. für SMC-Listenelemente menschenlesbare Benennungen empfohlen, anstelle der in den SMT-Spezifikationen manchmal empfohlenen fortlaufenden Nummerierungen (siehe Abbildung 3-11).
 
 ![](media/55d2a2e5f234912bceb4e93f42f28035.png)
 
-Abbildung 311: Benennung der Submodell-Elemente
+Abbildung 3-11: Benennung der Submodell-Elemente
 
 ### Versionierung
 
@@ -368,7 +369,7 @@ Die Versionierung einer VWS erfolgt über die administrativen Metadaten (Version
 
 ![Ein Bild, das Text, Screenshot, Schrift, Zahl enthält. KI-generierte Inhalte können fehlerhaft sein.](media/c86a91ee4908773cc182b672726c4cec.png)
 
-Abbildung 312: Versionierung
+Abbildung 3-12: Versionierung
 
 Es muss darauf hingewiesen werden, dass im VWS-Metamodell derzeit immer noch keine Metadaten für die Historieninformation verfügbar sind, was die praktische Nutzbarkeit der VWS-Technologie stark einschränkt. Siehe dazu auch [AdministrativeInformation: New properties "createdAt" and "lastModified" · Issue \#520 · admin-shell-io/aas-specs-metamodel](https://github.com/admin-shell-io/aas-specs-metamodel/issues/520)[^5].
 
@@ -493,7 +494,7 @@ Die *semanticId* und die *ConceptDescription* zusammen ermöglichen eine vollst�
 
 #### Data Specification IEC 61360
 
-Eine *Concept Description* ist anhand des Templates „*DataSpecificationIec61360*“ aufgebaut *(*Abbildung 313*),* welches spezifische Attribute wie *preferredName, unit, dataType* und *definition* enthält*.* Siehe hierzu auch [IDTA-01003-3-0: Specification Asset Administration Shell – Part 3a: Data Specification IEC 61360](https://industrialdigitaltwin.io/aas-specifications/IDTA-01003-a/v3.1/index.html)[^6] und [IDTA_Tutorial_VWS-Specification_Part3a_DataSpec_IEC61360.pdf](https://www.industrialdigitaltwin.org/en/wp-content/uploads/sites/2/2023/09/2023-09-28_IDTA_Tutorial_AAS-Specification_Part3a_DataSpec_IEC61360.pdf)[^7].
+Eine *Concept Description* ist anhand des Templates „*DataSpecificationIec61360*“ aufgebaut *(*Abbildung 3-13*),* welches spezifische Attribute wie *preferredName, unit, dataType* und *definition* enthält*.* Siehe hierzu auch [IDTA-01003-3-0: Specification Asset Administration Shell – Part 3a: Data Specification IEC 61360](https://industrialdigitaltwin.io/aas-specifications/IDTA-01003-a/v3.1/index.html)[^6] und [IDTA_Tutorial_VWS-Specification_Part3a_DataSpec_IEC61360.pdf](https://www.industrialdigitaltwin.org/en/wp-content/uploads/sites/2/2023/09/2023-09-28_IDTA_Tutorial_AAS-Specification_Part3a_DataSpec_IEC61360.pdf)[^7].
 
 [^6]: <https://industrialdigitaltwin.io/aas-specifications/IDTA-01003-a/v3.1/index.html>
 
@@ -501,11 +502,11 @@ Eine *Concept Description* ist anhand des Templates „*DataSpecificationIec6136
 
 ![Ein Bild, das Text, Screenshot, Schrift, Dokument enthält. KI-generierte Inhalte können fehlerhaft sein.](media/1a49dc7089666dfa0b18e168afc146a5.png)
 
-Abbildung 313: DataSpecification nach IEC61360
+Abbildung 3-13: DataSpecification nach IEC61360
 
 ![Ein Bild, das Text, Screenshot, Software, Zahl enthält. KI-generierte Inhalte können fehlerhaft sein.](media/71a4344d7e45b50207b026c9a502c1e5.png)
 
-Abbildung 314: AASPE Beispiel DataSpecification nach IEC61360
+Abbildung 3-14: AASPE Beispiel DataSpecification nach IEC61360
 
 ### Einheitendeklaration in der Concept Description
 
@@ -513,13 +514,13 @@ Die [*IDTA GUIDELINE: How to transport ECLASS in the Asset Administration Shell*
 
 ![Ein Bild, das Text, Screenshot, Schrift, Reihe enthält. KI-generierte Inhalte können fehlerhaft sein.](media/cd9d4726c5103de687e027d8c9871a56.png)
 
-Abbildung 315: Beispiel zur Einheitendefinition mittels einer Concept Description
+Abbildung 3-15: Beispiel zur Einheitendefinition mittels einer Concept Description
 
 Alternativ zu ECLASS (welches ohnehin auf IEC 62720 referenziert) wird empfohlen, direkt auf Einheitendefinitionen in IEC 62720 zu verweisen, und zwar mittels URI-Referenzen über <http://qudt.orq>, da diese Lösung gleichzeitig eine attraktive Onlinedarstellung bereitstellt (siehe z.B. <https://qudt.org/vocab/unit/MilliM>):
 
 ![Ein Bild, das Text, Screenshot, Software, Display enthält. KI-generierte Inhalte können fehlerhaft sein.](media/281732ea3bd94c1591b92828b5d7c79d.png)
 
-Abbildung 316: QUDT-Onlinedarstellung
+Abbildung 3-16: QUDT-Onlinedarstellung
 
 Siehe zu diesem Thema auch Kapitel „4.7.6 Klassifizierungssysteme für Einheiten“.
 
@@ -529,7 +530,7 @@ VEC [11] ist das führende Modellierungssystem der Leitungssatzbranche und stell
 
 ![Ein Bild, das Text, Screenshot, Software, Design enthält. Automatisch generierte Beschreibung](media/f2657ffc8a79cab6382a2d457d066ae0.png)
 
-Abbildung 317: Vehicle Electric Container (VEC)
+Abbildung 3-17: Vehicle Electric Container (VEC)
 
 Für die Produktklassifizierung über den VEC eignet sich die Klasse [PrimaryPartType](http://www.prostep.org/ontologies/ecad/2024/03/vec#PrimaryPartType)[^8].
 
@@ -537,7 +538,7 @@ Für die Produktklassifizierung über den VEC eignet sich die Klasse [PrimaryPar
 
 ![Ein Bild, das Text, Screenshot, Schrift, Diagramm enthält. Automatisch generierte Beschreibung](media/73389a40795cf6dde6e6586a6b1f1643.png)
 
-Abbildung 318: VEC-Datenmodell: Description of Parts
+Abbildung 3-18: VEC-Datenmodell: Description of Parts
 
 Es liegt nahe, für leitungssatzspezifische Properties in Produktkatalogen auf die [Definitionen des VEC](https://ecad-wiki.prostep.org/specifications/vec/v210/general-component-data/description-of-parts/) zurückzugreifen und entsprechend im Submodel „TechnicalData“ [2] in der SMC *TechnicalProperties* darauf zu verweisen.
 
@@ -545,7 +546,7 @@ Unter <https://ecad.prostep.org/ontologies/2024/03/vec> wird eine Ontologie in �
 
 ![A diagram of a machine Description automatically generated](media/cf0e1134a604f6b8902c082dc0b2720c.png)
 
-Abbildung 319: Beispiel VEC Terminal Datamodell (Quelle: VEC Recommendation V2.1)
+Abbildung 3-19: Beispiel VEC Terminal Datamodell (Quelle: VEC Recommendation V2.1)
 
 Sowohl in der OPC UA Companion Spec. „OPC 40570: OPC UA for the Wire Harness Manufacturing Industry“ [12] als auch der [DIN 72036](https://dx.doi.org/10.31030/3521962) [13] wird als semantische Referenzierung auf die [Ontologie des VEC](https://ecad-wiki.prostep.org/specifications/vec/v210/vec-2.1.0-ontology.ttl) verwiesen.
 
@@ -657,7 +658,7 @@ Modellierung eines VEC-NumericalValue durch verschiedene VWS-Konzepte und deren 
 
 ![Ein Bild, das Text, Screenshot, Schrift, Reihe enthält. KI-generierte Inhalte können fehlerhaft sein.](media/cd9d4726c5103de687e027d8c9871a56.png)
 
-Abbildung 320: Einheitendefinition in der Concept Description für ein VEC NumericalValue
+Abbildung 3-20: Einheitendefinition in der Concept Description für ein VEC NumericalValue
 
 Problem:
 
@@ -680,7 +681,7 @@ Problem: Der semantische Bezug zwischen den Konzeptbeschreibung und der VEC-Spez
 
 ![Ein Bild, das Text, Screenshot, Software, Zahl enthält. KI-generierte Inhalte können fehlerhaft sein.](media/0ef177855be010ece7bfcc794fd575b1.png)
 
-Abbildung 321: Definition der Einheit in der eingebetteten Datenspezifikation der Property
+Abbildung 3-21: Definition der Einheit in der eingebetteten Datenspezifikation der Property
 
 Problem: Erzeugt potentielle Redundanz.
 
