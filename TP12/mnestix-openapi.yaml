@@ -141,7 +141,7 @@ paths:
           description: AAS list page loaded successfully.
 
 
-  /dpps/{dppId}/elements/{elementPath}:
+  /dpps/{base64AasId}/elements/{elementPath}:
     get:
       tags:
         - "DPP Fine-Granular Life Cycle API"
@@ -149,7 +149,7 @@ paths:
       description: "Ermöglicht das Lesen eines spezifischen Datenelements mittels seines eindeutigen Pfades innerhalb eines DPPs."
       operationId: "readDataElement"
       parameters:
-        - $ref: "#/components/parameters/dppId"
+        - $ref: "#/components/parameters/base64AasId"
         - $ref: "#/components/parameters/elementPath"
       responses:
         "200":
@@ -167,7 +167,7 @@ paths:
       description: "Aktualisiert ein spezifisches Datenelement innerhalb eines DPPs. Ermöglicht auch das Hinzufügen oder Entfernen von Informationen."
       operationId: "updateDataElement"
       parameters:
-        - $ref: "#/components/parameters/dppId"
+        - $ref: "#/components/parameters/base64AasId"
         - $ref: "#/components/parameters/elementPath"
       requestBody:
         description: "Der neue Inhalt des Datenelements."
@@ -255,7 +255,7 @@ components:
       type: object
       description: "Repräsentiert den Digitalen Produktpass. Die genaue logische Struktur ist in 'Modul 4: Systeminteroperabilität' der Normungsreihe definiert und wird hier als generisches Objekt dargestellt."
       properties:
-        dppId:
+        base64AasId:
           $ref: "#/components/schemas/Identifier"
         productId:
           $ref: "#/components/schemas/Identifier"
@@ -315,11 +315,11 @@ components:
         - Exception
 
   parameters:
-    dppId:
-      name: dppId
+    base64AasId:
+      name: base64AasId
       in: path
       required: true
-      description: "Eindeutige Kennung des DPP."
+      description: "Eindeutige Kennung der DPP-AAS."
       schema:
         $ref: "#/components/schemas/Identifier"
     productId:
