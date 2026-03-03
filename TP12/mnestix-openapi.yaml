@@ -11,6 +11,8 @@ info:
       - [Mnestix OpenAPI](https://github.com/VWS4LS/vws4ls-subproject-results/blob/main/TP12/mnestix-openapi.yaml)
       - [Show in Swagger-Editor](https://editor.swagger.io/?url=https://raw.githubusercontent.com/VWS4LS/vws4ls-subproject-results/refs/heads/main/TP12/mnestix-openapi.yaml)
 
+    Erweiterungen zur "Digitaler Produktpass (DPP) API" basierend auf dem Entwurf der Norm DIN EN 18222:2025.
+
     ## Legal Disclaimer 
 
     This work is licenced under the Creative Commons Zero Licence 
@@ -27,6 +29,13 @@ info:
 servers:
   - url: https://vws4ls.dev.mnestix.xitaso.net
     description: VWS4LS Development Server
+
+tags:
+  - name: "Product Catalog"
+    description: "Zugriff auf Produktkatalog-Repositories"    
+  - name: "DPP Fine-Granular Life Cycle API"
+    description: "Optionale Operationen für den feingranularen Zugriff auf DPP-Daten."    
+
 paths:
 
   /marketplace:
@@ -132,6 +141,55 @@ paths:
           description: AAS list page loaded successfully.
 
 
+  /dpps/{dppId}/elements/{elementPath}:
+    get:
+      tags:
+        - "DPP Fine-Granular Life Cycle API"
+      summary: "Ein einzelnes Datenelement aus einem DPP lesen (ReadDataElement)"
+      description: "Ermöglicht das Lesen eines spezifischen Datenelements mittels seines eindeutigen Pfades innerhalb eines DPPs."
+      operationId: "readDataElement"
+      parameters:
+        - $ref: "#/components/parameters/dppId"
+        - $ref: "#/components/parameters/elementPath"
+      responses:
+        "200":
+          description: "Das angeforderte Datenelement."
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/DataElement"
+        "404":
+          $ref: "#/components/responses/NotFound"
+    patch:
+      tags:
+        - "DPP Fine-Granular Life Cycle API"
+      summary: "Ein einzelnes Datenelement in einem DPP aktualisieren (UpdateDataElement)"
+      description: "Aktualisiert ein spezifisches Datenelement innerhalb eines DPPs. Ermöglicht auch das Hinzufügen oder Entfernen von Informationen."
+      operationId: "updateDataElement"
+      parameters:
+        - $ref: "#/components/parameters/dppId"
+        - $ref: "#/components/parameters/elementPath"
+      requestBody:
+        description: "Der neue Inhalt des Datenelements."
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/DataElement"
+      responses:
+        "200":
+          description: "Erfolgreich aktualisiert. Gibt das geänderte Datenelement zurück."
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/DataElement"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "403":
+          $ref: "#/components/responses/Forbidden"
+        "404":
+          $ref: "#/components/responses/NotFound"
+
   /settings:
     get:
       summary: Settings Page
@@ -190,3 +248,119 @@ paths:
           description: Template details page loaded successfully.
         '404':
           description: Template not found.
+
+components:
+  schemas:
+    DPP:
+      type: object
+      description: "Repräsentiert den Digitalen Produktpass. Die genaue logische Struktur ist in 'Modul 4: Systeminteroperabilität' der Normungsreihe definiert und wird hier als generisches Objekt dargestellt."
+      properties:
+        dppId:
+          $ref: "#/components/schemas/Identifier"
+        productId:
+          $ref: "#/components/schemas/Identifier"
+      additionalProperties: true
+    PartialDPP:
+      type: object
+      description: "Eine partielle Repräsentation des DPP für PATCH-Operationen."
+      additionalProperties: true
+    DataElement:
+      description: "Ein einzelnes Datenelement innerhalb eines DPP. Kann ein beliebiger Typ sein."
+    DataElementCollection:
+      type: object
+      description: "Eine Sammlung von Datenelementen innerhalb eines DPPs."
+      additionalProperties:
+        $ref: "#/components/schemas/DataElement"
+    PartialDataElementCollection:
+      type: object
+      description: "Eine partielle Sammlung von Datenelementen für PATCH-Operationen."
+      additionalProperties:
+        $ref: "#/components/schemas/DataElement"
+    Identifier:
+      type: string
+      description: "Eine eindeutige Kennung."
+      example: "urn:uuid:6c84fb90-12c4-11e1-840d-7b25c5ee775a"
+    ErrorResult:
+      type: object
+      description: "Das Standard-Antwortobjekt im Fehlerfall."
+      properties:
+        message:
+          type: array
+          items:
+            $ref: "#/components/schemas/Message"
+    Message:
+      type: object
+      properties:
+        messageType:
+          $ref: "#/components/schemas/MessageTypeEnum"
+        text:
+          type: string
+          description: "Nachrichtentext, der den Fehler beschreibt."
+        code:
+          type: string
+          description: "Ein technologieabhängiger Status- oder Fehlercode."
+        correlationId:
+          type: string
+          description: "ID zur Verbindung von Nachrichten über mehrere Systeme hinweg."
+        timestamp:
+          type: string
+          format: date-time
+          description: "Zeitstempel der Nachricht."
+    MessageTypeEnum:
+      type: string
+      enum:
+        - Info
+        - Warning
+        - Error
+        - Exception
+
+  parameters:
+    dppId:
+      name: dppId
+      in: path
+      required: true
+      description: "Eindeutige Kennung des DPP."
+      schema:
+        $ref: "#/components/schemas/Identifier"
+    productId:
+      name: productId
+      in: path
+      required: true
+      description: "Eindeutige Kennung des Produkts."
+      schema:
+        $ref: "#/components/schemas/Identifier"
+    elementId:
+      name: elementId
+      in: path
+      required: true
+      description: "Kennung der DataElementCollection innerhalb des DPP."
+      schema:
+        $ref: "#/components/schemas/Identifier"
+    elementPath:
+      name: elementPath
+      in: path
+      required: true
+      description: "Der absolute Pfad zum spezifischen Datenelement innerhalb des DPP."
+      schema:
+        type: string
+        example: "sustainability.recyclability.recycledContent"
+
+  responses:
+    BadRequest:
+      description: "Fehlerhafte Anfrage (z.B. falsche Syntax oder ungültige Parameter)."
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/ErrorResult"
+    Forbidden:
+      description: "Zugriff verweigert. Der Client hat nicht die erforderlichen Berechtigungen für die Ressource."
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/ErrorResult"
+    NotFound:
+      description: "Die angeforderte Ressource wurde nicht gefunden."
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/ErrorResult"    
